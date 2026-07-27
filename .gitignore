@@ -1,1 +1,4 @@
 .env
+.dotenv/
+public/
+static/processed_images/

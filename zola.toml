@@ -1,10 +1,100 @@
 base_url = "https://atvari.eu"
+minify_html = true
 compile_sass = true
-build_search_index = true
+default_language = "en"
+theme = "portio-zola"
 
-[markdown]
+[languages.en]
+title = "atvari"
+generate_feeds = true
+build_search_index = false
 
-[markdown.highlighting]
-theme = "catppuccin-mocha"
+taxonomies = [
+    { name = "tags", feed = true, render = true, paginate_by = 9 },
+    { name = "categories", feed = true, render = true, paginate_by = 9 },
+]
+
+[languages.en.translations]
+contact_me = "Contact me"
+start_project = "Let's start a project"
+showing_all = "Showing all"
+hire_me_now = "Hire me now"
+get_in_touch = "Get in touch"
+see_details = "See details"
+sitemap = "Sitemap"
+address = "Address"
+phone = "Phone"
+email = "Email"
+categories_description = "Showing all posts with the category"
+tags_description = "Showing all posts with the tag"
+opening_hours = "Working hours"
+form_title = "Contact form"
+form_button = "Send message"
+form_input_name = "Name"
+form_input_email = "Email"
+form_input_message = "Message"
+form_input_agreement = "I agree that my submitted data is being collected and stored."
+copyright = "Copyright © atvari GmbH 2026"
+
+# Menus
+home = "Home"
+about = "About"
+service = "Service"
+work = "Work"
+resume = "Resume"
+blog = "Blog"
+contact = "Contact"
+
+# Sitemaps
+about_me = "About me"
+frequently_ask_question = "Frequently Asked Questions"
+privacy_and_policy = "Privacy Policy"
+latest_article = "Latest article"
+
 
 [extra]
+date_format = "%d %B, %Y"
+logo = "images/logo.png"
+footer_logo = "images/logo.png"
+# google_analytics = "YOUR TOKEN FOR GOOGLE ANALYTICS"
+display_cta = true
+
+menus = [
+  { name = "home", url = "#home" },
+  { name = "about", url = "#about" },
+  { name = "service", url = "#service" },
+  { name = "work", url = "#portfolio" },
+  { name = "resume", url = "#resume" },
+  { name = "blog", url = "#blog" },
+  { name = "contact", url = "#contact" }
+]
+
+sitemaps = [
+  { name = "about_me", url = "#about" },
+  { name = "frequently_ask_question", url = "#" },
+  { name = "privacy_and_policy", url = "#" },
+  { name = "latest_article", url = "#" }
+]
+
+socials = [
+  { icon = "linkedin-original", url = "https://www.linkedin.com/company/atvari" },
+  { icon = "github-original", url = "https://github.com/atvari-eu" },
+  # TODO
+  # { icon = "bluesky", url = "https://mu.social/atvari.eu" },
+  # { icon = "mastodon", url = "https://fosstodon.org/atvari" },
+]
+
+[extra.address]
+# phone = ""
+email = "hi@atvari.eu"
+address = "Salzstr. 1, 21335 Lüneburg, Germany"
+# opening_hours = "Open from 10am to 6pm (close at 5pm Sundays) "
+
+[extra.form]
+active = false
+# formspree_url = "YOUR FORMSPREE URL"
+
+[extra.map]
+active = false
+# latitude = ""
+# longitude = ""
