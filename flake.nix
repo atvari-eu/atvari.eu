@@ -21,6 +21,7 @@
         devShells.default = pkgs.mkShell {
           packages = with pkgs; [
             zola
+            typescript-language-server
           ];
         };
       }
