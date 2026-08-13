@@ -1,0 +1,202 @@
+// Theme custom properties. Light values match the site's existing design
+// exactly; dark values are the only thing that changes per theme.
+:root {
+  --color-bg: #ffffff;
+  --color-heading: #{$secondary-color};
+  --color-muted: #7e7e8a;
+  --color-surface: #ffffff;
+  --color-decorative: #f1f6f9;
+}
+
+@mixin dark-theme-vars {
+  --color-bg: #12141c;
+  --color-heading: #f1f1f4;
+  --color-muted: #a3a6b3;
+  --color-surface: #1b2031;
+  --color-decorative: #1b2031;
+}
+
+// Explicit user choice, persisted via localStorage and set on <html> before
+// first paint (see the inline script in base.html) to avoid a flash.
+[data-theme="dark"] {
+  @include dark-theme-vars;
+}
+
+// "Auto": no explicit choice stored, follow the OS/browser preference.
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]):not([data-theme="dark"]) {
+    @include dark-theme-vars;
+  }
+}
+
+// Component overrides. These only redeclare the color/background property
+// that needs to react to the theme, layered on top of the rules already
+// defined elsewhere (this file is imported last) rather than restating
+// each component's full rule.
+body {
+  background: var(--color-bg);
+}
+
+.navbar {
+  @include desktop {
+    background: var(--color-surface);
+  }
+  &.nav__color__change {
+    background: var(--color-surface);
+  }
+}
+.navbar .main-navigation .nav-item .nav-link {
+  color: var(--color-heading);
+}
+
+.hero_content h1,
+.hero_content span,
+.hero_content p {
+  color: var(--color-heading);
+}
+
+.hero_background-svg path {
+  fill: var(--color-decorative);
+}
+
+.about_header h2 {
+  color: var(--color-heading);
+}
+.about_header p {
+  color: var(--color-muted);
+}
+
+.service__header h1,
+.service__header p {
+  color: var(--color-heading);
+}
+.service__slider_item {
+  background: var(--color-surface);
+}
+.service__slider_item h4 {
+  color: var(--color-heading);
+}
+.service__slider_item p {
+  color: var(--color-muted);
+}
+.service__background path {
+  fill: var(--color-decorative);
+}
+.service__background_shape stop {
+  stop-color: var(--color-decorative);
+}
+
+.testimonial {
+  background: var(--color-decorative);
+}
+.testimonial__header h1 {
+  color: var(--color-heading);
+}
+.testimonial__slider_item {
+  background: var(--color-surface);
+}
+.testimonial__background_shape svg path {
+  fill: var(--color-bg);
+}
+.testimonial__slider_item-content {
+  color: var(--color-heading);
+}
+.testimonial__slider_item-author {
+  color: var(--color-muted);
+}
+.testimonial__slider_item-author span {
+  color: var(--color-heading);
+}
+
+.blog__header h1 {
+  color: var(--color-heading);
+}
+.blog__item-content {
+  background: var(--color-surface);
+}
+.blog__item-content a {
+  color: var(--color-heading);
+}
+
+.singleBlog__content h1,
+.singleBlog__content h2,
+.singleBlog__content h3,
+.singleBlog__content h4,
+.singleBlog__content h5,
+.singleBlog__content h6 {
+  color: var(--color-heading);
+}
+.singleBlog__content p {
+  color: var(--color-muted);
+}
+
+.breadCrumb__title,
+.breadCrumb .breadcrumb-item a,
+.breadCrumb .breadcrumb-item.active,
+.breadCrumb .breadcrumb-item + .breadcrumb-item::before {
+  color: var(--color-heading);
+}
+
+.contact__info_item h4 {
+  color: var(--color-heading);
+}
+.contact__info_item p,
+.contact__info_item a {
+  color: var(--color-muted);
+}
+.contact__background_shape svg path {
+  fill: var(--color-surface);
+}
+
+// Navbar logo swap: two <img> tags ship in the markup, only one shown
+// per theme, so it works before JS runs (no swap-driven flash).
+.navbar-brand__logo--dark {
+  display: none;
+}
+[data-theme="dark"] .navbar-brand__logo--light {
+  display: none;
+}
+[data-theme="dark"] .navbar-brand__logo--dark {
+  display: inline-block;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]):not([data-theme="dark"]) .navbar-brand__logo--light {
+    display: none;
+  }
+  :root:not([data-theme="light"]):not([data-theme="dark"]) .navbar-brand__logo--dark {
+    display: inline-block;
+  }
+}
+
+// Theme toggle button
+.theme-toggle {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  padding: 0;
+  border: none;
+  background: transparent;
+  color: var(--color-heading);
+  cursor: pointer;
+  &__icon {
+    display: none;
+    width: 20px;
+    height: 20px;
+  }
+  // default (no data-theme attribute): "auto" mode
+  &__icon--auto {
+    display: inline-block;
+  }
+}
+html[data-theme="light"] .theme-toggle__icon--auto,
+html[data-theme="dark"] .theme-toggle__icon--auto {
+  display: none;
+}
+html[data-theme="light"] .theme-toggle__icon--light {
+  display: inline-block;
+}
+html[data-theme="dark"] .theme-toggle__icon--dark {
+  display: inline-block;
+}

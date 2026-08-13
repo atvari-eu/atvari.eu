@@ -1,15 +1,17 @@
+{% import "macros.html" as macros %}
 <nav class="navbar navbar-expand-lg fixed-top">
     <div class="container">
         <a href="{{ get_url(path="/", lang=lang) }}" class="navbar-brand">
-            <img src="{{ get_url(path=extra.logo) }}" alt="site-logo">
+            <img src="{{ get_url(path=extra.logo) }}" alt="site-logo" class="navbar-brand__logo navbar-brand__logo--light">
+            <img src="{{ get_url(path=extra.logo_dark) }}" alt="site-logo" class="navbar-brand__logo navbar-brand__logo--dark">
         </a>
-        
+
         <button type="button" class="navbar-toggler collapsed" data-toggle="collapse" data-target="#navbarCollapse">
             <span class="navbar-toggler-icon"></span>
             <span class="navbar-toggler-icon"></span>
             <span class="navbar-toggler-icon"></span>
         </button>
-    
+
         <div class="collapse navbar-collapse justify-content-between" id="navbarCollapse">
             <ul class="nav navbar-nav main-navigation">
                 {% for menu in extra.menus %}
@@ -35,6 +37,10 @@
                     </ul>
                 </li>
                 {% endif %}
+
+                <li class="nav-item">
+                    {{ macros::theme_toggle() }}
+                </li>
             </ul>
 
             <div class="navbar-nav">
