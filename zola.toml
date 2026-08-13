@@ -131,11 +131,12 @@ sitemaps = [
 ]
 
 socials = [
-  { icon = "linkedin-original", url = "https://www.linkedin.com/company/atvari" },
-  { icon = "github-original", url = "https://github.com/atvari-eu" },
-  # TODO
-  # { icon = "bluesky", url = "https://mu.social/atvari.eu" },
-  # { icon = "mastodon", url = "https://fosstodon.org/atvari" },
+  { label = "Sifa ID", icon = "sifa", url = "https://sifa.id/c/atvari.eu" },
+  { label = "LinkedIn", icon = "linkedin-original", url = "https://www.linkedin.com/company/atvari" },
+  { label = "Bluesky", icon = "bluesky", url = "https://bsky.app/profile/atvari.eu" },
+  { label = "Mastodon", icon = "mastodon", url = "https://fosstodon.org/@atvari" },
+  { label = "GitHub", icon = "github-original", url = "https://github.com/atvari-eu" },
+  { label = "Email", icon = "envelope", url = "mailto:hi@atvari.eu" },
 ]
 
 [extra.address]

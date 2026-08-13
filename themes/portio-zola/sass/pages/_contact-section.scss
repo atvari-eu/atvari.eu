@@ -242,16 +242,20 @@
             ul{
                 margin: 0;
                 padding: 0;
-                float: right;
+                display: flex;
+                align-items: center;
+                justify-content: flex-end;
                 @include desktop{
                     margin: 20px auto 0;
-                    float: none;
+                    justify-content: center;
                 }
                 li{
                     list-style: none;
-                    display: inline-block;
+                    display: flex;
+                    align-items: center;
                     a{
-                        display: block;
+                        display: flex;
+                        align-items: center;
                         text-decoration: none;
                         color: #fff;
                         font-size: 20px;
