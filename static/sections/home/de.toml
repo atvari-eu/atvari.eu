@@ -1,0 +1,11 @@
+title       = "Hallo, ich bin Felix"
+description = """
+# Ich bin hier für Ihr Softwareprojekt
+
+Genießen Sie Software- & DevOps-Beratung, architektonische Unterstützung und maßgeschneiderte Softwarelösungen.
+"""
+button_name = "Kontaktiere mich"
+button_url  = "contact"
+image       = "images/hero/2960351.jpg"
+# video_thumb = "images/hero/popup-thumb.png"
+# video_url   = "https://www.youtube.com/embed/tgbNymZ7vqY"

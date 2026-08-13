@@ -1,0 +1,19 @@
+title = "Über mich"
+image = "images/about/about-img.jpg"
+buttons = [
+    ""
+]
+description = """
+  ## Über mich
+
+  Genießen Sie die Vielfalt des Teams und erweitern Sie Ihr Netzwerk mit
+  Menschen aus verschiedenen Bereichen.
+"""
+content = """
+  ### Ich gestalte und baue großartige Dinge.
+
+  Ich arbeite gerne im Bereich User Experience & User Interface Design. Denn ich
+  löse gerne Design-Probleme und finde einfache, bessere Lösungen dafür. Ich gebe
+  stets mein Bestes, um eine gute Benutzeroberfläche mit der besten Nutzererfahrung
+  zu schaffen. Ich arbeite seit Langem als visueller Designer.
+"""

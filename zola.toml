@@ -51,6 +51,52 @@ frequently_ask_question = "Frequently Asked Questions"
 privacy_and_policy = "Privacy Policy"
 latest_article = "Latest article"
 
+[languages.de]
+title = "atvari"
+generate_feeds = true
+build_search_index = false
+
+taxonomies = [
+    { name = "tags", feed = true, render = true, paginate_by = 9 },
+    { name = "categories", feed = true, render = true, paginate_by = 9 },
+]
+
+[languages.de.translations]
+contact_me = "Kontaktiere mich"
+start_project = "Projekt starten"
+showing_all = "Alle anzeigen"
+hire_me_now = "Jetzt engagieren"
+get_in_touch = "Kontakt aufnehmen"
+see_details = "Details ansehen"
+sitemap = "Sitemap"
+address = "Adresse"
+phone = "Telefon"
+email = "E-Mail"
+categories_description = "Zeigt alle Beiträge der Kategorie"
+tags_description = "Zeigt alle Beiträge mit dem Tag"
+opening_hours = "Öffnungszeiten"
+form_title = "Kontaktformular"
+form_button = "Nachricht senden"
+form_input_name = "Name"
+form_input_email = "E-Mail"
+form_input_message = "Nachricht"
+form_input_agreement = "Ich stimme zu, dass meine übermittelten Daten gespeichert werden."
+copyright = "Copyright © atvari GmbH 2026"
+
+# Menus
+home = "Start"
+about = "Über uns"
+service = "Leistungen"
+work = "Arbeiten"
+resume = "Lebenslauf"
+blog = "Blog"
+contact = "Kontakt"
+
+# Sitemaps
+about_me = "Über mich"
+frequently_ask_question = "Häufig gestellte Fragen"
+privacy_and_policy = "Datenschutz"
+latest_article = "Neuester Artikel"
 
 [extra]
 date_format = "%d %B, %Y"

@@ -1,0 +1,16 @@
+top_title = "Meine Fähigkeiten"
+title     = "Warum Sie mich für Ihr nächstes Projekt engagieren sollten"
+subtitle  = "Mein Ziel ist es, ein starkes, unterstützendes professionelles Netzwerk unter allen Freelancern und Startups aufzubauen, um deren Leistung zu verbessern."
+image     = "images/skill/skill_image.jpg"
+
+[[skills]]
+title   = "HTML"
+percent = 69
+
+[[skills]]
+title   = "CSS"
+percent = 60
+
+[[skills]]
+title   = "Javascript"
+percent = 85

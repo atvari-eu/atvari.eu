@@ -1,0 +1,33 @@
+top_title = "Arbeitsbereich"
+title     = "Kreative Leistungen"
+subtitle  = "Genießen Sie die Vielfalt des Teams und erweitern Sie Ihr Netzwerk mit Menschen aus verschiedenen Bereichen."
+
+[[services]]
+title   = "UI/UX Design"
+content = "Lorem ipsum dolor sit amet conset sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat."
+image   = "images/service/ui-ux.svg"
+
+[[services]]
+title   = "Webentwicklung"
+content = "Lorem ipsum dolor sit amet conset sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat."
+image   = "images/service/web.svg"
+
+[[services]]
+title   = "Kreatives Design"
+content = "Lorem ipsum dolor sit amet conset sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat."
+image   = "images/service/creative.svg"
+
+[[services]]
+title   = "Branding"
+content = "Lorem ipsum dolor sit amet conset sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat."
+image   = "images/service/branding.svg"
+
+[[services]]
+title   = "UI/UX Design"
+content = "Lorem ipsum dolor sit amet conset sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat."
+image   = "images/service/ui-ux.svg"
+
+[[services]]
+title   = "Webentwicklung"
+content = "Lorem ipsum dolor sit amet conset sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat."
+image   = "images/service/web.svg"

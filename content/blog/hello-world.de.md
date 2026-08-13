@@ -1,5 +1,5 @@
 +++
-title = "Hello World!"
+title = "Hallo Welt!"
 date = 2026-08-01
 slug = "hello-world"
 
@@ -12,4 +12,4 @@ feature_image = "images/blog/posts/5.jpg"
 post_image = "images/blog/feature-image.jpg"
 +++
 
-As of today, atvari GmbH is alive! 🥳
+Ab heute ist die atvari GmbH da! 🥳
