@@ -31,12 +31,12 @@
     }
     h1 {
       margin: 0;
-      font-size: 55px;
+      font-size: 48px;
       font-family: $primary-font;
       color: $secondary-color;
       line-height: 1;
       @include tablet {
-        font-size: 40px;
+        font-size: 32px;
       }
     }
   }
