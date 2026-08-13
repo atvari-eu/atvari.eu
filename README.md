@@ -1,24 +1,17 @@
 # atvari.eu
 
-Source for the [atvari GmbH](https://atvari.eu) website, built with [Zola](https://www.getzola.org/) using the [portio-zola](https://github.com/quentin-rodriguez/portio-zola) theme.
+Source for the [atvari GmbH](https://atvari.eu) website, built with [Zola](https://www.getzola.org/) using a vendored, locally-customized copy of the [portio-zola](https://github.com/quentin-rodriguez/portio-zola) theme (`themes/portio-zola/`).
 
 ## Prerequisites
 
 - [Nix](https://nixos.org/download) with flakes enabled, plus [direnv](https://direnv.net/) (recommended) — or just install [Zola](https://www.getzola.org/documentation/getting-started/installation/) `0.22.0` directly.
-- Git (the theme is pulled in as a submodule).
 
 ## Getting started
 
 ```sh
-git clone --recurse-submodules <repo-url>
+git clone <repo-url>
 cd atvari.eu
 direnv allow   # or: nix develop
-```
-
-If you already cloned without `--recurse-submodules`:
-
-```sh
-git submodule update --init
 ```
 
 ## Development

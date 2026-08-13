@@ -4,11 +4,11 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 ## What this is
 
-The source for the atvari GmbH marketing site (atvari.eu), built with [Zola](https://www.getzola.org/) (static site generator, Rust/Tera templates) using the `portio-zola` theme as a git submodule. This repo owns content and site-specific config/assets; nearly all templates and Sass come from the theme.
+The source for the atvari GmbH marketing site (atvari.eu), built with [Zola](https://www.getzola.org/) (static site generator, Rust/Tera templates) using a vendored, locally-customized copy of the `portio-zola` theme (`themes/portio-zola/`, plain tracked files — not a git submodule). This repo owns content and site-specific config/assets; nearly all templates and Sass come from the theme, but theme files can now be edited directly when a project-level `templates/` override isn't enough.
 
 ## Commands
 
-Dev environment is a Nix flake (`flake.nix`) providing `zola` and `typescript-language-server`; `.envrc` loads it via direnv (`use flake`). The theme submodule also defines `mise.toml` tasks that wrap the same zola invocations:
+Dev environment is a Nix flake (`flake.nix`) providing `zola` and `typescript-language-server`; `.envrc` loads it via direnv (`use flake`). `themes/portio-zola/mise.toml` also defines equivalent `mise` tasks:
 
 ```sh
 zola serve --fast --force   # local preview with fast rebuilds (mise task: serve)
@@ -17,8 +17,6 @@ zola check --drafts         # validate links/content including drafts (mise task
 ```
 
 Run these from the repo root. There is no separate JS build step — `typescript-language-server` in the flake is only for editor tooling.
-
-Submodule note: `themes/portio-zola` is a git submodule. After cloning, run `git submodule update --init` if it's empty. If `git status` shows the submodule as "modified content," check `git -C themes/portio-zola status` before assuming it's intentional — it usually means the working tree there has untracked/uncommitted changes rather than a real pointer bump.
 
 ## Architecture
 
