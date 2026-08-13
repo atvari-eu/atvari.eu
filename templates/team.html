@@ -1,4 +1,5 @@
 {% extends "base.html" %}
+{% import "macros.html" as macros %}
 
 {% block content %}
 <header class="breadCrumb">
@@ -17,14 +18,71 @@
   </div>
 </header>
 
-<section class="section singleBlog">
+<section class="section team">
   <div class="container">
-    <div class="row mt-5">
-      <div class="col-lg-10 offset-lg-1">
-        <div class="singleBlog__content">
-          {{ section.content | safe }}
+    <div class="team__grid">
+      {% for member in section.extra.members %}
+      <div class="team__card">
+        <div class="team__card-inner">
+          <div class="team__card-inner-blob">
+            <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+              viewBox="0 0 600 600">
+              <defs>
+                <linearGradient id="e" x1="0.929" y1="0.111" x2="0.263" y2="0.935"
+                  gradientUnits="objectBoundingBox">
+                  <stop offset="0" stop-color="#f1f6f9" />
+                  <stop offset="1" stop-color="#f1f6f9" stop-opacity="0" />
+                </linearGradient>
+              </defs>
+              <g data-name="blob-shape (3)">
+                <path class="blob" fill="url(#e)"
+                  d="M455.4 151.1c43.1 36.7 73.4 92.8 60.8 136.3-12.7 43.5-68.1 74.4-111.3 119.4-43.1 45-74 104.1-109.8 109-35.9 5-76.7-44.2-111.8-89.2-35.2-45-64.7-85.8-70.8-132.6-6-46.8 11.6-99.6 46.7-136.3 35.2-36.6 88-57.2 142.4-58.8 54.5-1.7 110.6 15.6 153.8 52.2z" />
+              </g>
+            </svg>
+          </div>
+          {% if member.image %}
+          <div class="team__card-image">
+            <img src="{{ get_url(path=member.image) }}" alt="{{ member.name }}">
+          </div>
+          {% endif %}
+          <h3>{{ member.name }}</h3>
+          {% if member.role %}
+          <span class="team__card-role">{{ member.role }}</span>
+          {% endif %}
+          {% if member.bio %}
+          <div class="team__card-bio">
+            {{ member.bio | markdown | safe }}
+          </div>
+          {% endif %}
+          {% if member.skills %}
+          <ul class="team__card-skills">
+            {% for skill in member.skills %}
+            <li>{{ skill }}</li>
+            {% endfor %}
+          </ul>
+          {% endif %}
+          {% if member.education %}
+          {% for entry in member.education %}
+          <p class="team__card-meta">{{ entry }}</p>
+          {% endfor %}
+          {% endif %}
+          {% if member.links %}
+          <div class="team__card-links">
+            {% for link in member.links %}
+            <a class="team__card-link" href="{{ link.url }}" target="_blank" rel="noopener" aria-label="{{ link.label }}" title="{{ link.label }}">
+              {% if link.icon in ["bluesky", "mastodon", "codeberg", "forgejo", "sifa"] %}
+              {{ macros::brand_icon(name=link.icon) }}
+              {% elif link.icon %}
+              <i class="lni lni-{{ link.icon }}"></i>
+              {% endif %}
+              {% if not link.icon or link.icon == "link" %}{{ link.label }}{% endif %}
+            </a>
+            {% endfor %}
+          </div>
+          {% endif %}
         </div>
       </div>
+      {% endfor %}
     </div>
   </div>
 </section>
