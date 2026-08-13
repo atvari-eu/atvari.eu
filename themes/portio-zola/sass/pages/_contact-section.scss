@@ -95,12 +95,12 @@
             }
             h1{
                 font-family: $primary-font;
-                font-size: 55px;
+                font-size: 48px;
                 color: #fff;
                 margin: 0;
                 line-height: 1;
                 @include desktop{
-                    font-size: 40px;
+                    font-size: 32px;
                 }
             }
         }
@@ -125,7 +125,7 @@
                     float: none;
                 }
                 &:hover{
-                    background: #768bf3;
+                    background: $primary-color;
                     color: #fff;
                 }
             }
