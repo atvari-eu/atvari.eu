@@ -1,4 +1,4 @@
 +++
-title = "Kontaktiere mich"
+title = "Kontaktiere uns"
 template = "contact/section.html"
 +++

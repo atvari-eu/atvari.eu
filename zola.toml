@@ -20,10 +20,10 @@ taxonomies = [
 ]
 
 [languages.en.translations]
-contact_me = "Contact me"
+contact_me = "Contact us"
 start_project = "Let's start a project"
 showing_all = "Showing all"
-hire_me_now = "Hire me now"
+hire_me_now = "Hire us now"
 get_in_touch = "Get in touch"
 see_details = "See details"
 sitemap = "Sitemap"
@@ -68,7 +68,7 @@ taxonomies = [
 ]
 
 [languages.de.translations]
-contact_me = "Kontaktiere mich"
+contact_me = "Kontaktiere uns"
 start_project = "Projekt starten"
 showing_all = "Alle anzeigen"
 hire_me_now = "Jetzt engagieren"
