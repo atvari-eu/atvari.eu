@@ -1,19 +1,23 @@
-title = "About"
+title = "About atvari"
 image = "images/about/about-img.jpg"
 buttons = [
     ""
 ]
 description = """
-  ## About me
+  ## Software & Cloud Engineering Consulting
 
-  Enjoy team diversity and increase their networks among others people in
-  various fields by provided.
+  atvari GmbH is a software and cloud engineering consultancy founded in
+  2026 and based in Lüneburg, Germany.
 """
 content = """
-  ### I design and build ultimate things.
-  
-  I love to work in User Experience & User Interface designing. Because I love
-  to solve the design problem and find easy and better solutions to solve it. I always
-  try my best to make good user interface with the best user experience. I have been
-  working as a Visual designer from.
+  ### With ❤️ for Rust, Nix & Open Source
+
+  We help teams design, build, and operate secure, scalable, and
+  easy-to-maintain systems — offering software & cloud architecture, custom
+  software engineering, cloud engineering, and DevOps / infrastructure-as-code
+  consulting, with particular depth in Rust and the Nix/NixOS ecosystem.
+
+  We're active contributors to the open source community, including
+  Nixpkgs, the largest open source package repository, and care deeply
+  about building systems that are secure and reproducible by design.
 """

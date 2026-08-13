@@ -1,19 +1,24 @@
-title = "Über mich"
+title = "Über atvari"
 image = "images/about/about-img.jpg"
 buttons = [
     ""
 ]
 description = """
-  ## Über mich
+  ## Software- & Cloud-Engineering-Beratung
 
-  Genießen Sie die Vielfalt des Teams und erweitern Sie Ihr Netzwerk mit
-  Menschen aus verschiedenen Bereichen.
+  Die atvari GmbH ist eine 2026 gegründete Software- und
+  Cloud-Engineering-Beratung mit Sitz in Lüneburg.
 """
 content = """
-  ### Ich gestalte und baue großartige Dinge.
+  ### Mit ❤️ für Rust, Nix & Open Source
 
-  Ich arbeite gerne im Bereich User Experience & User Interface Design. Denn ich
-  löse gerne Design-Probleme und finde einfache, bessere Lösungen dafür. Ich gebe
-  stets mein Bestes, um eine gute Benutzeroberfläche mit der besten Nutzererfahrung
-  zu schaffen. Ich arbeite seit Langem als visueller Designer.
+  Wir helfen Teams dabei, sichere, skalierbare und leicht wartbare Systeme
+  zu entwickeln und zu betreiben — mit Beratung in den Bereichen Software-
+  & Cloud-Architektur, individuelle Softwareentwicklung, Cloud-Engineering
+  und DevOps / Infrastructure-as-Code, mit besonderer Tiefe in Rust und dem
+  Nix/NixOS-Ökosystem.
+
+  Wir sind aktive Mitglieder der Open-Source-Community — unter anderem bei
+  Nixpkgs, dem größten Open-Source-Paketarchiv — und legen großen Wert auf
+  Systeme, die von Grund auf sicher und reproduzierbar sind.
 """

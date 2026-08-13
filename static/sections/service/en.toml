@@ -1,33 +1,19 @@
-top_title = "Working Area"
-title     = "Creative Services"
-subtitle  = "Enjoy team diversity and increase their networks among others people in various fields by provided."
+top_title = "What We Do"
+title     = "Our Services"
+subtitle  = "Consulting and hands-on engineering for teams that need software and infrastructure they can trust."
 
 [[services]]
-title   = "UI/UX Design"
-content = "Lorem ipsum dolor sit amet conset sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat."
-image   = "images/service/ui-ux.svg"
+title   = "Software & Cloud Architecture"
+content = "Designing secure, scalable, and maintainable systems from the ground up."
 
 [[services]]
-title   = "Web Development"
-content = "Lorem ipsum dolor sit amet conset sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat."
-image   = "images/service/web.svg"
+title   = "Cloud Engineering & DevOps"
+content = "Building and operating cloud-native infrastructure with Kubernetes, infrastructure-as-code, and modern DevOps practices."
 
 [[services]]
-title   = "Creative Design"
-content = "Lorem ipsum dolor sit amet conset sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat."
-image   = "images/service/creative.svg"
+title   = "Rust Development"
+content = "Building reliable, high-performance software in Rust."
 
 [[services]]
-title   = "Branding"
-content = "Lorem ipsum dolor sit amet conset sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat."
-image   = "images/service/branding.svg"
-
-[[services]]
-title   = "UI/UX Design"
-content = "Lorem ipsum dolor sit amet conset sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat."
-image   = "images/service/ui-ux.svg"
-
-[[services]]
-title   = "Web Development"
-content = "Lorem ipsum dolor sit amet conset sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat."
-image   = "images/service/web.svg"
+title   = "Nix & NixOS Consulting"
+content = "Declarative infrastructure and reproducible systems with Nix, NixOS, and Nixpkgs."

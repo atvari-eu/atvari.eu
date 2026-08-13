@@ -4,6 +4,11 @@ compile_sass = true
 default_language = "en"
 theme = "portio-zola"
 
+[link_checker]
+skip_prefixes = [
+    "https://www.linkedin.com/",
+]
+
 [languages.en]
 title = "atvari"
 generate_feeds = true
@@ -41,7 +46,7 @@ home = "Home"
 about = "About"
 service = "Service"
 work = "Work"
-resume = "Resume"
+team = "Team"
 blog = "Blog"
 contact = "Contact"
 
@@ -89,7 +94,7 @@ home = "Start"
 about = "Über uns"
 service = "Leistungen"
 work = "Arbeiten"
-resume = "Lebenslauf"
+team = "Team"
 blog = "Blog"
 contact = "Kontakt"
 
@@ -112,7 +117,7 @@ menus = [
   { name = "about", url = "#about" },
   { name = "service", url = "#service" },
   { name = "work", url = "#portfolio" },
-  { name = "resume", url = "#resume" },
+  { name = "team", url = "team" },
   { name = "blog", url = "#blog" },
   { name = "contact", url = "#contact" }
 ]

@@ -1,10 +1,10 @@
-title       = "Hello, I am Felix"
+title       = "atvari GmbH"
 description = """
-# I am here for your software business
+# Software & Cloud Engineering Consulting
 
-Enjoy Software & DevOps consulting, architectural guidance, and custom software solutions.
+With ❤️ for Rust 🦀, Nix ❄️ & Open Source 🌐 — we help teams build secure, scalable systems they can trust.
 """
-button_name = "Contact me"
+button_name = "Get in touch"
 button_url  = "contact"
 image       = "images/hero/2960351.jpg"
 # video_thumb = "images/hero/popup-thumb.png"
