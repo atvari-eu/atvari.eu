@@ -50,6 +50,7 @@ about_me = "About me"
 frequently_ask_question = "Frequently Asked Questions"
 privacy_and_policy = "Privacy Policy"
 latest_article = "Latest article"
+impressum = "Impressum"
 
 [languages.de]
 title = "atvari"
@@ -97,6 +98,7 @@ about_me = "Über mich"
 frequently_ask_question = "Häufig gestellte Fragen"
 privacy_and_policy = "Datenschutz"
 latest_article = "Neuester Artikel"
+impressum = "Impressum"
 
 [extra]
 date_format = "%d %B, %Y"
@@ -119,7 +121,8 @@ sitemaps = [
   { name = "about_me", url = "#about" },
   { name = "frequently_ask_question", url = "#" },
   { name = "privacy_and_policy", url = "#" },
-  { name = "latest_article", url = "#" }
+  { name = "latest_article", url = "#" },
+  { name = "impressum", url = "/impressum/" }
 ]
 
 socials = [
