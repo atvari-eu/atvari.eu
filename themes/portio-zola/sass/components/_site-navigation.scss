@@ -11,10 +11,13 @@
         border-radius: 5px;
     }
     .navbar-brand{
+        width: 178px;
         img{
-            @include desktop{
-                width: 80%;
-            }
+            width: 100%;
+            height: auto;
+        }
+        @include desktop{
+            width: 142px;
         }
     }
     .main-navigation{
