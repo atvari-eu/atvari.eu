@@ -96,7 +96,7 @@
                         {% for social in extra.socials %}
                         <li class="d-inline-block mx-2">
                             <a target="_blank" href="{{ social.url }}" aria-label="{{ social.label }}" title="{{ social.label }}">
-                                {% if social.icon in ["bluesky", "mastodon", "codeberg", "forgejo", "sifa"] %}
+                                {% if social.icon in ["bluesky", "mastodon", "matrix", "codeberg", "forgejo", "sifa"] %}
                                 {{ macros::brand_icon(name=social.icon) }}
                                 {% else %}
                                 <i class="lni lni-{{ social.icon }}"></i>

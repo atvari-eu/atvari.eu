@@ -33,12 +33,16 @@ email = "Email"
 categories_description = "Showing all posts with the category"
 tags_description = "Showing all posts with the tag"
 opening_hours = "Working hours"
+follow_us = "Follow us"
 form_title = "Contact form"
 form_button = "Send message"
 form_input_name = "Name"
 form_input_email = "Email"
 form_input_message = "Message"
 form_input_agreement = "I agree that my submitted data is being collected and stored."
+booking_title = "Free initial consultation"
+booking_description = "Pick a time that works for you and we'll get in touch."
+booking_button = "Schedule a call"
 copyright = "Copyright © atvari GmbH 2026"
 
 # Menus
@@ -76,12 +80,16 @@ email = "E-Mail"
 categories_description = "Zeigt alle Beiträge der Kategorie"
 tags_description = "Zeigt alle Beiträge mit dem Tag"
 opening_hours = "Öffnungszeiten"
+follow_us = "Folge uns"
 form_title = "Kontaktformular"
 form_button = "Nachricht senden"
 form_input_name = "Name"
 form_input_email = "E-Mail"
 form_input_message = "Nachricht"
 form_input_agreement = "Ich stimme zu, dass meine übermittelten Daten gespeichert werden."
+booking_title = "Kostenloses Erstgespräch"
+booking_description = "Wähle einen passenden Termin und wir melden uns bei dir."
+booking_button = "Termin vereinbaren"
 copyright = "Copyright © atvari GmbH 2026"
 
 # Menus
@@ -109,7 +117,7 @@ menus = [
   { name = "service", url = "#service" },
   { name = "team", url = "team" },
   { name = "blog", url = "blog" },
-  { name = "contact", url = "#contact" }
+  { name = "contact", url = "contact" }
 ]
 
 sitemaps = [
@@ -143,3 +151,7 @@ active = false
 active = false
 # latitude = ""
 # longitude = ""
+
+[extra.booking]
+active = true
+url = "https://calendar.proton.me/bookings#U5cyVy3HoE--MztMab00xjtVjHi2Er2MZFwdagPoZY4="
