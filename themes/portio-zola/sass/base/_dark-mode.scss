@@ -1,3 +1,5 @@
+$dark-link-hover-color: lighten($primary-color, 12%);
+
 // Theme custom properties. Light values match the site's existing design
 // exactly; dark values are the only thing that changes per theme.
 :root {
@@ -14,6 +16,23 @@
   --color-muted: #a3a6b3;
   --color-surface: #1b2031;
   --color-decorative: #1b2031;
+
+  // Bootstrap components/utilities (.text-reset, .text-body-secondary, plain
+  // <body> inheritance, etc.) read these directly, so without overriding them
+  // here any markup that relies on Bootstrap's own text color stays dark.
+  --bs-body-color: var(--color-heading);
+  --bs-body-color-rgb: 241, 241, 244;
+  --bs-secondary-color: var(--color-muted);
+  --bs-tertiary-color: var(--color-muted);
+  --bs-emphasis-color: var(--color-heading);
+  --bs-heading-color: var(--color-heading);
+
+  // Default Bootstrap link blue reads poorly on the dark surface color;
+  // use the brand green (already used for links/accents elsewhere) instead.
+  --bs-link-color: #{$primary-color};
+  --bs-link-color-rgb: #{red($primary-color)}, #{green($primary-color)}, #{blue($primary-color)};
+  --bs-link-hover-color: #{$dark-link-hover-color};
+  --bs-link-hover-color-rgb: #{red($dark-link-hover-color)}, #{green($dark-link-hover-color)}, #{blue($dark-link-hover-color)};
 }
 
 // Explicit user choice, persisted via localStorage and set on <html> before
@@ -35,6 +54,14 @@
 // each component's full rule.
 body {
   background: var(--color-bg);
+}
+
+// Bootstrap components that redeclare their own custom properties (like
+// --bs-dropdown-bg) locally can't be themed by overriding the root-level
+// variable alone — the component's own rule shadows it. Override the
+// property directly on the component instead.
+.dropdown-menu {
+  --bs-dropdown-bg: var(--color-surface);
 }
 
 .navbar {
