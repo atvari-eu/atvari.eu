@@ -62,6 +62,8 @@ body {
 // property directly on the component instead.
 .dropdown-menu {
   --bs-dropdown-bg: var(--color-surface);
+  --bs-dropdown-link-hover-bg: rgba(255, 255, 255, 0.08);
+  --bs-dropdown-link-hover-color: var(--color-heading);
 }
 
 .navbar {
