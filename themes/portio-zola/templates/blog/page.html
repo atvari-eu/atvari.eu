@@ -76,7 +76,6 @@
         <div class="card blog__post-card blog__post-card--large">
           <img class="blog__post-card-image" src="{{ get_url(path=page.extra.post_image) }}" alt="feature-image">
           <div class="blog__post-card-body">
-            <div class="singleBlog__content">
                 {% if page.toc %}
                     <h3>Table of contents</h3>
                     <ul>
@@ -99,7 +98,6 @@
                 {% endif %}
 
               {{ page.content | safe }}
-            </div>
           </div>
         </div>
       </div>
