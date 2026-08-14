@@ -77,7 +77,7 @@
           <img class="blog__post-card-image" src="{{ get_url(path=page.extra.post_image) }}" alt="feature-image">
           <div class="blog__post-card-body">
                 {% if page.toc %}
-                    <h3>Table of contents</h3>
+                    <h3>{{ trans(key="table_of_contents", lang=lang) }}</h3>
                     <ul>
                     {% for toc in page.toc %}
                         <li>

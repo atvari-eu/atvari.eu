@@ -20,6 +20,7 @@ taxonomies = [
 ]
 
 [languages.en.translations]
+table_of_contents = "Table of contents"
 contact_me = "Contact us"
 start_project = "Let's start a project"
 showing_all = "Showing all"
@@ -67,6 +68,7 @@ taxonomies = [
 ]
 
 [languages.de.translations]
+table_of_contents = "Inhaltsverzeichnis"
 contact_me = "Kontaktiere uns"
 start_project = "Projekt starten"
 showing_all = "Alle anzeigen"
