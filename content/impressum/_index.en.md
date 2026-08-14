@@ -22,5 +22,3 @@ VAT ID pursuant to § 27a UStG: pending\
 Managing director: Felix Schröter
 
 Responsible for content pursuant to § 55 (2) RStV: Felix Schröter (address as above)
-
-🛡️ [Professional liability insurance provided by exali](https://www.exali.de/siegel/atvari)

@@ -22,5 +22,3 @@ Umsatzsteuer-Identifikationsnummer gem. § 27a UStG: ausstehend\
 Vertretungsberechtigter Geschäftsführer: Felix Schröter
 
 Verantwortlich für den Inhalt nach § 55 Abs. 2 RStV: Felix Schröter (Anschrift s.o.)
-
-🛡️ [Haftpflichtversichert durch exali](https://www.exali.de/siegel/atvari)
