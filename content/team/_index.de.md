@@ -8,7 +8,7 @@ name = "Felix Schröter"
 role = "Gründer & Principal Engineer"
 image = "images/team/felix.jpg"
 bio = """
-Unabhängiger Software- und Cloud-Engineer mit über 11 Jahren Erfahrung im Aufbau von Cloud-nativer Infrastruktur nach DevOps-Praktiken für Startups und Unternehmen. Bevor er 2026 atvari gründete, war er als Tech Lead bei der upsquared GmbH sowie als Senior Software Engineer bei Digital Spring und upsquared tätig und startete seine Karriere 2012 als Trainee bei der Werum IT Solutions.
+Unabhängiger Software- und Cloud-Engineer mit über 11 Jahren Erfahrung im Aufbau von Cloud-nativer Infrastruktur nach DevOps-Praktiken für Startups und Unternehmen.
 
 Er ist seit 2019 Nixpkgs-Contributor, seit 2020 Maintainer und seit 2024 Committer — und hilft damit, das größte Open-Source-Paketarchiv zu pflegen. Bemerkenswert ist außerdem Plastikpost, eine von ihm entwickelte Web-App, über die bereits mehr als 79.000 Widersprüche gegen unadressierte Werbepost eingelegt wurden.
 """
