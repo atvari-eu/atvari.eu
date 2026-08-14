@@ -138,9 +138,20 @@
             padding: 50px 0;
         }
         &_logo{
-            img{
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            @include desktop{
+                align-items: center;
+            }
+            > img{
                 width: 178px;
                 height: auto;
+            }
+            .contact__widget_seal{
+                display: block;
+                margin-top: 15px;
             }
         }
         &_sitemap{
@@ -239,10 +250,6 @@
                 font-family: $secondary-font;
                 margin: 0;
             }
-        }
-        &_seal{
-            display: inline-block;
-            margin-top: 15px;
         }
         &_social{
             ul{
