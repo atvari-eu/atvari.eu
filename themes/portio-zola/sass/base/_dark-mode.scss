@@ -1,4 +1,9 @@
 $dark-link-hover-color: lighten($primary-color, 12%);
+$dark-surface-color: #1b2031;
+// Background SVG shapes (hero, service) sit behind foreground cards that
+// already use $dark-surface-color, so they need to be visibly darker rather
+// than reusing it directly.
+$dark-shape-color: darken($dark-surface-color, 5%);
 
 // Theme custom properties. Light values match the site's existing design
 // exactly; dark values are the only thing that changes per theme.
@@ -8,14 +13,16 @@ $dark-link-hover-color: lighten($primary-color, 12%);
   --color-muted: #7e7e8a;
   --color-surface: #ffffff;
   --color-decorative: #f1f6f9;
+  --color-shape: #f1f6f9;
 }
 
 @mixin dark-theme-vars {
   --color-bg: #12141c;
   --color-heading: #f1f1f4;
   --color-muted: #a3a6b3;
-  --color-surface: #1b2031;
-  --color-decorative: #1b2031;
+  --color-surface: #{$dark-surface-color};
+  --color-decorative: #{$dark-surface-color};
+  --color-shape: #{$dark-shape-color};
 
   // Bootstrap components/utilities (.text-reset, .text-body-secondary, plain
   // <body> inheritance, etc.) read these directly, so without overriding them
@@ -87,7 +94,7 @@ body {
 }
 
 .hero_background-svg path {
-  fill: var(--color-decorative);
+  fill: var(--color-shape);
 }
 
 .about_header h2 {
@@ -118,7 +125,7 @@ body {
   color: var(--color-muted);
 }
 .service__background path {
-  fill: var(--color-decorative);
+  fill: var(--color-shape);
 }
 .service__background_shape stop {
   stop-color: var(--color-decorative);
@@ -213,7 +220,7 @@ body {
   color: var(--color-heading);
 }
 .contact-booking-card p {
-  color: var(--color-muted);
+  color: var(--color-heading);
 }
 .contact__background_shape svg path {
   fill: var(--color-surface);
