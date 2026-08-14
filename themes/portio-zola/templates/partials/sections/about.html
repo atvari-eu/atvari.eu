@@ -8,11 +8,6 @@
         <div class="row text-center">
             <div class="col-lg-6 offset-lg-3">
                 <div class="about_header mb-5">
-                    {% if data.title %}
-                    <span class="top-title">
-                        {{ data.title }}
-                    </span>
-                    {% endif %}
                    {{ data.description | markdown(inline=true) | safe }}
                 </div>
             </div>

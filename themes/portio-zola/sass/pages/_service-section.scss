@@ -37,6 +37,9 @@
     }
     &__header{
         margin-bottom: 50px;
+        @include desktop{
+            text-align: center;
+        }
         span{
             font-size: 20px;
             font-family: $secondary-font;

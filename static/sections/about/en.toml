@@ -1,12 +1,11 @@
-title = "About atvari"
 buttons = [
     ""
 ]
 description = """
-  ## Software & Cloud Engineering Consulting
+  ## About atvari
 
   atvari GmbH is a software and cloud engineering consultancy founded in
-  2026 and based in Lüneburg, Germany.
+  2026 and based in Lüneburg, Germany, operating worldwide.
 """
 content = """
   ### With ❤️ for Rust, Nix & Open Source

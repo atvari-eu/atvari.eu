@@ -1,12 +1,11 @@
-title = "Über atvari"
 buttons = [
     ""
 ]
 description = """
-  ## Software- & Cloud-Engineering-Beratung
+  ## Über atvari
 
   Die atvari GmbH ist eine 2026 gegründete Software- und
-  Cloud-Engineering-Beratung mit Sitz in Lüneburg.
+  Cloud-Engineering-Beratung mit Sitz in Lüneburg, die weltweit tätig ist.
 """
 content = """
   ### Mit ❤️ für Rust, Nix & Open Source
