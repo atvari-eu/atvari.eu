@@ -2,6 +2,7 @@ base_url = "https://atvari.eu"
 minify_html = true
 compile_sass = true
 default_language = "en"
+generate_feeds = true
 theme = "portio-zola"
 
 [link_checker]
