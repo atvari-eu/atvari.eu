@@ -43,6 +43,15 @@
                 color: $primary_color;
             }
         }
+        // On wide viewports the nav is a horizontal bar (not the collapsed
+        // hamburger menu), so dropdowns can open on hover in addition to
+        // Bootstrap's default click/JS toggle.
+        @media (min-width: 992px) {
+            .dropdown:hover > .dropdown-menu {
+                display: block;
+                margin-top: 0;
+            }
+        }
     }
     
     .hire_button{

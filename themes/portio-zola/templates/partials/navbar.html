@@ -15,11 +15,23 @@
         <div class="collapse navbar-collapse justify-content-between" id="navbarCollapse">
             <ul class="nav navbar-nav main-navigation">
                 {% for menu in extra.menus %}
+                {% if menu.name == "service" %}
+                <li class="nav-item dropdown">
+                    <a href="{{ get_url(path=menu.url, lang=lang) }}" class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        {{ trans(key=menu.name, lang=lang) }}
+                    </a>
+                    <ul class="dropdown-menu">
+                        <li><a class="dropdown-item" href="{{ get_url(path="nix", lang=lang) }}">{{ trans(key="nix", lang=lang) }}</a></li>
+                        <li><a class="dropdown-item" href="{{ get_url(path="rust", lang=lang) }}">{{ trans(key="rust", lang=lang) }}</a></li>
+                    </ul>
+                </li>
+                {% else %}
                 <li class="nav-item">
                     <a href="{{ get_url(path=menu.url, lang=lang) }}" class="nav-link">
                         {{ trans(key=menu.name, lang=lang) }}
                     </a>
                 </li>
+                {% endif %}
                 {% endfor %}
                 
                 {% if config.languages | length >= 1 %}

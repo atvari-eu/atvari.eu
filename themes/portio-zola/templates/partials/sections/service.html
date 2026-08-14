@@ -39,7 +39,11 @@
 
               <div class="service__slider">
                   {% for service in data.services %}
+                  {% if service.url %}
+                  <a href="{{ get_url(path=service.url, lang=lang) }}" class="service__slider_item">
+                  {% else %}
                   <div class="service__slider_item">
+                  {% endif %}
                       {% if service.image %}
                         <div class="service__slider_item-icon">
                             <div class="icon-background">
@@ -54,7 +58,11 @@
                       {% endif %}
                       <h4>{{ service.title }}</h4>
                       <p>{{ service.content | markdown(inline=true) | safe }}</p>
+                  {% if service.url %}
+                  </a>
+                  {% else %}
                   </div>
+                  {% endif %}
                   {% endfor %}
               </div>
   </div>

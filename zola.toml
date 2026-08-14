@@ -122,8 +122,6 @@ menus = [
   { name = "home", url = "#home" },
   { name = "about", url = "#about" },
   { name = "service", url = "#service" },
-  { name = "nix", url = "nix" },
-  { name = "rust", url = "rust" },
   { name = "team", url = "team" },
   { name = "blog", url = "blog" },
   { name = "contact", url = "contact" }

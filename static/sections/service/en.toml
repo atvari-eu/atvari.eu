@@ -12,7 +12,9 @@ content = "Building and operating cloud-native infrastructure with Kubernetes, i
 [[services]]
 title   = "Rust Development"
 content = "Building reliable, high-performance software in Rust."
+url     = "@/rust/_index.md"
 
 [[services]]
 title   = "Nix & NixOS Consulting"
 content = "Declarative infrastructure and reproducible systems with Nix, NixOS, and Nixpkgs."
+url     = "@/nix/_index.md"
