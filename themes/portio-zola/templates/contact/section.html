@@ -37,23 +37,18 @@
   </div>
 </header>
 
-{% if extra.booking.active and extra.booking.url %}
-<section class="section contact-booking">
-    <div class="container">
-        <div class="contact-booking-card">
-            <h3>{{ trans(key='booking_title', lang=lang) }}</h3>
-            <p>{{ trans(key='booking_description', lang=lang) }}</p>
-            <a href="{{ extra.booking.url }}" target="_blank" rel="noopener" class="contact-booking-btn">
-                {{ trans(key='booking_button', lang=lang) }}
-            </a>
-        </div>
-    </div>
-</section>
-{% endif %}
-
 <section class="section contact__info">
   <div class="container">
-    <div class="row d-flex align-items-stretch">
+    {% if extra.booking.active and extra.booking.url %}
+    <div class="contact-booking-card">
+        <h3>{{ trans(key='booking_title', lang=lang) }}</h3>
+        <p>{{ trans(key='booking_description', lang=lang) }}</p>
+        <a href="{{ extra.booking.url }}" target="_blank" rel="noopener" class="contact-booking-btn">
+            {{ trans(key='booking_button', lang=lang) }}
+        </a>
+    </div>
+    {% endif %}
+    <div class="row d-flex align-items-stretch gy-4{% if extra.booking.active and extra.booking.url %} mt-4{% endif %}">
       {% if extra.address.address %}
       <div class="col-lg-4 d-flex">
         <div class="contact__info_item flex-fill">
