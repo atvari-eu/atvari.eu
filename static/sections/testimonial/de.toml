@@ -2,19 +2,17 @@ top_title = "Kundenstimmen"
 title     = "Was sagen andere über uns?"
 
 [[testimonials]]
-name    = "Ryan Cook"
-comment = "Takimata sanctus est lorem ipsum dolor sit amet lorem ipsum dolor sit amet consetur sad ipscing elitr sed diam nonumy eirmod tempor invidunt labore dolore magna."
-time    = "20. Jan. 2020"
+name    = "Daniel Heymann"
+company = "CmdScale GmbH"
+comment = """Ich schätze Felix's Engagement als aktiver NixOS-Maintainer und seine Fähigkeit, technisches Wissen als Mentor strukturiert an das Team weiterzugeben. Ich kann Felix als Architekten und Engineer absolut empfehlen."""
+time    = "07. Mai 2026"
 star    = 5
 
 [[testimonials]]
-name    = "Justin Trudo"
-comment = "Takimata sanctus est lorem ipsum dolor sit amet lorem ipsum dolor sit amet consetur sad ipscing elitr sed diam nonumy eirmod tempor invidunt labore dolore magna."
-time    = "16. Jan. 2020"
-star    = 4
+name    = "Evgeny Satyev"
+company = "upsquared GmbH"
+comment = """Felix ist der Typ Engineer, der versteht, dass „schnell langsam ist" – er geht an die Entwicklung mit viel Nachdenken, sorgfältiger Planung und einem starken Fokus auf Qualität heran. Die Umgebungen, die er aufgesetzt hat, und die Lösungen, die er geliefert hat, waren immer sicher, skalierbar und leicht zu warten.
 
-[[testimonials]]
-name    = "Franky Filth"
-comment = "Takimata sanctus est lorem ipsum dolor sit amet lorem ipsum dolor sit amet consetur sad ipscing elitr sed diam nonumy eirmod tempor invidunt labore dolore magna."
-time    = "08. Mär. 2020"
-star    = 3
+(Aus dem Englischen übersetzt.)"""
+time    = "04. Jul. 2025"
+star    = 5
