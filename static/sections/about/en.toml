@@ -12,8 +12,8 @@ content = """
 
   We help teams design, build, and operate secure, scalable, and
   easy-to-maintain systems — offering software & cloud architecture, custom
-  software engineering, cloud engineering, and DevOps / infrastructure-as-code
-  consulting, with particular depth in Rust and the Nix/NixOS ecosystem.
+  software engineering, cloud engineering, and DevOps consulting, with
+  particular depth in Rust and the Nix/NixOS ecosystem.
 
   We're active contributors to the open source community, including
   Nixpkgs, the largest open source package repository, and care deeply
