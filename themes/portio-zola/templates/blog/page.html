@@ -73,36 +73,34 @@
   <div class="container">
     <div class="row">
       <div class="col-lg-12">
-        <div class="singleBlog__feature">
-          <img src="{{ get_url(path=page.extra.post_image) }}" alt="feature-image">
-        </div>
-      </div>
-    </div>
-    <div class="row mt-5">
-      <div class="col-lg-12">
-        <div class="singleBlog__content">
-            {% if page.toc %}
-                <h3>Table of contents</h3>
-                <ul>
-                {% for toc in page.toc %}
-                    <li>
-                        <a href="{{ toc.permalink | safe }}">{{ toc.title }}</a>
+        <div class="card blog__post-card blog__post-card--large">
+          <img class="blog__post-card-image" src="{{ get_url(path=page.extra.post_image) }}" alt="feature-image">
+          <div class="blog__post-card-body">
+            <div class="singleBlog__content">
+                {% if page.toc %}
+                    <h3>Table of contents</h3>
+                    <ul>
+                    {% for toc in page.toc %}
+                        <li>
+                            <a href="{{ toc.permalink | safe }}">{{ toc.title }}</a>
 
-                        {% if toc.children %}
-                        <ul>
-                            {% for children in toc.children %}
-                                <li>
-                                    <a href="{{ children.permalink | safe }}">{{ children.title }}</a>
-                                </li>
-                            {% endfor %}
-                        </ul>
-                        {% endif %}
-                    </li>
-                {% endfor %}
-                </ul>
-            {% endif %}
+                            {% if toc.children %}
+                            <ul>
+                                {% for children in toc.children %}
+                                    <li>
+                                        <a href="{{ children.permalink | safe }}">{{ children.title }}</a>
+                                    </li>
+                                {% endfor %}
+                            </ul>
+                            {% endif %}
+                        </li>
+                    {% endfor %}
+                    </ul>
+                {% endif %}
 
-          {{ page.content | safe }}
+              {{ page.content | safe }}
+            </div>
+          </div>
         </div>
       </div>
     </div>

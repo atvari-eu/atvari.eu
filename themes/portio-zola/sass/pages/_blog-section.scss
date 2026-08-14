@@ -194,6 +194,21 @@
         color: #9d9ea5;
     }
 }
+.blog__post-card--large.card {
+    border-radius: 30px;
+}
+.blog__post-card--large .blog__post-card-image {
+    height: 420px;
+    @include desktop {
+        height: 260px;
+    }
+}
+.blog__post-card--large .blog__post-card-body {
+    padding: 60px;
+    @include desktop {
+        padding: 30px;
+    }
+}
 @keyframes rotate{
     from { 
         -webkit-transform: rotate(0deg); 
