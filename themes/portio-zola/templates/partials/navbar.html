@@ -23,13 +23,20 @@
                 {% endfor %}
                 
                 {% if config.languages | length >= 1 %}
+                {# Zola omits the leading slash from `current_path` specifically for a
+                   non-default language's homepage (e.g. "de/" instead of "/de/"),
+                   unlike every other page -- normalize before matching the prefix. #}
+                {% set normalized_path = current_path %}
+                {% if not (normalized_path is starting_with("/")) %}
+                    {% set normalized_path = "/" ~ normalized_path %}
+                {% endif %}
                 {% set lang_prefix = "/" ~ lang ~ "/" %}
-                {% if lang != config.default_language and current_path is starting_with(lang_prefix) %}
-                    {% set current_relative_path = current_path | replace(from=lang_prefix, to="") %}
-                {% elif current_path == "/" %}
+                {% if normalized_path == "/" or normalized_path == lang_prefix %}
                     {% set current_relative_path = "/" %}
+                {% elif lang != config.default_language and normalized_path is starting_with(lang_prefix) %}
+                    {% set current_relative_path = normalized_path | replace(from=lang_prefix, to="") %}
                 {% else %}
-                    {% set current_relative_path = current_path | trim_start_matches(pat="/") %}
+                    {% set current_relative_path = normalized_path | trim_start_matches(pat="/") %}
                 {% endif %}
                 <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">{{ lang | upper }}</a>
