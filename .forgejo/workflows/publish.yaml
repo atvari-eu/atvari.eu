@@ -1,0 +1,25 @@
+name: Publish
+
+on:
+  push:
+    branches: [main]
+
+jobs:
+  publish:
+    runs-on: codeberg-tiny
+    steps:
+      - uses: actions/checkout@v5
+
+      - name: Install Zola
+        run: |
+          curl -sL https://github.com/getzola/zola/releases/download/v0.22.1/zola-v0.22.1-x86_64-unknown-linux-gnu.tar.gz | tar xz
+          chmod +x zola
+
+      - name: Build site
+        run: ./zola build --minify
+
+      - uses: actions/git-pages@v2
+        with:
+          site: https://${{ forge.event.repository.owner.username }}.codeberg.page/${{ forge.event.repository.name }}/
+          token: ${{ forge.token }}
+          source: public/
