@@ -18,6 +18,9 @@
       width: 100%;
       height: 100%;
     }
+    @media (min-width: 1400px) {
+      top: -580px;
+    }
   }
   &_footer-svg {
     position: absolute;

@@ -50,9 +50,11 @@ body {
 }
 
 .hero_content h1,
-.hero_content span,
 .hero_content p {
   color: var(--color-heading);
+}
+.hero_content span {
+  color: var(--color-muted);
 }
 
 .hero_background-svg path {
@@ -66,9 +68,16 @@ body {
   color: var(--color-muted);
 }
 
+.top-title {
+  color: var(--color-muted);
+}
+
 .service__header h1,
 .service__header p {
   color: var(--color-heading);
+}
+.service__header span {
+  color: var(--color-muted);
 }
 .service__slider_item {
   background: var(--color-surface);
@@ -86,11 +95,18 @@ body {
   stop-color: var(--color-decorative);
 }
 
+.skill__progress_heading span {
+  color: var(--color-muted);
+}
+
 .testimonial {
   background: var(--color-decorative);
 }
 .testimonial__header h1 {
   color: var(--color-heading);
+}
+.testimonial__header span {
+  color: var(--color-muted);
 }
 .testimonial__slider_item {
   background: var(--color-surface);
@@ -110,6 +126,9 @@ body {
 
 .blog__header h1 {
   color: var(--color-heading);
+}
+.blog__header span {
+  color: var(--color-muted);
 }
 .blog__item-content {
   background: var(--color-surface);
@@ -137,11 +156,21 @@ body {
   color: var(--color-heading);
 }
 
+.contact__info_item,
+.contact-booking-card {
+  background: var(--color-surface);
+}
 .contact__info_item h4 {
   color: var(--color-heading);
 }
 .contact__info_item p,
 .contact__info_item a {
+  color: var(--color-muted);
+}
+.contact-booking-card h3 {
+  color: var(--color-heading);
+}
+.contact-booking-card p {
   color: var(--color-muted);
 }
 .contact__background_shape svg path {
