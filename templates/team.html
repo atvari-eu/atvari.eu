@@ -22,7 +22,7 @@
   <div class="container">
     <div class="team__grid">
       {% for member in section.extra.members %}
-      <div class="team__card">
+      <div class="team__card" id="{{ member.name | slugify }}">
         <div class="team__card-inner">
           <div class="team__card-inner-blob">
             <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"

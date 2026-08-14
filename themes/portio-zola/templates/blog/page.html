@@ -1,6 +1,10 @@
 {% extends "base.html" %}
 
 {% block content %}
+{% if page.extra.author %}
+{% set team = get_section(path="team/_index.md", lang=lang) %}
+{% set authors = team.extra.members | filter(attribute="name", value=page.extra.author) %}
+{% endif %}
 <header class="breadCrumb">
   <div class="container">
     <div class="row">
@@ -17,6 +21,14 @@
     </div>
 
     <ul class="post-meta">
+      {% if authors and authors | length > 0 %}
+      {% set author = authors | first %}
+      <li>
+        <a class="post-meta__author-link" href="{{ get_url(path='@/team/_index.md', lang=lang) }}#{{ author.name | slugify }}">
+          <img class="post-meta__avatar" src="{{ get_url(path=author.image) }}" alt="{{ author.name }}">{{ author.name }}
+        </a>
+      </li>
+      {% endif %}
       <li>
         <i class="lni lni-calendar"></i>
         {{ page.date | date(format=config.extra.date_format) }}

@@ -8,6 +8,7 @@ categories = ["blog"]
 tags = ["announcement"]
 
 [extra]
+author = "Felix Schröter"
 feature_image = "images/blog/posts/hello-world.jpg"
 post_image = "images/blog/posts/hello-world.jpg"
 +++

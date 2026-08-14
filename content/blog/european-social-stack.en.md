@@ -8,6 +8,7 @@ categories = ["blog"]
 tags = ["announcement", "digital-sovereignty"]
 
 [extra]
+author = "Felix Schröter"
 feature_image = "images/blog/posts/european-social-stack.png"
 post_image = "images/blog/posts/european-social-stack.png"
 +++
