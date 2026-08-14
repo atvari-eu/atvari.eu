@@ -18,7 +18,7 @@ System liegt. [NixOS](https://nixos.org/) ist eine Linux-Distribution, die
 auf allen dreien aufbaut und das gesamte System — Pakete, Dienste, Nutzer —
 aus derselben deklarativen Sprache konfiguriert. Zusammen machen sie
 Builds, Deployments und Entwicklungsumgebungen wirklich reproduzierbar: Was
-auf einer Maschine funktioniert, funktioniert auf jeder Maschine — heute
+auf einer Maschine funktioniert, funktioniert auf jeder Maschine, heute
 und in Jahren noch.
 
 Wir betreiben Nix und NixOS seit Jahren produktiv und auf unseren eigenen
@@ -26,7 +26,7 @@ Rechnern und helfen Teams dabei, sie ohne Trial-and-Error einzuführen.
 """
 intro_business = """
 Verlässlichkeit und Vorhersehbarkeit senken direkt eure Betriebskosten.
-Mit Nix und NixOS ist „läuft bei mir“ keine Ausrede mehr — was
+Mit Nix und NixOS ist „läuft bei mir“ keine Ausrede mehr: was
 Entwickler:innen bauen und testen, läuft exakt so in Produktion. Das
 bedeutet weniger Ausfälle, schnellere Wiederherstellung nach Störungen
 (ein fehlgeschlagenes Deployment ist in Sekunden zurückgerollt) und
@@ -35,16 +35,16 @@ weniger Zeit für die Fehlersuche wegen unterschiedlicher Umgebungen.
 Teams, die Nix einführen, onboarden neue Entwickler:innen außerdem
 schneller, da eine funktionierende Entwicklungsumgebung nur einen Befehl
 entfernt ist, und können dieselbe Infrastruktur über Cloud-Anbieter oder
-On-Premises hinweg betreiben — ganz ohne Vendor-Lock-in.
+On-Premises hinweg betreiben, ganz ohne Vendor-Lock-in.
 
-Wir helfen euch, diese Vorteile ohne steile Lernkurve zu erreichen — vom
+Wir helfen euch, diese Vorteile ohne steile Lernkurve zu erreichen, vom
 ersten Pilotprojekt bis zum Betrieb eurer gesamten Plattform.
 """
 
 [[extra.benefits]]
 icon = "reload"
 title = "Reproduzierbar per Design"
-content = "Jeder Build läuft in einer isolierten Sandbox mit explizit deklarierten Eingaben — was auf einer Maschine funktioniert, funktioniert auf jeder und auch noch nächstes Jahr."
+content = "Jeder Build läuft in einer isolierten Sandbox mit explizit deklarierten Eingaben, was auf einer Maschine funktioniert, funktioniert auf jeder und auch noch nächstes Jahr."
 
 [[extra.benefits]]
 icon = "checkmark-circle"
@@ -89,7 +89,7 @@ content = "Flake-basierte Dev-Shells, damit das Onboarding neuer Mitwirkender Mi
 [[extra.services]]
 icon = "network"
 title = "NixOS-Infrastruktur"
-content = "Deklarative Server-Flotten, ausgerollt und synchron gehalten mit Tools wie nixos-rebuild, deploy-rs oder colmena — inklusive Secrets-Management."
+content = "Deklarative Server-Flotten, ausgerollt und synchron gehalten mit Tools wie nixos-rebuild, deploy-rs oder colmena, inklusive Secrets-Management."
 
 [[extra.services]]
 icon = "target"

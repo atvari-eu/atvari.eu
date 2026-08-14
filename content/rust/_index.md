@@ -18,7 +18,7 @@ iterators, combinators, and closures rather than mutable loops.
 
 Originally created by Graydon Hoare at Mozilla and now stewarded by the
 independent Rust Foundation, Rust has topped Stack Overflow's "most loved
-language" survey every year since 2016 — and we've been writing it for
+language" survey every year since 2016, and we've been writing it for
 years, from backend services to CLIs and systems software.
 """
 intro_business = """
@@ -29,7 +29,7 @@ efficiency, and less time spent firefighting instead of shipping features.
 
 Because the compiler catches entire categories of bugs before code ever
 reaches production, teams spend less time on incident response and more
-on building — and Rust's consistent popularity as developers' most-loved
+on building, and Rust's consistent popularity as developers' most-loved
 language makes it easier to attract and retain strong engineers.
 
 We help you evaluate where Rust pays off fastest, then design, build, or
@@ -59,12 +59,12 @@ content = "Pattern matching, algebraic data types, and Option/Result make illega
 [[extra.benefits]]
 icon = "checkmark-circle"
 title = "Reliability by default"
-content = "No null, no uncaught exceptions, no implicit conversions — whole classes of runtime crashes are ruled out before the program ever runs."
+content = "No null, no uncaught exceptions, no implicit conversions. Whole classes of runtime crashes are ruled out before the program ever runs."
 
 [[extra.benefits]]
 icon = "graph"
 title = "One of the most loved languages"
-content = "Rust has topped Stack Overflow's \"most admired language\" survey every year since 2016 — which shows up directly in team velocity and retention."
+content = "Rust has topped Stack Overflow's \"most admired language\" survey every year since 2016, which shows up directly in team velocity and retention."
 
 [[extra.services]]
 icon = "code-alt"
@@ -79,7 +79,7 @@ content = "Porting performance- or reliability-critical components from Python, 
 [[extra.services]]
 icon = "layers"
 title = "Architecture & code review"
-content = "Reviewing designs and codebases for idiomatic, functional-leaning Rust — ownership boundaries, error handling, and API ergonomics."
+content = "Reviewing designs and codebases for idiomatic, functional-leaning Rust: ownership boundaries, error handling, and API ergonomics."
 
 [[extra.services]]
 icon = "network"

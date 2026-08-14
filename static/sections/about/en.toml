@@ -11,7 +11,7 @@ content = """
   ### With ❤️ for Rust, Nix & Open Source
 
   We help teams design, build, and operate secure, scalable, and
-  easy-to-maintain systems — offering software & cloud architecture, custom
+  easy-to-maintain systems, offering software & cloud architecture, custom
   software engineering, cloud engineering, and DevOps consulting, with
   particular depth in Rust and the Nix/NixOS ecosystem.
 

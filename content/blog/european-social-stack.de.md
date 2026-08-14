@@ -24,7 +24,7 @@ Zu den zentralen Verpflichtungen gehören:
 - Gemeinsame, DSA/DMA-konforme Infrastruktur zur Inhaltemoderation
 - Ein Ökosystem, in dem kleine Anbieter shippen können und Nutzer frei wechseln können
 
-Heute dominieren Konzerne im Billionen-Dollar-Bereich. Die Antwort darauf ist nicht ein weiterer geschlossener Garten — sondern ein Ökosystem. Europa hat sowohl das technische Talent als auch den regulatorischen Rahmen, um hier voranzugehen.
+Heute dominieren Konzerne im Billionen-Dollar-Bereich. Die Antwort darauf ist nicht ein weiterer geschlossener Garten, sondern ein Ökosystem. Europa hat sowohl das technische Talent als auch den regulatorischen Rahmen, um hier voranzugehen.
 
 Wir schließen uns rund 100 Organisationen und 600 Einzelpersonen in diesem Vorhaben an.
 

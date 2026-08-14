@@ -19,7 +19,7 @@ setzt.
 
 Ursprünglich von Graydon Hoare bei Mozilla entwickelt und heute von der
 unabhängigen Rust Foundation getragen, führt Rust seit 2016 jedes Jahr die
-„most loved language“-Umfrage von Stack Overflow an — und wir schreiben es
+„most loved language“-Umfrage von Stack Overflow an, und wir schreiben es
 seit Jahren, von Backend-Services über CLIs bis hin zu Systemsoftware.
 """
 intro_business = """
@@ -31,7 +31,7 @@ neue Features.
 
 Weil der Compiler ganze Fehlerklassen erkennt, bevor Code überhaupt in
 Produktion läuft, verbringen Teams weniger Zeit mit Incident-Response und
-mehr mit dem eigentlichen Bauen — und Rusts anhaltende Beliebtheit als von
+mehr mit dem eigentlichen Bauen, und Rusts anhaltende Beliebtheit als von
 Entwickler:innen meistgeliebte Sprache erleichtert es, starke Engineers zu
 gewinnen und zu halten.
 
@@ -53,7 +53,7 @@ content = "Zero-Cost-Abstraktionen werden vollständig wegkompiliert, sodass les
 [[extra.benefits]]
 icon = "cogs"
 title = "Fearless Concurrency"
-content = "Das Typsystem erzwingt sicheres Teilen von Daten zwischen Threads bereits zur Compile-Zeit — eine ganze Klasse von Concurrency-Bugs wird zum Compile-Fehler."
+content = "Das Typsystem erzwingt sicheres Teilen von Daten zwischen Threads bereits zur Compile-Zeit. Eine ganze Klasse von Concurrency-Bugs wird zum Compile-Fehler."
 
 [[extra.benefits]]
 icon = "code-alt"
@@ -63,12 +63,12 @@ content = "Pattern Matching, algebraische Datentypen und Option/Result machen il
 [[extra.benefits]]
 icon = "checkmark-circle"
 title = "Verlässlichkeit per Default"
-content = "Kein Null, keine unbehandelten Exceptions, keine impliziten Konvertierungen — ganze Klassen von Laufzeitabstürzen sind von vornherein ausgeschlossen."
+content = "Kein Null, keine unbehandelten Exceptions, keine impliziten Konvertierungen. Ganze Klassen von Laufzeitabstürzen sind von vornherein ausgeschlossen."
 
 [[extra.benefits]]
 icon = "graph"
 title = "Eine der beliebtesten Sprachen"
-content = "Rust führt seit 2016 jedes Jahr die „most admired language“-Umfrage von Stack Overflow an — das zahlt sich direkt in Team-Geschwindigkeit und -Bindung aus."
+content = "Rust führt seit 2016 jedes Jahr die „most admired language“-Umfrage von Stack Overflow an, das zahlt sich direkt in Team-Geschwindigkeit und -Bindung aus."
 
 [[extra.services]]
 icon = "code-alt"
@@ -83,7 +83,7 @@ content = "Portierung performance- oder zuverlässigkeitskritischer Komponenten 
 [[extra.services]]
 icon = "layers"
 title = "Architektur & Code-Reviews"
-content = "Review von Designs und Codebasen auf idiomatisches, funktional geprägtes Rust — Ownership-Grenzen, Fehlerbehandlung und API-Ergonomie."
+content = "Review von Designs und Codebasen auf idiomatisches, funktional geprägtes Rust: Ownership-Grenzen, Fehlerbehandlung und API-Ergonomie."
 
 [[extra.services]]
 icon = "network"

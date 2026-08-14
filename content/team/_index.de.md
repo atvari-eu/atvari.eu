@@ -10,7 +10,7 @@ image = "images/team/felix.jpg"
 bio = """
 Unabhängiger Software- und Cloud-Engineer mit über 11 Jahren Erfahrung im Aufbau von Cloud-nativer Infrastruktur nach DevOps-Praktiken für Startups und Unternehmen.
 
-Er ist seit 2019 Nixpkgs-Contributor, seit 2020 Maintainer und seit 2024 Committer — und hilft damit, das größte Open-Source-Paketarchiv zu pflegen. Bemerkenswert ist außerdem Plastikpost, eine von ihm entwickelte Web-App, über die bereits mehr als 79.000 Widersprüche gegen unadressierte Werbepost eingelegt wurden.
+Er ist seit 2019 Nixpkgs-Contributor, seit 2020 Maintainer und seit 2024 Committer und hilft damit, das größte Open-Source-Paketarchiv zu pflegen. Bemerkenswert ist außerdem Plastikpost, eine von ihm entwickelte Web-App, über die bereits mehr als 79.000 Widersprüche gegen unadressierte Werbepost eingelegt wurden.
 """
 skills = [
   "Rust",

@@ -26,7 +26,7 @@ years, and we help teams adopt them without the trial and error.
 intro_business = """
 Reliability and predictability translate directly into lower operating
 costs. With Nix and NixOS, "it works on my machine" stops being an
-excuse — what a developer builds and tests is exactly what runs in
+excuse: what a developer builds and tests is exactly what runs in
 production, which means fewer outages, faster incident recovery (a broken
 deployment rolls back in seconds), and less time spent debugging
 environment drift.
@@ -36,14 +36,14 @@ development setup is one command away, and can run the same
 infrastructure across cloud providers or on-premises without vendor
 lock-in.
 
-We help you get these benefits without the steep learning curve — from a
+We help you get these benefits without the steep learning curve, from a
 first pilot project to running your whole platform on it.
 """
 
 [[extra.benefits]]
 icon = "reload"
 title = "Reproducible by design"
-content = "Every build runs in an isolated sandbox with explicitly declared inputs, so if it works on one machine, it works on every machine — and still works next year."
+content = "Every build runs in an isolated sandbox with explicitly declared inputs, so if it works on one machine, it works on every machine, and still works next year."
 
 [[extra.benefits]]
 icon = "checkmark-circle"
@@ -88,7 +88,7 @@ content = "Flake-based dev shells so onboarding a new contributor takes minutes,
 [[extra.services]]
 icon = "network"
 title = "NixOS infrastructure"
-content = "Declarative server fleets deployed and kept in sync via tools like nixos-rebuild, deploy-rs, or colmena — including secrets management."
+content = "Declarative server fleets deployed and kept in sync via tools like nixos-rebuild, deploy-rs, or colmena, including secrets management."
 
 [[extra.services]]
 icon = "target"
