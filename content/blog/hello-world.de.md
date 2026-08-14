@@ -8,8 +8,8 @@ categories = ["blog"]
 tags = ["website"]
 
 [extra]
-feature_image = "images/blog/posts/5.jpg"
-post_image = "images/blog/feature-image.jpg"
+feature_image = "images/blog/posts/hello-world.jpg"
+post_image = "images/blog/posts/hello-world.jpg"
 +++
 
 Ab heute ist die atvari GmbH da! 🥳
