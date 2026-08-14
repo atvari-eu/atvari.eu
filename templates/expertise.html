@@ -1,0 +1,83 @@
+{% extends "base.html" %}
+
+{% block content %}
+<header class="breadCrumb">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-10 col-md-12 offset-lg-1 offset-md-0 text-center">
+        <h3 class="breadCrumb__title">{{ section.title }}</h3>
+        <nav aria-label="breadcrumb" class="d-flex justify-content-center">
+          <ol class="breadcrumb align-items-center">
+            <li class="breadcrumb-item"><a href="{{ get_url(path=config.base_url, lang=lang) }}">{{ trans(key="home", lang=lang) }}</a></li>
+            <li class="breadcrumb-item active" aria-current="page">{{ section.title }}</li>
+          </ol>
+        </nav>
+      </div>
+    </div>
+  </div>
+</header>
+
+<section class="section expertise">
+  <div class="container">
+    {% if section.extra.intro %}
+    <div class="row mt-5">
+      <div class="col-lg-10 offset-lg-1">
+        <div class="contact-booking-card text-start">
+          {{ section.extra.intro | markdown | safe }}
+        </div>
+      </div>
+    </div>
+    {% endif %}
+
+    {% if section.extra.benefits %}
+    <div class="row mt-5">
+      <div class="col-12">
+        <h2 class="expertise__heading">{{ section.extra.benefits_heading }}</h2>
+      </div>
+    </div>
+    <div class="expertise__grid">
+      {% for item in section.extra.benefits %}
+      <div class="expertise__grid-item">
+        <div class="expertise__grid-item-icon"><i class="lni lni-{{ item.icon }}"></i></div>
+        <h4>{{ item.title }}</h4>
+        <p>{{ item.content | markdown(inline=true) | safe }}</p>
+      </div>
+      {% endfor %}
+    </div>
+    {% endif %}
+
+    {% if section.extra.services %}
+    <div class="row mt-5">
+      <div class="col-12">
+        <h2 class="expertise__heading">{{ section.extra.services_heading }}</h2>
+      </div>
+    </div>
+    <div class="expertise__grid">
+      {% for item in section.extra.services %}
+      <div class="expertise__grid-item">
+        <div class="expertise__grid-item-icon"><i class="lni lni-{{ item.icon }}"></i></div>
+        <h4>{{ item.title }}</h4>
+        <p>{{ item.content | markdown(inline=true) | safe }}</p>
+      </div>
+      {% endfor %}
+    </div>
+    {% endif %}
+
+    {% if section.extra.track_record %}
+    <div class="row mt-5">
+      <div class="col-lg-10 offset-lg-1">
+        <div class="contact-booking-card text-start">
+          {{ section.extra.track_record | markdown | safe }}
+        </div>
+      </div>
+    </div>
+    {% endif %}
+
+    <div class="row mt-5">
+      <div class="col-12 text-center">
+        <a href="{{ get_url(path='@/contact/_index.md', lang=lang) }}" class="contact-booking-btn">{{ section.extra.cta | default(value=trans(key="start_project", lang=lang)) }}</a>
+      </div>
+    </div>
+  </div>
+</section>
+{% endblock %}

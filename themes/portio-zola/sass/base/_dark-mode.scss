@@ -226,6 +226,19 @@ body {
   fill: var(--color-surface);
 }
 
+.expertise__heading {
+  color: var(--color-heading);
+}
+.expertise__grid-item {
+  background: var(--color-surface);
+}
+.expertise__grid-item h4 {
+  color: var(--color-heading);
+}
+.expertise__grid-item p {
+  color: var(--color-muted);
+}
+
 // Navbar logo swap: two <img> tags ship in the markup, only one shown
 // per theme, so it works before JS runs (no swap-driven flash).
 .navbar-brand__logo--dark {

@@ -51,6 +51,8 @@ copyright = "Copyright © atvari GmbH 2026"
 home = "Home"
 about = "About"
 service = "Services"
+nix = "Nix Expertise"
+rust = "Rust Expertise"
 team = "Team"
 blog = "Blog"
 contact = "Contact"
@@ -99,6 +101,8 @@ copyright = "Copyright © atvari GmbH 2026"
 home = "Start"
 about = "Über uns"
 service = "Leistungen"
+nix = "Nix-Expertise"
+rust = "Rust-Expertise"
 team = "Team"
 blog = "Blog"
 contact = "Kontakt"
@@ -118,6 +122,8 @@ menus = [
   { name = "home", url = "#home" },
   { name = "about", url = "#about" },
   { name = "service", url = "#service" },
+  { name = "nix", url = "nix" },
+  { name = "rust", url = "rust" },
   { name = "team", url = "team" },
   { name = "blog", url = "blog" },
   { name = "contact", url = "contact" }
@@ -125,6 +131,8 @@ menus = [
 
 sitemaps = [
   { name = "home", url = "/" },
+  { name = "nix", url = "/nix/" },
+  { name = "rust", url = "/rust/" },
   { name = "team", url = "/team/" },
   { name = "blog", url = "/blog/" },
   { name = "contact", url = "/contact/" },
