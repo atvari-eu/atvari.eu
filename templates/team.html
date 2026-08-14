@@ -61,16 +61,11 @@
             {% endfor %}
           </ul>
           {% endif %}
-          {% if member.education %}
-          {% for entry in member.education %}
-          <p class="team__card-meta">{{ entry }}</p>
-          {% endfor %}
-          {% endif %}
           {% if member.links %}
           <div class="team__card-links">
             {% for link in member.links %}
             <a class="team__card-link" href="{{ link.url }}" target="_blank" rel="noopener" aria-label="{{ link.label }}" title="{{ link.label }}">
-              {% if link.icon in ["bluesky", "mastodon", "codeberg", "forgejo", "sifa"] %}
+              {% if link.icon in ["bluesky", "mastodon", "matrix", "codeberg", "forgejo", "sifa"] %}
               {{ macros::brand_icon(name=link.icon) }}
               {% elif link.icon %}
               <i class="lni lni-{{ link.icon }}"></i>
