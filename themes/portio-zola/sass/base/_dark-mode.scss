@@ -137,6 +137,20 @@ body {
   color: var(--color-heading);
 }
 
+.card {
+  background: var(--color-surface);
+  border-color: transparent;
+}
+.card-title {
+  color: var(--color-heading);
+}
+.card-text {
+  color: var(--color-muted);
+}
+.text-body-secondary {
+  color: var(--color-muted) !important;
+}
+
 .singleBlog__content h1,
 .singleBlog__content h2,
 .singleBlog__content h3,
@@ -150,8 +164,9 @@ body {
 }
 
 .breadCrumb__title,
-.breadCrumb .breadcrumb-item a,
-.breadCrumb .breadcrumb-item.active,
+.breadCrumb .breadcrumb li,
+.breadCrumb .breadcrumb .breadcrumb-item a,
+.breadCrumb .breadcrumb .breadcrumb-item.active,
 .breadCrumb .breadcrumb-item + .breadcrumb-item::before {
   color: var(--color-heading);
 }
