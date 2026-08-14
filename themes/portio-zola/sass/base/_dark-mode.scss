@@ -188,6 +188,9 @@ body {
 .breadCrumb .breadcrumb-item + .breadcrumb-item::before {
   color: var(--color-heading);
 }
+.post-meta li a {
+  color: var(--color-heading);
+}
 
 .contact__info_item,
 .contact-booking-card {
