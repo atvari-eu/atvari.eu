@@ -177,6 +177,12 @@ body {
 .card-text {
   color: var(--color-muted);
 }
+.blog__post-card-title {
+  color: var(--color-heading);
+}
+.blog__post-card-meta {
+  color: var(--color-muted);
+}
 .text-body-secondary {
   color: var(--color-muted) !important;
 }
