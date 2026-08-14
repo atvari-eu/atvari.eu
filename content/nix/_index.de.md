@@ -28,47 +28,47 @@ Rechnern und helfen Teams dabei, sie ohne Trial-and-Error einzuführen.
 [[extra.benefits]]
 icon = "reload"
 title = "Reproduzierbar per Design"
-content = "Jedes Paket wird aus einem Nix-Ausdruck gebaut, der seine Eingaben exakt festlegt; das Build-Tool wertet ihn aus und baut ihn in einer isolierten Sandbox — was auf einer Maschine funktioniert, funktioniert auf jeder und auch noch nächstes Jahr."
+content = "Jeder Build läuft in einer isolierten Sandbox mit explizit deklarierten Eingaben — was auf einer Maschine funktioniert, funktioniert auf jeder und auch noch nächstes Jahr."
 
 [[extra.benefits]]
 icon = "checkmark-circle"
 title = "Atomare Updates & Rollbacks"
-content = "Der Nix-Paketmanager macht System- und Paketänderungen transaktional. Geht etwas schief, ist ein Rollback zur vorherigen Generation in Sekunden erledigt — keine kaputten Halb-Updates."
+content = "System- und Paketänderungen sind transaktional. Geht etwas schief, ist ein Rollback zur vorherigen Generation in Sekunden erledigt — keine kaputten Halb-Updates."
 
 [[extra.benefits]]
 icon = "layers"
 title = "Deklarative Infrastruktur"
-content = "Ein ganzes System — Pakete, Dienste, Nutzer, Secrets — als Ausdrücke der Nix-Sprache beschreiben, versioniert und überall identisch reproduziert."
+content = "Ein ganzes System — Pakete, Dienste, Nutzer, Secrets — als versionierten Code beschreiben und überall identisch reproduzieren."
 
 [[extra.benefits]]
 icon = "code-alt"
 title = "Verlässliche Entwicklungsumgebungen"
-content = "`nix develop` nutzt das Nix-Build-Tool, um genau die in einem einzigen Nix-Ausdruck deklarierte Toolchain für jeden Mitwirkenden bereitzustellen — kein „läuft bei mir“ mehr."
+content = "Ein einzelner Befehl gibt jedem Mitwirkenden exakt dieselbe Toolchain, bis zur letzten Bibliotheksversion — kein „läuft bei mir“ mehr."
 
 [[extra.benefits]]
 icon = "package"
 title = "Ein Tool für jede Sprache"
-content = "Nixpkgs, die in der Nix-Sprache geschriebene Paketsammlung, bündelt weit über 100.000 Pakete über alle Ökosysteme hinweg — ein Build-Tool und Paketmanager für jeden Stack."
+content = "Nixpkgs bündelt weit über 100.000 Software-Pakete über alle Ökosysteme hinweg, sodass polyglotte Stacks ein einziges, konsistentes Build-Tool teilen."
 
 [[extra.benefits]]
 icon = "shield"
 title = "Keine Abhängigkeitskonflikte"
-content = "Der Nix-Paketmanager hält mehrere Versionen derselben Bibliothek nebeneinander im Nix Store und räumt per Garbage Collection auf, was nicht mehr referenziert wird."
+content = "Mehrere Versionen derselben Bibliothek koexistieren sicher nebeneinander, mit automatischer Garbage Collection für alles, was nicht mehr referenziert wird."
 
 [[extra.services]]
 icon = "package"
 title = "Nixpkgs-Packaging"
-content = "Wir packagen eure Software als Nix-Ausdruck für Nixpkgs oder richten ein privates Flake bzw. Overlay für internes Tooling ein."
+content = "Wir packagen eure Software für Nixpkgs oder richten ein privates Flake bzw. Overlay für internes Tooling ein."
 
 [[extra.services]]
 icon = "cogs"
 title = "Reproduzierbare Builds & CI"
-content = "CI-Pipelines, angetrieben vom Nix-Build-Tool, die bei jedem Lauf auf jeder Maschine identische Artefakte erzeugen."
+content = "Nix-basierte Build-Pipelines, die bei jedem Lauf auf jeder Maschine identische Artefakte erzeugen."
 
 [[extra.services]]
 icon = "code-alt"
 title = "Reproduzierbare Entwicklungsumgebungen"
-content = "Flake-basierte, in der Nix-Sprache definierte Dev-Shells, damit das Onboarding neuer Mitwirkender Minuten statt Tage dauert."
+content = "Flake-basierte Dev-Shells, damit das Onboarding neuer Mitwirkender Minuten statt Tage dauert."
 
 [[extra.services]]
 icon = "network"
