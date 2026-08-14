@@ -229,6 +229,15 @@ body {
 .expertise__heading {
   color: var(--color-heading);
 }
+.expertise__audience-toggle {
+  background: var(--color-surface);
+}
+.expertise__audience-btn {
+  color: var(--color-muted);
+}
+.expertise__audience-btn.is-active {
+  color: #fff;
+}
 .expertise__grid-item {
   background: var(--color-surface);
 }

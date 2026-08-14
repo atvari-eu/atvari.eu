@@ -46,6 +46,8 @@ booking_title = "Free initial consultation"
 booking_description = "Pick a time that works for you and we'll get in touch."
 booking_button = "Schedule a call"
 copyright = "Copyright © atvari GmbH 2026"
+for_engineers = "For Engineers"
+for_business = "For Decision-Makers"
 
 # Menus
 home = "Home"
@@ -96,6 +98,8 @@ booking_title = "Kostenloses Erstgespräch"
 booking_description = "Wähle einen passenden Termin und wir melden uns bei dir."
 booking_button = "Termin vereinbaren"
 copyright = "Copyright © atvari GmbH 2026"
+for_engineers = "Für Entwickler"
+for_business = "Für Entscheider"
 
 # Menus
 home = "Start"

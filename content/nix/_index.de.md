@@ -24,6 +24,22 @@ und in Jahren noch.
 Wir betreiben Nix und NixOS seit Jahren produktiv und auf unseren eigenen
 Rechnern und helfen Teams dabei, sie ohne Trial-and-Error einzuführen.
 """
+intro_business = """
+Verlässlichkeit und Vorhersehbarkeit senken direkt eure Betriebskosten.
+Mit Nix und NixOS ist „läuft bei mir“ keine Ausrede mehr — was
+Entwickler:innen bauen und testen, läuft exakt so in Produktion. Das
+bedeutet weniger Ausfälle, schnellere Wiederherstellung nach Störungen
+(ein fehlgeschlagenes Deployment ist in Sekunden zurückgerollt) und
+weniger Zeit für die Fehlersuche wegen unterschiedlicher Umgebungen.
+
+Teams, die Nix einführen, onboarden neue Entwickler:innen außerdem
+schneller, da eine funktionierende Entwicklungsumgebung nur einen Befehl
+entfernt ist, und können dieselbe Infrastruktur über Cloud-Anbieter oder
+On-Premises hinweg betreiben — ganz ohne Vendor-Lock-in.
+
+Wir helfen euch, diese Vorteile ohne steile Lernkurve zu erreichen — vom
+ersten Pilotprojekt bis zum Betrieb eurer gesamten Plattform.
+"""
 
 [[extra.benefits]]
 icon = "reload"

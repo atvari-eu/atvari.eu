@@ -22,6 +22,23 @@ unabhängigen Rust Foundation getragen, führt Rust seit 2016 jedes Jahr die
 „most loved language“-Umfrage von Stack Overflow an — und wir schreiben es
 seit Jahren, von Backend-Services über CLIs bis hin zu Systemsoftware.
 """
+intro_business = """
+Rust tauscht eine kleine anfängliche Lernkurve gegen große, sich
+summierende Einsparungen später: weniger Produktionsvorfälle durch
+Speicherfehler oder Abstürze, niedrigere Cloud-Kosten dank C-ähnlicher
+Performance und Effizienz, und weniger Zeit für Brandbekämpfung statt für
+neue Features.
+
+Weil der Compiler ganze Fehlerklassen erkennt, bevor Code überhaupt in
+Produktion läuft, verbringen Teams weniger Zeit mit Incident-Response und
+mehr mit dem eigentlichen Bauen — und Rusts anhaltende Beliebtheit als von
+Entwickler:innen meistgeliebte Sprache erleichtert es, starke Engineers zu
+gewinnen und zu halten.
+
+Wir helfen euch zu bewerten, wo sich Rust am schnellsten auszahlt, und
+entwerfen, bauen oder migrieren dann die Systeme, die am meisten
+profitieren.
+"""
 
 [[extra.benefits]]
 icon = "shield"

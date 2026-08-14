@@ -23,6 +23,22 @@ years from now.
 We've been running Nix and NixOS in production and on our own machines for
 years, and we help teams adopt them without the trial and error.
 """
+intro_business = """
+Reliability and predictability translate directly into lower operating
+costs. With Nix and NixOS, "it works on my machine" stops being an
+excuse — what a developer builds and tests is exactly what runs in
+production, which means fewer outages, faster incident recovery (a broken
+deployment rolls back in seconds), and less time spent debugging
+environment drift.
+
+Teams that adopt Nix also onboard new engineers faster, since a working
+development setup is one command away, and can run the same
+infrastructure across cloud providers or on-premises without vendor
+lock-in.
+
+We help you get these benefits without the steep learning curve — from a
+first pilot project to running your whole platform on it.
+"""
 
 [[extra.benefits]]
 icon = "reload"

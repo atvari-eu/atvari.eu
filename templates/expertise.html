@@ -22,9 +22,22 @@
     {% if section.extra.intro %}
     <div class="row mt-5">
       <div class="col-lg-10 offset-lg-1">
+        {% if section.extra.intro_business %}
+        <div class="expertise__audience-toggle" role="tablist">
+          <button type="button" class="expertise__audience-btn is-active" data-audience="technical">{{ trans(key="for_engineers", lang=lang) }}</button>
+          <button type="button" class="expertise__audience-btn" data-audience="business">{{ trans(key="for_business", lang=lang) }}</button>
+        </div>
+        <div class="contact-booking-card text-start expertise__intro is-active" data-audience="technical">
+          {{ section.extra.intro | markdown | safe }}
+        </div>
+        <div class="contact-booking-card text-start expertise__intro" data-audience="business" hidden>
+          {{ section.extra.intro_business | markdown | safe }}
+        </div>
+        {% else %}
         <div class="contact-booking-card text-start">
           {{ section.extra.intro | markdown | safe }}
         </div>
+        {% endif %}
       </div>
     </div>
     {% endif %}
@@ -80,4 +93,7 @@
     </div>
   </div>
 </section>
+{% if section.extra.intro_business %}
+<script src="{{ get_url(path='js/expertise-toggle.js') }}"></script>
+{% endif %}
 {% endblock %}
