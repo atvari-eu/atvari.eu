@@ -1,6 +1,6 @@
 .section{
     @include desktop{
-        padding: 50px 0;
+        padding: 25px 0;
     }
     .svg-img{
         position: absolute;
@@ -59,6 +59,7 @@
   display: flex;
   justify-content: space-around;
   padding-top: 10px;
+  margin-top: 40px;
   li {
     list-style: none;
     z-index: 2;
