@@ -23,13 +23,21 @@
                 {% endfor %}
                 
                 {% if config.languages | length >= 1 %}
+                {% set lang_prefix = "/" ~ lang ~ "/" %}
+                {% if lang != config.default_language and current_path is starting_with(lang_prefix) %}
+                    {% set current_relative_path = current_path | replace(from=lang_prefix, to="") %}
+                {% elif current_path == "/" %}
+                    {% set current_relative_path = "/" %}
+                {% else %}
+                    {% set current_relative_path = current_path | trim_start_matches(pat="/") %}
+                {% endif %}
                 <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">{{ lang | upper }}</a>
-                    
+
                     <ul class="dropdown-menu">
                         {% for language, _ in config.languages %}
                         <li>
-                            <a class="dropdown-item" href="{{ get_url(path="/", lang=language) }}">
+                            <a class="dropdown-item lang-switch-link" href="{{ get_url(path=current_relative_path, lang=language) }}">
                             {{ language | upper }}
                             </a>
                         </li>
