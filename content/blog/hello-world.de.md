@@ -1,5 +1,6 @@
 +++
 title = "Hallo Welt!"
+description = "atvari GmbH ist eine Software- und Cloud-Engineering-Beratung mit Sitz in Lüneburg. Erfahren Sie, warum wir gegründet haben und was wir anbieten."
 date = 2026-08-14
 slug = "hello-world"
 

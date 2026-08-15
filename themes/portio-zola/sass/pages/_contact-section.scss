@@ -93,7 +93,7 @@
                     background: #fff;
                 }
             }
-            h1{
+            h2{
                 font-family: $primary-font;
                 font-size: 48px;
                 color: #fff;
@@ -152,6 +152,9 @@
             .contact__widget_seal{
                 display: block;
                 margin-top: 15px;
+                img{
+                    border: 0;
+                }
             }
         }
         &_sitemap{

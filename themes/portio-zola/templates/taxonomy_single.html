@@ -46,7 +46,7 @@
   <div class="container">
     <div class="row">
       <div class="col-12 text-center">
-        <h3 class="breadCrumb__title text-capitalize">{{ taxonomy.name }}</h3>
+        <h1 class="breadCrumb__title text-capitalize">{{ taxonomy.name }}</h1>
         <nav aria-label="breadcrumb" class="d-flex justify-content-center">
           <ol class="breadcrumb align-items-center">
             <li>{{ trans(key=taxonomy.name ~ "_description") }} "{{ term.name }}"</li>
@@ -65,7 +65,7 @@
         <img class="blog__post-card-image" src="{{ get_url(path=page.extra.feature_image) }}" alt="post-image">
         <div class="blog__post-card-body">
             <a class="text-reset text-decoration-none" href="{{ page.permalink }}">
-                <h3 class="blog__post-card-title">{{ page.title }}</h3>
+                <h2 class="blog__post-card-title">{{ page.title }}</h2>
                 <p class="blog__post-card-meta">
                     {{ page.date | date(format=config.extra.date_format) }}
                 </p>

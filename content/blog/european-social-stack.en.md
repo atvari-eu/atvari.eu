@@ -1,5 +1,6 @@
 +++
 title = "We've signed The European Social Stack declaration"
+description = "atvari GmbH has signed The European Social Stack declaration, committing to a federated, interoperable, European-owned social ecosystem."
 date = 2026-08-14
 slug = "european-social-stack"
 

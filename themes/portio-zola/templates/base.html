@@ -4,7 +4,7 @@
 
 <!DOCTYPE html>
 
-<html lang="{{ lang }}">
+<html lang="{{ lang }}" itemscope itemtype="https://schema.org/WebPage">
     <head>
         <title>
             {% block title %}
@@ -27,8 +27,22 @@
         <meta name="theme-color" content="#ffffff" media="(prefers-color-scheme: light)">
         <meta name="theme-color" content="#12141c" media="(prefers-color-scheme: dark)">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <meta itemprop="name" content="{{ page.title | default(value=config.title) }}">
-        <meta itemprop="description" content="{{ page.description | default(value=config.description) }}">
+        {% if page is defined and page.title %}
+            {% set meta_title = page.title %}
+        {% elif section is defined and section.title %}
+            {% set meta_title = section.title %}
+        {% else %}
+            {% set meta_title = config.title %}
+        {% endif %}
+        {% if page is defined and page.description %}
+            {% set meta_description = page.description %}
+        {% elif section is defined and section.description %}
+            {% set meta_description = section.description %}
+        {% else %}
+            {% set meta_description = config.description %}
+        {% endif %}
+        <meta itemprop="name" content="{{ meta_title }}">
+        <meta itemprop="description" content="{{ meta_description }}">
         {% block canonical %}
         {# Zola omits the leading slash from `current_path` specifically for a
            non-default language's homepage (e.g. "de/" instead of "/de/"). #}

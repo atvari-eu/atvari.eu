@@ -26,7 +26,7 @@
 	<div class="container">
 		<div class="row">
 			<div class="col-12 text-center">
-				<h3 class="breadCrumb__title">{{ section.title }}</h3>
+				<h1 class="breadCrumb__title">{{ section.title }}</h1>
 				<nav aria-label="breadcrumb" class="d-flex justify-content-center">
 					<ol class="breadcrumb align-items-center">
 						<li class="breadcrumb-item"><a href="{{ get_url(path=config.base_url, lang=lang) }}">{{ config.title }}</a></li>
@@ -38,7 +38,7 @@
 	</div>
 </header>
 
-<section class="section">
+<div class="section">
 	<div class="container">
 		<div class="d-flex justify-content-center flex-wrap">
 			{% for page in paginator.pages %}
@@ -46,7 +46,7 @@
 			    <img class="blog__post-card-image" src="{{ get_url(path=page.extra.feature_image) }}" alt="{{ page.title }}">
 				<div class="blog__post-card-body">
                     <a class="text-reset text-decoration-none" href="{{ page.permalink }}">
-                        <h3 class="blog__post-card-title">{{ page.title }}</h3>
+                        <h2 class="blog__post-card-title">{{ page.title }}</h2>
                         <p class="blog__post-card-meta">
                             <time datetime="{{ page.date | date(format='%Y-%m-%d') }}">{{ page.date | date(format=config.extra.date_format) }}</time>
                         </p>
@@ -58,5 +58,5 @@
 
         {{ macros::pagination(paginator=paginator) }}
 	</div>
-</section>
+</div>
 {% endblock %}

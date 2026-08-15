@@ -1,5 +1,6 @@
 +++
 title = "Wir haben die „European Social Stack“-Erklärung unterzeichnet"
+description = "atvari GmbH hat die „European Social Stack“-Erklärung unterzeichnet und setzt sich für ein föderiertes, europäisches Social-Web ein."
 date = 2026-08-14
 slug = "european-social-stack"
 

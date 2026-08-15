@@ -1,5 +1,6 @@
 +++
 title = "Hello World!"
+description = "atvari GmbH is a software and cloud engineering consultancy based in Lüneburg, Germany. Read about why we started and what we offer."
 date = 2026-08-14
 slug = "hello-world"
 
