@@ -42,17 +42,17 @@
 	<div class="container">
 		<div class="d-flex justify-content-center flex-wrap">
 			{% for page in paginator.pages %}
-			<div class="card col-lg-3 m-2 blog__post-card">
-			    <img class="blog__post-card-image" src="{{ get_url(path=page.extra.feature_image) }}" alt="post-image">
+			<article class="card col-lg-3 m-2 blog__post-card">
+			    <img class="blog__post-card-image" src="{{ get_url(path=page.extra.feature_image) }}" alt="{{ page.title }}">
 				<div class="blog__post-card-body">
                     <a class="text-reset text-decoration-none" href="{{ page.permalink }}">
                         <h3 class="blog__post-card-title">{{ page.title }}</h3>
                         <p class="blog__post-card-meta">
-                            {{ page.date | date(format=config.extra.date_format) }}
+                            <time datetime="{{ page.date | date(format='%Y-%m-%d') }}">{{ page.date | date(format=config.extra.date_format) }}</time>
                         </p>
                     </a>
 				</div>
-			</div>
+			</article>
 			{% endfor %}
 		</div>
 

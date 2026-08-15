@@ -31,7 +31,7 @@
       {% endif %}
       <li>
         <i class="lni lni-calendar"></i>
-        {{ page.date | date(format=config.extra.date_format) }}
+        <time datetime="{{ page.date | date(format='%Y-%m-%d') }}">{{ page.date | date(format=config.extra.date_format) }}</time>
       </li>
       <li>
         <i class="lni lni-alarm-clock"></i>
@@ -85,8 +85,8 @@
   <div class="container">
     <div class="row">
       <div class="col-lg-12">
-        <div class="card blog__post-card blog__post-card--large">
-          <img class="blog__post-card-image" src="{{ get_url(path=page.extra.post_image) }}" alt="feature-image">
+        <article class="card blog__post-card blog__post-card--large">
+          <img class="blog__post-card-image" src="{{ get_url(path=page.extra.post_image) }}" alt="{{ page.title }}">
           <div class="blog__post-card-body">
                 {% if page.toc %}
                     <h3>{{ trans(key="table_of_contents", lang=lang) }}</h3>
@@ -111,7 +111,7 @@
 
               {{ page.content | safe }}
           </div>
-        </div>
+        </article>
       </div>
     </div>
   </div>
