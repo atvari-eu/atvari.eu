@@ -31,7 +31,7 @@
               </div>
               <div class="blog__item-content">
                 <time datetime="{{ page.date | date(format='%Y-%m-%d') }}">{{ page.date | date(format=config.extra.date_format) }}</time>
-                <a href="{{ page.permalink }}">{{ page.title }}</a>
+                <h3><a href="{{ page.permalink }}">{{ page.title }}</a></h3>
               </div>
             </article>
           </div>
