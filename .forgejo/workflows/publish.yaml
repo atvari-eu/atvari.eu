@@ -12,11 +12,7 @@ jobs:
     steps:
       - uses: actions/checkout@v5
 
-      - name: Install Nix
-        run: |
-          groupadd -f nixbld
-          sh <(curl -L https://nixos.org/nix/install) --no-daemon
-          echo "$HOME/.nix-profile/bin" >> "$GITHUB_PATH"
+      - uses: https://github.com/DeterminateSystems/nix-installer-action@main
 
       - name: Build site
         run: nix build .
