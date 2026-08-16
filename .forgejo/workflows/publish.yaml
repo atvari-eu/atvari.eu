@@ -15,7 +15,9 @@ jobs:
       - uses: https://github.com/DeterminateSystems/nix-installer-action@main
 
       - name: Build site
-        run: nix build .
+        run: |
+          out=$(nix build . --no-link --print-out-paths)
+          cp -rL "$out" result
 
       - uses: actions/git-pages@v2
         with:
