@@ -10,17 +10,14 @@ jobs:
     steps:
       - uses: actions/checkout@v5
 
-      - name: Install Zola
-        run: |
-          curl -sL https://github.com/getzola/zola/releases/download/v0.22.1/zola-v0.22.1-x86_64-unknown-linux-gnu.tar.gz | tar xz
-          chmod +x zola
+      - uses: DeterminateSystems/nix-installer-action@main
 
       - name: Build site
-        run: ./zola build --minify
+        run: nix build .
 
       - uses: actions/git-pages@v2
         with:
           site: https://atvari.eu/
           server: codeberg.page
           token: ${{ forge.token }}
-          source: public/
+          source: result/
