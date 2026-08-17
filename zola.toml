@@ -12,6 +12,7 @@ skip_prefixes = [
 
 [languages.en]
 title = "atvari"
+description = "atvari GmbH is a software and cloud engineering consultancy based in Lüneburg, Germany, specializing in Nix and Rust."
 generate_feeds = true
 build_search_index = false
 
@@ -64,6 +65,7 @@ impressum = "Impressum"
 
 [languages.de]
 title = "atvari"
+description = "atvari GmbH ist eine Software- und Cloud-Engineering-Beratung mit Sitz in Lüneburg, spezialisiert auf Nix und Rust."
 generate_feeds = true
 build_search_index = false
 

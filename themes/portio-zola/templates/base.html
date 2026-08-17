@@ -52,6 +52,27 @@
         {% endif %}
         <link rel="canonical" href="{{ config.base_url ~ canonical_path }}">
         {% endblock %}
+        {% block opengraph %}
+        {% if page is defined and page.extra.feature_image %}
+            {% set meta_image = get_url(path=page.extra.feature_image) %}
+        {% else %}
+            {% set meta_image = get_url(path="images/symbol.png") %}
+        {% endif %}
+        {% set meta_type = "website" %}
+        {% if page is defined and page.date %}
+            {% set meta_type = "article" %}
+        {% endif %}
+        <meta property="og:type" content="{{ meta_type }}">
+        <meta property="og:site_name" content="{{ config.title }}">
+        <meta property="og:title" content="{{ meta_title }}">
+        <meta property="og:description" content="{{ meta_description }}">
+        <meta property="og:url" content="{{ config.base_url ~ canonical_path }}">
+        <meta property="og:image" content="{{ meta_image }}">
+        <meta name="twitter:card" content="summary_large_image">
+        <meta name="twitter:title" content="{{ meta_title }}">
+        <meta name="twitter:description" content="{{ meta_description }}">
+        <meta name="twitter:image" content="{{ meta_image }}">
+        {% endblock %}
         {% block rss %}
             {% if config.generate_feeds %}
                 {{ macros::feeds() }}
