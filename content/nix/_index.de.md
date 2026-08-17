@@ -15,7 +15,7 @@ reproduzierbaren Derivationen auswertet und sie in isolierten Sandboxes
 baut; und ein **Paketmanager**, der die Ergebnisse installiert,
 aktualisiert und zurückrollt, ohne je anzutasten, was bereits auf dem
 System liegt. [NixOS](https://nixos.org/) ist eine Linux-Distribution, die
-auf allen dreien aufbaut und das gesamte System — Pakete, Dienste, Nutzer —
+auf allen dreien aufbaut und das gesamte System (Pakete, Dienste, Nutzer)
 aus derselben deklarativen Sprache konfiguriert. Zusammen machen sie
 Builds, Deployments und Entwicklungsumgebungen wirklich reproduzierbar: Was
 auf einer Maschine funktioniert, funktioniert auf jeder Maschine, heute
@@ -49,17 +49,17 @@ content = "Jeder Build läuft in einer isolierten Sandbox mit explizit deklarier
 [[extra.benefits]]
 icon = "checkmark-circle"
 title = "Atomare Updates & Rollbacks"
-content = "System- und Paketänderungen sind transaktional. Geht etwas schief, ist ein Rollback zur vorherigen Generation in Sekunden erledigt — keine kaputten Halb-Updates."
+content = "System- und Paketänderungen sind transaktional. Geht etwas schief, ist ein Rollback zur vorherigen Generation in Sekunden erledigt, ohne kaputte Halb-Updates."
 
 [[extra.benefits]]
 icon = "layers"
 title = "Deklarative Infrastruktur"
-content = "Ein ganzes System — Pakete, Dienste, Nutzer, Secrets — als versionierten Code beschreiben und überall identisch reproduzieren."
+content = "Ein ganzes System (Pakete, Dienste, Nutzer, Secrets) als versionierten Code beschreiben und überall identisch reproduzieren."
 
 [[extra.benefits]]
 icon = "code-alt"
 title = "Verlässliche Entwicklungsumgebungen"
-content = "Ein einzelner Befehl gibt jedem Mitwirkenden exakt dieselbe Toolchain, bis zur letzten Bibliotheksversion — kein „läuft bei mir“ mehr."
+content = "Ein einzelner Befehl gibt jedem Mitwirkenden exakt dieselbe Toolchain, bis zur letzten Bibliotheksversion, sodass „läuft bei mir“ keine Ausrede mehr ist."
 
 [[extra.benefits]]
 icon = "package"
@@ -102,7 +102,7 @@ title = "Laufende Wartung"
 content = "Pakete, NixOS-Module und Flake-Inputs dauerhaft aktuell und sicher halten."
 
 track_record = """
-Nix und NixOS sind für uns mehr als eine Dienstleistung — wir betreiben
+Nix und NixOS sind für uns mehr als eine Dienstleistung: wir betreiben
 sie selbst. Unser Gründer ist seit 2019 Nixpkgs-Contributor, seit 2020
 Maintainer und seit 2024 Committer und hilft damit, das größte
 Open-Source-Paketarchiv zu pflegen. Seine Beiträge gibt es auf

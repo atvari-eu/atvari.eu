@@ -11,8 +11,8 @@ intro = """
 [Rust](https://www.rust-lang.org/) ist eine Systemprogrammiersprache, die
 Speichersicherheit ohne Garbage Collector bietet. Ownership und der Borrow
 Checker erkennen Use-after-free-Fehler, Data Races und Null-Referenzen
-bereits zur Compile-Zeit, während das Typsystem — Enums, Pattern Matching,
-`Option` und `Result` — einen [unveränderlichen, funktional geprägten
+bereits zur Compile-Zeit, während das Typsystem (Enums, Pattern Matching,
+`Option` und `Result`) einen [unveränderlichen, funktional geprägten
 Stil](https://rust-unofficial.github.io/patterns/functional/) fördert, der
 auf Iteratoren, Kombinatoren und Closures statt auf veränderliche Schleifen
 setzt.
@@ -43,7 +43,7 @@ profitieren.
 [[extra.benefits]]
 icon = "shield"
 title = "Speichersicherheit ohne Garbage Collector"
-content = "Ownership und der Borrow Checker erkennen Use-after-free, Data Races und Nullpointer-Fehler bereits zur Compile-Zeit — nicht erst in Produktion."
+content = "Ownership und der Borrow Checker erkennen Use-after-free, Data Races und Nullpointer-Fehler bereits zur Compile-Zeit, nicht erst in Produktion."
 
 [[extra.benefits]]
 icon = "rocket"
@@ -102,9 +102,9 @@ content = "Crates, Toolchain und CI dauerhaft aktuell halten und Abhängigkeiten
 
 track_record = """
 Wir setzen Rust überall dort ein, wo Verlässlichkeit und Performance zählen,
-und bevorzugen dabei seine funktionalen Idiome — Iteratoren statt
+und bevorzugen dabei seine funktionalen Idiome: Iteratoren statt
 Schleifen, `Option`/`Result` statt Exceptions, Unveränderlichkeit per
-Default — für Code, der sich leichter nachvollziehen und reviewen lässt.
+Default, für Code, der sich leichter nachvollziehen und reviewen lässt.
 Unsere öffentliche Arbeit gibt es auf
 [GitHub](https://github.com/felschr).
 """

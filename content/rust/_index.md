@@ -11,8 +11,8 @@ intro = """
 [Rust](https://www.rust-lang.org/) is a systems programming language built
 around memory safety without a garbage collector. Its ownership and borrow
 checker catch use-after-free bugs, data races, and null references at
-compile time, while its type system — enums, pattern matching, `Option` and
-`Result` — encourages an [immutable, functional-leaning
+compile time, while its type system (enums, pattern matching, `Option` and
+`Result`) encourages an [immutable, functional-leaning
 style](https://rust-unofficial.github.io/patterns/functional/) built on
 iterators, combinators, and closures rather than mutable loops.
 
@@ -39,7 +39,7 @@ migrate the systems that benefit most.
 [[extra.benefits]]
 icon = "shield"
 title = "Memory safety without a garbage collector"
-content = "The ownership and borrow checker catch use-after-free, data races, and null-pointer bugs at compile time — not in production."
+content = "The ownership and borrow checker catch use-after-free, data races, and null-pointer bugs at compile time, not in production."
 
 [[extra.benefits]]
 icon = "rocket"
@@ -98,8 +98,8 @@ content = "Keeping crates, toolchains, and CI up to date, and dependencies free 
 
 track_record = """
 We reach for Rust wherever reliability and performance matter, and favor
-its functional idioms — iterators over loops, `Option`/`Result` over
-exceptions, immutability by default — for code that's easier to reason
+its functional idioms: iterators over loops, `Option`/`Result` over
+exceptions, immutability by default, for code that's easier to reason
 about and to review. See our public work on
 [GitHub](https://github.com/felschr).
 """

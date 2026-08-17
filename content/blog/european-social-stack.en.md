@@ -20,12 +20,12 @@ This is an open commitment to building a federated, interoperable, European-owne
 
 Key commitments include:
 
-- **Eurobridge** — bridging the Fediverse (ActivityPub) and the Atmosphere (AT Protocol)
+- **Eurobridge**: bridging the Fediverse (ActivityPub) and the Atmosphere (AT Protocol)
 - Privacy-first distributed identity aligned with the EU Digital ID Wallet
 - Shared DSA/DMA-compliant content moderation infrastructure
 - An ecosystem where small builders can ship and users move freely
 
-Trillion-dollar incumbents dominate today. The answer isn't another walled garden — it's an ecosystem. Europe has both the technical talent and the regulatory framework to lead.
+Trillion-dollar incumbents dominate today. The answer isn't another walled garden. It's an ecosystem. Europe has both the technical talent and the regulatory framework to lead.
 
 We join roughly 100 organizations and 600 individuals in this effort.
 

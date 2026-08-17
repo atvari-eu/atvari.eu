@@ -14,8 +14,8 @@ a **build tool** that evaluates those descriptions into reproducible
 derivations and builds them in isolated sandboxes; and a **package
 manager** that installs, upgrades, and rolls back the results without ever
 disturbing what's already on your system. [NixOS](https://nixos.org/) is a
-Linux distribution built on all three, configuring your entire system —
-packages, services, users — from that same declarative language. Together
+Linux distribution built on all three, configuring your entire system
+(packages, services, users) from that same declarative language. Together
 they make builds, deployments, and development environments genuinely
 reproducible: what works on one machine works on every machine, today and
 years from now.
@@ -48,17 +48,17 @@ content = "Every build runs in an isolated sandbox with explicitly declared inpu
 [[extra.benefits]]
 icon = "checkmark-circle"
 title = "Atomic upgrades & rollbacks"
-content = "System and package changes are transactional. If something goes wrong, roll back to the previous generation in seconds — no broken half-upgrades."
+content = "System and package changes are transactional. If something goes wrong, roll back to the previous generation in seconds, with no broken half-upgrades."
 
 [[extra.benefits]]
 icon = "layers"
 title = "Declarative infrastructure"
-content = "Describe an entire system — packages, services, users, secrets — as version-controlled code, and reproduce it identically anywhere."
+content = "Describe an entire system (packages, services, users, secrets) as version-controlled code, and reproduce it identically anywhere."
 
 [[extra.benefits]]
 icon = "code-alt"
 title = "Reliable dev environments"
-content = "A single command hands every contributor the exact same toolchain, down to the last library version — no more \"works on my machine\"."
+content = "A single command hands every contributor the exact same toolchain, down to the last library version, so there's no more \"works on my machine\"."
 
 [[extra.benefits]]
 icon = "package"
@@ -101,7 +101,7 @@ title = "Ongoing maintenance"
 content = "Keeping packages, NixOS modules, and flake inputs up to date and secure over time."
 
 track_record = """
-Nix and NixOS are more than a service we sell — they're what we run
+Nix and NixOS are more than a service we sell: they're what we run
 ourselves. Our founder has been a Nixpkgs contributor since 2019, a
 maintainer since 2020, and a committer since 2024, helping maintain the
 largest open source package repository. See his contributions on

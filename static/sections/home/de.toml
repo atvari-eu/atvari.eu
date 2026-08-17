@@ -1,7 +1,7 @@
 description = """
 # Software- & Cloud-Engineering-Beratung
 
-Mit ❤️ für Rust 🦀, Nix ❄️ & Open Source 🌐 — wir helfen Teams dabei, sichere, skalierbare Systeme zu bauen, auf die Verlass ist.
+Mit ❤️ für Rust 🦀, Nix ❄️ & Open Source 🌐 helfen wir Teams dabei, sichere, skalierbare Systeme zu bauen, auf die Verlass ist.
 """
 button_name = "Kontakt aufnehmen"
 button_url  = "contact"

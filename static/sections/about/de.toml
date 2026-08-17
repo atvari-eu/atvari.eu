@@ -15,7 +15,7 @@ content = """
   & Cloud-Architektur, individuelle Softwareentwicklung, Cloud-Engineering
   und DevOps, mit besonderer Tiefe in Rust und dem Nix/NixOS-Ökosystem.
 
-  Wir sind aktive Mitglieder der Open-Source-Community — unter anderem bei
-  Nixpkgs, dem größten Open-Source-Paketarchiv — und legen großen Wert auf
+  Wir sind aktive Mitglieder der Open-Source-Community, unter anderem bei
+  Nixpkgs, dem größten Open-Source-Paketarchiv, und legen großen Wert auf
   Systeme, die von Grund auf sicher und reproduzierbar sind.
 """

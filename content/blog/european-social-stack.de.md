@@ -20,7 +20,7 @@ Das ist ein offenes Bekenntnis zum Aufbau eines föderierten, interoperablen, eu
 
 Zu den zentralen Verpflichtungen gehören:
 
-- **Eurobridge** — eine Brücke zwischen dem Fediverse (ActivityPub) und der Atmosphere (AT Protocol)
+- **Eurobridge**: eine Brücke zwischen dem Fediverse (ActivityPub) und der Atmosphere (AT Protocol)
 - Privacy-first, verteilte Identität im Einklang mit der EU Digital Identity Wallet
 - Gemeinsame, DSA/DMA-konforme Infrastruktur zur Inhaltemoderation
 - Ein Ökosystem, in dem kleine Anbieter shippen können und Nutzer frei wechseln können
