@@ -128,9 +128,9 @@ menus = [
   { name = "home", url = "#home" },
   { name = "about", url = "#about" },
   { name = "service", url = "#service" },
-  { name = "team", url = "team" },
-  { name = "blog", url = "blog" },
-  { name = "contact", url = "contact" }
+  { name = "team", url = "@/team/_index.md" },
+  { name = "blog", url = "@/blog/_index.md" },
+  { name = "contact", url = "@/contact/_index.md" }
 ]
 
 sitemaps = [

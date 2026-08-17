@@ -4,4 +4,4 @@ description = """
 With ❤️ for Rust 🦀, Nix ❄️ & Open Source 🌐, we help teams build secure, scalable systems they can trust.
 """
 button_name = "Get in touch"
-button_url  = "contact"
+button_url  = "@/contact/_index.md"

@@ -21,8 +21,8 @@
                         {{ trans(key=menu.name, lang=lang) }}
                     </a>
                     <ul class="dropdown-menu">
-                        <li><a class="dropdown-item" href="{{ get_url(path="nix", lang=lang) }}">{{ trans(key="nix", lang=lang) }}</a></li>
-                        <li><a class="dropdown-item" href="{{ get_url(path="rust", lang=lang) }}">{{ trans(key="rust", lang=lang) }}</a></li>
+                        <li><a class="dropdown-item" href="{{ get_url(path="@/nix/_index.md", lang=lang) }}">{{ trans(key="nix", lang=lang) }}</a></li>
+                        <li><a class="dropdown-item" href="{{ get_url(path="@/rust/_index.md", lang=lang) }}">{{ trans(key="rust", lang=lang) }}</a></li>
                     </ul>
                 </li>
                 {% else %}
@@ -55,8 +55,12 @@
 
                     <ul class="dropdown-menu">
                         {% for language, _ in config.languages %}
+                        {% set lang_href = get_url(path=current_relative_path, lang=language) %}
+                        {% if not (lang_href is ending_with("/")) %}
+                            {% set lang_href = lang_href ~ "/" %}
+                        {% endif %}
                         <li>
-                            <a class="dropdown-item lang-switch-link" href="{{ get_url(path=current_relative_path, lang=language) }}">
+                            <a class="dropdown-item lang-switch-link" href="{{ lang_href }}">
                             {{ language | upper }}
                             </a>
                         </li>
@@ -71,7 +75,7 @@
             </ul>
 
             <div class="navbar-nav">
-                <a href="{{get_url(path='contact', lang=lang) }}" class="hire_button">
+                <a href="{{get_url(path='@/contact/_index.md', lang=lang) }}" class="hire_button">
                     {{ trans(key="hire_me_now", lang=lang) }}
                 </a>
             </div>

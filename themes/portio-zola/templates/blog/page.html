@@ -12,7 +12,7 @@
         <h1 class="breadCrumb__title">{{ page.title }}</h1>
         <nav aria-label="breadcrumb" class="d-flex justify-content-center">
           <ol class="breadcrumb align-items-center">
-            <li class="breadcrumb-item"><a href="{{ get_url(path=config.base_url, lang=lang) }}">Home</a></li>
+            <li class="breadcrumb-item"><a href="{{ get_url(path="/", lang=lang) }}">Home</a></li>
             <li class="breadcrumb-item"><a href="{{ get_url(path='@/blog/_index.md', lang=lang) }}">All Post</a></li>
             <li class="breadcrumb-item active" aria-current="page">{{ page.title }}</li>
           </ol>
