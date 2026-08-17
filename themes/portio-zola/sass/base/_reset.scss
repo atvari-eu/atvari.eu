@@ -1,5 +1,12 @@
 html {
   scroll-behavior: smooth;
+  // Keeps anchor-link targets (e.g. #service) from being hidden behind the
+  // fixed navbar, whose height differs between the wide desktop layout and
+  // the more compact bar used at narrower widths (see _site-navigation.scss).
+  scroll-padding-top: 180px;
+  @include desktop{
+    scroll-padding-top: 110px;
+  }
 }
 
 @media screen and (prefers-reduced-motion: reduce) {

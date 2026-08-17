@@ -58,12 +58,18 @@
         background: none;
         margin: 0;
         padding: 0;
+        width: 100%;
+        justify-content: center;
+        text-align: center;
         &-item{
             a{
                 font-family: $secondary-font;
-                color: $secondary-color;
+                color: #7e7e8a;
                 font-size: 17px;
-                text-decoration: none;
+                text-decoration: underline;
+                &:hover{
+                    color: $primary-color;
+                }
                 @include mobile{
                     font-size: 14px;
                 }

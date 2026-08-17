@@ -21,6 +21,7 @@
                         {{ trans(key=menu.name, lang=lang) }}
                     </a>
                     <ul class="dropdown-menu">
+                        <li><a class="dropdown-item" href="{{ get_url(path="#service", lang=lang) }}">{{ trans(key="service_overview", lang=lang) }}</a></li>
                         <li><a class="dropdown-item" href="{{ get_url(path="@/nix/_index.md", lang=lang) }}">{{ trans(key="nix", lang=lang) }}</a></li>
                         <li><a class="dropdown-item" href="{{ get_url(path="@/rust/_index.md", lang=lang) }}">{{ trans(key="rust", lang=lang) }}</a></li>
                     </ul>
