@@ -57,9 +57,14 @@
 
 .post-meta {
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-around;
   padding-top: 10px;
   margin-top: 40px;
+  @include mobile {
+    justify-content: center;
+    gap: 12px 20px;
+  }
   li {
     list-style: none;
     z-index: 2;
@@ -74,6 +79,9 @@
       &:hover {
         color: $primary-color;
       }
+    }
+    @include mobile {
+      font-size: 14px;
     }
   }
   &__author-link {
