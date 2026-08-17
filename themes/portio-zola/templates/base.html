@@ -43,6 +43,9 @@
         {% endif %}
         <meta itemprop="name" content="{{ meta_title }}">
         <meta itemprop="description" content="{{ meta_description }}">
+        {% if page is defined and page.extra.author %}
+        <meta name="author" content="{{ page.extra.author }}">
+        {% endif %}
         {% block canonical %}
         {# Zola omits the leading slash from `current_path` specifically for a
            non-default language's homepage (e.g. "de/" instead of "/de/"). #}
