@@ -127,7 +127,11 @@ body {
 .service__background path {
   fill: var(--color-shape);
 }
-.service__background_shape stop {
+.service__background_shape stop,
+.hero_blob stop,
+.about_content-inner-blob stop,
+.skill__background_shape stop,
+.animate-shape stop {
   stop-color: var(--color-decorative);
 }
 
