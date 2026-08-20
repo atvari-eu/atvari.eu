@@ -8,6 +8,7 @@ theme = "portio-zola"
 [link_checker]
 skip_prefixes = [
     "https://www.linkedin.com/",
+    "https://www.openpr.de/",
 ]
 
 [languages.en]
@@ -63,6 +64,7 @@ contact = "Contact"
 
 # Sitemaps
 impressum = "Impressum"
+press = "Press"
 
 [languages.de]
 title = "atvari"
@@ -117,6 +119,7 @@ contact = "Kontakt"
 
 # Sitemaps
 impressum = "Impressum"
+press = "Presse"
 
 [extra]
 date_format = "%d %B, %Y"
@@ -142,7 +145,8 @@ sitemaps = [
   { name = "team", url = "@/team/_index.md" },
   { name = "blog", url = "@/blog/_index.md" },
   { name = "contact", url = "@/contact/_index.md" },
-  { name = "impressum", url = "@/impressum/_index.md" }
+  { name = "impressum", url = "@/impressum/_index.md" },
+  { name = "press", url = "@/press/_index.md" }
 ]
 
 socials = [
