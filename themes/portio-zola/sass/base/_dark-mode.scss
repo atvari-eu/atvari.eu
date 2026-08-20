@@ -1,3 +1,4 @@
+$light-link-hover-color: darken($primary-color, 12%);
 $dark-link-hover-color: lighten($primary-color, 12%);
 $dark-surface-color: #1b2031;
 // Background SVG shapes (hero, service) sit behind foreground cards that
@@ -5,8 +6,10 @@ $dark-surface-color: #1b2031;
 // than reusing it directly.
 $dark-shape-color: darken($dark-surface-color, 5%);
 
-// Theme custom properties. Light values match the site's existing design
-// exactly; dark values are the only thing that changes per theme.
+// Theme custom properties. Most light values match the site's existing
+// design exactly; the link colors are a deliberate exception, overriding
+// Bootstrap's default blue with the brand green in both themes so link
+// color doesn't depend on which theme is active.
 :root {
   --color-bg: #ffffff;
   --color-heading: #{$secondary-color};
@@ -14,6 +17,10 @@ $dark-shape-color: darken($dark-surface-color, 5%);
   --color-surface: #ffffff;
   --color-decorative: #f1f6f9;
   --color-shape: #f1f6f9;
+  --bs-link-color: #{$primary-color};
+  --bs-link-color-rgb: #{red($primary-color)}, #{green($primary-color)}, #{blue($primary-color)};
+  --bs-link-hover-color: #{$light-link-hover-color};
+  --bs-link-hover-color-rgb: #{red($light-link-hover-color)}, #{green($light-link-hover-color)}, #{blue($light-link-hover-color)};
 }
 
 @mixin dark-theme-vars {
@@ -34,10 +41,8 @@ $dark-shape-color: darken($dark-surface-color, 5%);
   --bs-emphasis-color: var(--color-heading);
   --bs-heading-color: var(--color-heading);
 
-  // Default Bootstrap link blue reads poorly on the dark surface color;
-  // use the brand green (already used for links/accents elsewhere) instead.
-  --bs-link-color: #{$primary-color};
-  --bs-link-color-rgb: #{red($primary-color)}, #{green($primary-color)}, #{blue($primary-color)};
+  // --bs-link-color itself is already the brand green via :root; only the
+  // hover shade needs to flip from "darken" to "lighten" on a dark surface.
   --bs-link-hover-color: #{$dark-link-hover-color};
   --bs-link-hover-color-rgb: #{red($dark-link-hover-color)}, #{green($dark-link-hover-color)}, #{blue($dark-link-hover-color)};
 }
