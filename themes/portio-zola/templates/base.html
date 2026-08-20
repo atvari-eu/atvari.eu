@@ -147,6 +147,17 @@
         {% set nix_url = get_url(path="@/nix/_index.md", lang=lang) %}
         {% set rust_url = get_url(path="@/rust/_index.md", lang=lang) %}
         {% set service_url = config.base_url ~ "/#service" %}
+        {% set team_section = get_section(path="team/_index.md", lang=lang) %}
+        {% set founder_members = team_section.extra.members | filter(attribute="name", value="Felix Schröter") %}
+        {% set_global founder_same_as = [] %}
+        {% if founder_members and founder_members | length > 0 %}
+            {% set founder_member = founder_members | first %}
+            {% for link in founder_member.links %}
+                {% if link.url is starting_with("http") %}
+                    {% set_global founder_same_as = founder_same_as | concat(with=[link.url]) %}
+                {% endif %}
+            {% endfor %}
+        {% endif %}
         <script type="application/ld+json">
         {
             "@context": "https://schema.org",
@@ -196,11 +207,13 @@
                 "@type": "Person",
                 "name": "Felix Schröter",
                 "jobTitle": "Founder & Principal Engineer"
+                {% if founder_same_as | length > 0 %},"sameAs": {{ founder_same_as | json_encode() | safe }}{% endif %}
             },
             "legalRepresentative": {
                 "@type": "Person",
                 "name": "Felix Schröter",
                 "jobTitle": "Managing Director"
+                {% if founder_same_as | length > 0 %},"sameAs": {{ founder_same_as | json_encode() | safe }}{% endif %}
             },
             "makesOffer": [
                 {
