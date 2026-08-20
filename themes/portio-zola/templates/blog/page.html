@@ -1,4 +1,5 @@
 {% extends "base.html" %}
+{% import "macros.html" as macros %}
 
 {% block content %}
 {% if page.extra.author %}
@@ -17,6 +18,11 @@
             <li class="breadcrumb-item active" aria-current="page">{{ page.title }}</li>
           </ol>
         </nav>
+        {{ macros::breadcrumb_jsonld(items=[
+          trans(key="home", lang=lang) ~ "|||" ~ get_url(path="/", lang=lang),
+          trans(key="blog", lang=lang) ~ "|||" ~ get_url(path='@/blog/_index.md', lang=lang),
+          page.title ~ "|||" ~ page.permalink
+        ]) }}
       </div>
     </div>
 

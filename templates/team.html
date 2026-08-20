@@ -13,6 +13,10 @@
             <li class="breadcrumb-item active" aria-current="page">{{ section.title }}</li>
           </ol>
         </nav>
+        {{ macros::breadcrumb_jsonld(items=[
+          trans(key="home", lang=lang) ~ "|||" ~ get_url(path="/", lang=lang),
+          section.title ~ "|||" ~ section.permalink
+        ]) }}
       </div>
     </div>
   </div>
