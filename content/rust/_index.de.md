@@ -1,5 +1,5 @@
 +++
-title = "Rust-Expertise"
+title = "Rust-Consulting"
 description = "Rust-Consulting: speichersichere, performante Systeme in einem idiomatischen, funktional geprägten Stil."
 template = "expertise.html"
 

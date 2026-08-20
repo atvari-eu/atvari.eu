@@ -1,5 +1,5 @@
 +++
-title = "Nix- & NixOS-Expertise"
+title = "Nix- & NixOS-Consulting"
 description = "Nix- und NixOS-Consulting: reproduzierbare Builds, deklarative Infrastruktur und verlässliche Entwicklungsumgebungen."
 template = "expertise.html"
 
