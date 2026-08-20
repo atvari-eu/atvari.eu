@@ -1,6 +1,43 @@
 {% extends "base.html" %}
 {% import "macros.html" as macros %}
 
+{% block seo %}
+{{ super() }}
+<script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@type": "Service",
+    "name": {{ section.title | json_encode() | safe }},
+    "description": {{ section.description | json_encode() | safe }},
+    "url": {{ section.permalink | json_encode() | safe }},
+    "provider": {
+        "@type": "Organization",
+        "name": {{ extra.legal.name | json_encode() | safe }},
+        "url": {{ config.base_url | json_encode() | safe }}
+    },
+    "areaServed": "Worldwide"
+    {% if section.extra.services %}
+    ,"hasOfferCatalog": {
+        "@type": "OfferCatalog",
+        "name": {{ section.extra.services_heading | json_encode() | safe }},
+        "itemListElement": [
+            {% for item in section.extra.services %}
+            {
+                "@type": "Offer",
+                "itemOffered": {
+                    "@type": "Service",
+                    "name": {{ item.title | json_encode() | safe }},
+                    "description": {{ item.content | json_encode() | safe }}
+                }
+            }{% if not loop.last %},{% endif %}
+            {% endfor %}
+        ]
+    }
+    {% endif %}
+}
+</script>
+{% endblock %}
+
 {% block content %}
 <header class="breadCrumb">
   <div class="container">
