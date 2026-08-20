@@ -6,12 +6,19 @@
 
 <html lang="{{ lang }}" itemscope itemtype="https://schema.org/WebPage">
     <head>
+        {% if page is defined and page.title %}
+            {% set meta_title = page.title %}
+        {% elif section is defined and section.title %}
+            {% set meta_title = section.title %}
+        {% else %}
+            {% set meta_title = config.title %}
+        {% endif %}
         <title>
             {% block title %}
-            {{ page.title | default(value=config.title) }}
+            {{ meta_title }}
             {% endblock %}
         </title>
-        
+
         <meta charset="UTF-8">
         <script>
             (function () {
@@ -27,13 +34,6 @@
         <meta name="theme-color" content="#ffffff" media="(prefers-color-scheme: light)">
         <meta name="theme-color" content="#12141c" media="(prefers-color-scheme: dark)">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        {% if page is defined and page.title %}
-            {% set meta_title = page.title %}
-        {% elif section is defined and section.title %}
-            {% set meta_title = section.title %}
-        {% else %}
-            {% set meta_title = config.title %}
-        {% endif %}
         {% if page is defined and page.description %}
             {% set meta_description = page.description %}
         {% elif section is defined and section.description %}
