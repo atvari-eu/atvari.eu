@@ -65,6 +65,7 @@ contact = "Contact"
 # Sitemaps
 impressum = "Impressum"
 press = "Press"
+press_releases = "Press releases"
 
 [languages.de]
 title = "atvari"
@@ -120,6 +121,7 @@ contact = "Kontakt"
 # Sitemaps
 impressum = "Impressum"
 press = "Presse"
+press_releases = "Pressemitteilungen"
 
 [extra]
 date_format = "%d %B, %Y"
