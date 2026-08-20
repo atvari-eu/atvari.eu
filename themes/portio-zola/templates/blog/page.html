@@ -21,6 +21,8 @@
     },
     {% if authors and authors | length > 0 %}
     {% set author = authors | first %}
+    {% set author_slug = author.name | slugify %}
+    {% set author_url = get_url(path="@/team/_index.md", lang=lang) ~ "#" ~ author_slug %}
     {% set_global author_same_as = [] %}
     {% for link in author.links %}
         {% if link.url is starting_with("http") %}
@@ -30,7 +32,8 @@
     "author": {
         "@type": "Person",
         "name": {{ author.name | json_encode() | safe }},
-        "jobTitle": {{ author.role | json_encode() | safe }}
+        "jobTitle": {{ author.role | json_encode() | safe }},
+        "url": {{ author_url | json_encode() | safe }}
         {% if author_same_as | length > 0 %},"sameAs": {{ author_same_as | json_encode() | safe }}{% endif %}
     },
     {% else %}
@@ -46,6 +49,7 @@
             "@type": "ImageObject",
             "url": {{ get_url(path="images/logo.png") | json_encode() | safe }}
         }
+        {% if org_same_as | length > 0 %},"sameAs": {{ org_same_as | json_encode() | safe }}{% endif %}
     },
     "keywords": {{ page.taxonomies.tags | default(value=[]) | json_encode() | safe }}
 }

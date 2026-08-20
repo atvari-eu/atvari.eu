@@ -14,6 +14,7 @@
         "@type": "Organization",
         "name": {{ extra.legal.name | json_encode() | safe }},
         "url": {{ config.base_url | json_encode() | safe }}
+        {% if org_same_as | length > 0 %},"sameAs": {{ org_same_as | json_encode() | safe }}{% endif %}
     },
     "areaServed": "Worldwide"
     {% if section.extra.services %}
