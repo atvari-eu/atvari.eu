@@ -137,12 +137,12 @@ menus = [
 
 sitemaps = [
   { name = "home", url = "/" },
-  { name = "nix", url = "/nix/" },
-  { name = "rust", url = "/rust/" },
-  { name = "team", url = "/team/" },
-  { name = "blog", url = "/blog/" },
-  { name = "contact", url = "/contact/" },
-  { name = "impressum", url = "/impressum/" }
+  { name = "nix", url = "@/nix/_index.md" },
+  { name = "rust", url = "@/rust/_index.md" },
+  { name = "team", url = "@/team/_index.md" },
+  { name = "blog", url = "@/blog/_index.md" },
+  { name = "contact", url = "@/contact/_index.md" },
+  { name = "impressum", url = "@/impressum/_index.md" }
 ]
 
 socials = [
