@@ -155,10 +155,23 @@ socials = [
 ]
 
 [extra.address]
-# phone = ""
+phone = "+49 30 82684221"
 email = "hi@atvari.eu"
 address = "Salzstr. 1, 21335 Lüneburg, Germany"
 # opening_hours = "Open from 10am to 6pm (close at 5pm Sundays) "
+# Structured components of `address` above, used for JSON-LD (schema.org PostalAddress).
+street = "Salzstr. 1"
+postal_code = "21335"
+city = "Lüneburg"
+country = "DE"
+
+# Legal/registration details, used for JSON-LD (schema.org OnlineBusiness identifiers).
+[extra.legal]
+name = "atvari GmbH"
+registration_court = "Amtsgericht Lüneburg"
+registration_number = "HRB 213941"
+duns = "317303891"
+founding_date = "2026-08-06"
 
 [extra.form]
 active = false

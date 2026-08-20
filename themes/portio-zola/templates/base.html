@@ -144,15 +144,102 @@
                 {% set_global org_same_as = org_same_as | concat(with=[social.url]) %}
             {% endif %}
         {% endfor %}
+        {% set nix_url = get_url(path="@/nix/_index.md", lang=lang) %}
+        {% set rust_url = get_url(path="@/rust/_index.md", lang=lang) %}
+        {% set service_url = config.base_url ~ "/#service" %}
         <script type="application/ld+json">
         {
             "@context": "https://schema.org",
-            "@type": "Organization",
+            "@type": "OnlineBusiness",
             "name": {{ config.title | json_encode() | safe }},
+            "legalName": {{ extra.legal.name | json_encode() | safe }},
             "url": {{ config.base_url | json_encode() | safe }},
-            "logo": {{ get_url(path=extra.logo) | json_encode() | safe }},
+            "logo": {{ get_url(path="images/logo.png") | json_encode() | safe }},
+            "image": {{ get_url(path="images/logo.png") | json_encode() | safe }},
             "description": {{ config.description | json_encode() | safe }},
             "email": {{ extra.address.email | json_encode() | safe }},
+            "telephone": {{ extra.address.phone | json_encode() | safe }},
+            "duns": {{ extra.legal.duns | json_encode() | safe }},
+            "identifier": {
+                "@type": "PropertyValue",
+                "propertyID": "DE-HRB",
+                "name": "Handelsregisternummer",
+                "value": {{ extra.legal.registration_number | json_encode() | safe }},
+                "description": {{ extra.legal.registration_court | json_encode() | safe }}
+            },
+            "address": {
+                "@type": "PostalAddress",
+                "streetAddress": {{ extra.address.street | json_encode() | safe }},
+                "postalCode": {{ extra.address.postal_code | json_encode() | safe }},
+                "addressLocality": {{ extra.address.city | json_encode() | safe }},
+                "addressCountry": {{ extra.address.country | json_encode() | safe }}
+            },
+            "legalAddress": {
+                "@type": "PostalAddress",
+                "streetAddress": {{ extra.address.street | json_encode() | safe }},
+                "postalCode": {{ extra.address.postal_code | json_encode() | safe }},
+                "addressLocality": {{ extra.address.city | json_encode() | safe }},
+                "addressCountry": {{ extra.address.country | json_encode() | safe }}
+            },
+            "foundingDate": {{ extra.legal.founding_date | json_encode() | safe }},
+            "foundingLocation": {
+                "@type": "Place",
+                "address": {
+                    "@type": "PostalAddress",
+                    "addressLocality": {{ extra.address.city | json_encode() | safe }},
+                    "addressCountry": {{ extra.address.country | json_encode() | safe }}
+                }
+            },
+            "areaServed": "Worldwide",
+            "knowsAbout": ["Rust", "Nix", "NixOS", "Cloud Engineering", "DevOps", "Kubernetes", "Software Architecture", "Cloud Architecture", "Infrastructure as Code"],
+            "founder": {
+                "@type": "Person",
+                "name": "Felix Schröter",
+                "jobTitle": "Founder & Principal Engineer"
+            },
+            "legalRepresentative": {
+                "@type": "Person",
+                "name": "Felix Schröter",
+                "jobTitle": "Managing Director"
+            },
+            "makesOffer": [
+                {
+                    "@type": "Offer",
+                    "url": {{ service_url | json_encode() | safe }},
+                    "itemOffered": {
+                        "@type": "Service",
+                        "name": "Software & Cloud Architecture",
+                        "url": {{ service_url | json_encode() | safe }}
+                    }
+                },
+                {
+                    "@type": "Offer",
+                    "url": {{ service_url | json_encode() | safe }},
+                    "itemOffered": {
+                        "@type": "Service",
+                        "name": "Cloud Engineering & DevOps",
+                        "url": {{ service_url | json_encode() | safe }}
+                    }
+                },
+                {
+                    "@type": "Offer",
+                    "url": {{ rust_url | json_encode() | safe }},
+                    "itemOffered": {
+                        "@type": "Service",
+                        "name": "Rust Consulting",
+                        "url": {{ rust_url | json_encode() | safe }}
+                    }
+                },
+                {
+                    "@type": "Offer",
+                    "url": {{ nix_url | json_encode() | safe }},
+                    "itemOffered": {
+                        "@type": "Service",
+                        "name": "Nix & NixOS Consulting",
+                        "url": {{ nix_url | json_encode() | safe }}
+                    }
+                }
+            ],
             "sameAs": {{ org_same_as | json_encode() | safe }}
         }
         </script>
