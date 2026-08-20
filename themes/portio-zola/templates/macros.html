@@ -96,6 +96,28 @@
 </button>
 {% endmacro %}
 
+{# `items` is a list of "Name|||https://absolute/url" strings (Tera has no map-literal
+   syntax available here, so name/url pairs are packed into one string and split). #}
+{% macro breadcrumb_jsonld(items) %}
+<script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+        {% for item in items %}
+        {% set parts = item | split(pat="|||") %}
+        {
+            "@type": "ListItem",
+            "position": {{ loop.index }},
+            "name": {{ parts.0 | json_encode() | safe }},
+            "item": {{ parts.1 | json_encode() | safe }}
+        }{% if not loop.last %},{% endif %}
+        {% endfor %}
+    ]
+}
+</script>
+{% endmacro %}
+
 {% macro analytics() %}
     {% if config.extra.ganalytics %}
       <script async src="https://www.googletagmanager.com/gtag/js?id={{config.extra.ganalytics}}"></script>
