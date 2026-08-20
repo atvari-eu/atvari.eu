@@ -1,6 +1,56 @@
 {% extends "base.html" %}
 {% import "macros.html" as macros %}
 
+{% block seo %}
+{{ super() }}
+{% set team = get_section(path="team/_index.md", lang=lang) %}
+{% set authors = team.extra.members | filter(attribute="name", value=page.extra.author) %}
+<script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    "headline": {{ page.title | json_encode() | safe }},
+    "description": {{ page.description | json_encode() | safe }},
+    "datePublished": {{ page.date | date(format="%Y-%m-%d") | json_encode() | safe }},
+    "image": {{ get_url(path=page.extra.post_image) | json_encode() | safe }},
+    "url": {{ page.permalink | json_encode() | safe }},
+    "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": {{ page.permalink | json_encode() | safe }}
+    },
+    {% if authors and authors | length > 0 %}
+    {% set author = authors | first %}
+    {% set_global author_same_as = [] %}
+    {% for link in author.links %}
+        {% if link.url is starting_with("http") %}
+            {% set_global author_same_as = author_same_as | concat(with=[link.url]) %}
+        {% endif %}
+    {% endfor %}
+    "author": {
+        "@type": "Person",
+        "name": {{ author.name | json_encode() | safe }},
+        "jobTitle": {{ author.role | json_encode() | safe }}
+        {% if author_same_as | length > 0 %},"sameAs": {{ author_same_as | json_encode() | safe }}{% endif %}
+    },
+    {% else %}
+    "author": {
+        "@type": "Person",
+        "name": {{ page.extra.author | json_encode() | safe }}
+    },
+    {% endif %}
+    "publisher": {
+        "@type": "Organization",
+        "name": {{ extra.legal.name | json_encode() | safe }},
+        "logo": {
+            "@type": "ImageObject",
+            "url": {{ get_url(path="images/logo.png") | json_encode() | safe }}
+        }
+    },
+    "keywords": {{ page.taxonomies.tags | default(value=[]) | json_encode() | safe }}
+}
+</script>
+{% endblock %}
+
 {% block content %}
 {% if page.extra.author %}
 {% set team = get_section(path="team/_index.md", lang=lang) %}
