@@ -171,9 +171,18 @@
                     margin: 0 0 20px 0;
                 }
             }
+            &_columns{
+                display: flex;
+                gap: 20px;
+                @include mobile{
+                    flex-direction: column;
+                    gap: 0;
+                }
+            }
             ul{
                 margin: 0;
                 padding: 0;
+                flex: 1;
                 li{
                     list-style: none;
                     a{
