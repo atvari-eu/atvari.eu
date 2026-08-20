@@ -18,6 +18,15 @@ date = "2026-08-20"
 date_display = "20. August 2026"
 language = "en"
 language_note = "Englisch"
+
+[[extra.press_releases]]
+title = "atvari GmbH Launches Software and Cloud Consulting in Lüneburg"
+url = "https://www.openpr.com/news/4608595/atvari-gmbh-launches-software-and-cloud-consulting"
+publisher = "openPR"
+date = "2026-08-20"
+date_display = "20. August 2026"
+language = "en"
+language_note = "Englisch"
 +++
 
 ## Presseanfragen
