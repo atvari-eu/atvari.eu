@@ -144,9 +144,9 @@ sitemaps = [
   { name = "rust", url = "@/rust/_index.md" },
   { name = "team", url = "@/team/_index.md" },
   { name = "blog", url = "@/blog/_index.md" },
+  { name = "press", url = "@/press/_index.md" },
   { name = "contact", url = "@/contact/_index.md" },
-  { name = "impressum", url = "@/impressum/_index.md" },
-  { name = "press", url = "@/press/_index.md" }
+  { name = "impressum", url = "@/impressum/_index.md" }
 ]
 
 socials = [
