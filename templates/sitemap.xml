@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+{#
+  Zola's built-in sitemap.xml has no per-language hreflang support: each
+  SitemapEntry only carries permalink/updated/extra (see
+  https://github.com/getzola/zola/blob/master/components/site/src/sitemap.rs),
+  so this template reimplements sitemap generation instead of using the
+  built-in `entries` variable, enumerating this site's known content
+  directly via get_section/get_page/get_taxonomy so each URL can list its
+  language alternates per https://www.sitemaps.org/protocol.html's hreflang
+  extension. `config`/`lang`/`current_path` aren't available in this
+  template (see https://www.getzola.org/documentation/templates/overview/),
+  only global functions, so "en"/"de" are hardcoded below rather than read
+  from config.languages.
+
+  get_page/get_section resolve a translation by its bare canonical path
+  (e.g. "blog/hello-world.md") regardless of whether the underlying file
+  for the default language is named bare or with an explicit `.en.md`
+  suffix. Page/Section.translations, by contrast, does NOT treat an
+  `.en.md`-suffixed file as the same translation group as its `.de.md`
+  counterpart, so it's not used here.
+
+  Paginated listing/taxonomy pages are intentionally omitted: they're
+  near-duplicates of the unpaginated page and Google recommends excluding
+  them from sitemaps.
+#}
+{%- set sections = [
+    "_index.md",
+    "team/_index.md",
+    "blog/_index.md",
+    "contact/_index.md",
+    "nix/_index.md",
+    "rust/_index.md",
+    "impressum/_index.md",
+    "press/_index.md"
+] -%}
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
+{%- for path in sections %}
+{%- set en = get_section(path=path, lang="en") -%}
+{%- set de = get_section(path=path, lang="de") %}
+    <url>
+        <loc>{{ en.permalink | safe }}</loc>
+        <xhtml:link rel="alternate" hreflang="en" href="{{ en.permalink | safe }}"/>
+        <xhtml:link rel="alternate" hreflang="de" href="{{ de.permalink | safe }}"/>
+        <xhtml:link rel="alternate" hreflang="x-default" href="{{ en.permalink | safe }}"/>
+    </url>
+    <url>
+        <loc>{{ de.permalink | safe }}</loc>
+        <xhtml:link rel="alternate" hreflang="en" href="{{ en.permalink | safe }}"/>
+        <xhtml:link rel="alternate" hreflang="de" href="{{ de.permalink | safe }}"/>
+        <xhtml:link rel="alternate" hreflang="x-default" href="{{ en.permalink | safe }}"/>
+    </url>
+{%- endfor %}
+
+{%- set blog_en = get_section(path="blog/_index.md", lang="en") -%}
+{%- for post in blog_en.pages %}
+{%- set en = post -%}
+{%- set de = get_page(path="blog/" ~ post.slug ~ ".md", lang="de") %}
+    <url>
+        <loc>{{ en.permalink | safe }}</loc>
+        <lastmod>{{ en.updated | default(value=en.date) }}</lastmod>
+        <xhtml:link rel="alternate" hreflang="en" href="{{ en.permalink | safe }}"/>
+        <xhtml:link rel="alternate" hreflang="de" href="{{ de.permalink | safe }}"/>
+        <xhtml:link rel="alternate" hreflang="x-default" href="{{ en.permalink | safe }}"/>
+    </url>
+    <url>
+        <loc>{{ de.permalink | safe }}</loc>
+        <lastmod>{{ de.updated | default(value=de.date) }}</lastmod>
+        <xhtml:link rel="alternate" hreflang="en" href="{{ en.permalink | safe }}"/>
+        <xhtml:link rel="alternate" hreflang="de" href="{{ de.permalink | safe }}"/>
+        <xhtml:link rel="alternate" hreflang="x-default" href="{{ en.permalink | safe }}"/>
+    </url>
+{%- endfor %}
+
+{%- for lang in ["en", "de"] %}
+{%- for kind in ["categories", "tags"] %}
+{%- set taxonomy = get_taxonomy(kind=kind, lang=lang, required=false) -%}
+{%- if taxonomy %}
+    <url><loc>{{ taxonomy.permalink | safe }}</loc></url>
+{%- for item in taxonomy.items %}
+    <url><loc>{{ item.permalink | safe }}</loc></url>
+{%- endfor -%}
+{%- endif -%}
+{%- endfor -%}
+{%- endfor %}
+</urlset>
