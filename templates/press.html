@@ -65,8 +65,8 @@
           <ul>
             {% for item in section.extra.press_releases %}
             <li>
-              <strong><a href="{{ item.url }}" rel="external">{{ item.title }}</a></strong>
-              — {{ item.publisher }}, {{ item.date_display }}{% if item.language_note %} ({{ item.language_note }}){% endif %}
+              <cite><a href="{{ item.url }}" rel="external">{{ item.title }}</a></cite>
+              — {{ item.publisher }}, <time datetime="{{ item.date }}">{{ item.date_display }}</time>{% if item.language_note %} ({{ item.language_note }}){% endif %}
             </li>
             {% endfor %}
           </ul>
