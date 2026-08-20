@@ -8,7 +8,7 @@ name = "Felix Schröter"
 role = "Gründer & Principal Engineer"
 image = "images/team/felix.jpg"
 bio = """
-Unabhängiger Software- und Cloud-Engineer mit über 11 Jahren Erfahrung im Aufbau von Cloud-nativer Infrastruktur nach DevOps-Praktiken für Startups und Unternehmen.
+Unabhängiger Software- und Cloud-Engineering-Consultant und Contractor mit über 11 Jahren Erfahrung im Aufbau von Cloud-nativer Infrastruktur nach DevOps-Praktiken für Startups und Unternehmen. Als Rust-Experte und Nix-Experte steht er sowohl für projektbasierte Beratung als auch für Contracting zur Verfügung.
 
 Er ist seit 2019 Nixpkgs-Contributor, seit 2020 Maintainer und seit 2024 Committer und hilft damit, das größte Open-Source-Paketarchiv zu pflegen. Bemerkenswert ist außerdem Plastikpost, eine von ihm entwickelte Web-App, über die bereits mehr als 79.000 Widersprüche gegen unadressierte Werbepost eingelegt wurden.
 """

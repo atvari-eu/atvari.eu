@@ -18,8 +18,8 @@ iterators, combinators, and closures rather than mutable loops.
 
 Originally created by Graydon Hoare at Mozilla and now stewarded by the
 independent Rust Foundation, Rust has topped Stack Overflow's "most loved
-language" survey every year since 2016, and we've been writing it for
-years, from backend services to CLIs and systems software.
+language" survey every year since 2016, and as Rust experts, we've been
+writing it for years, from backend services to CLIs and systems software.
 """
 intro_business = """
 Rust trades a small upfront investment in learning curve for large,

@@ -21,8 +21,9 @@ Builds, Deployments und Entwicklungsumgebungen wirklich reproduzierbar: Was
 auf einer Maschine funktioniert, funktioniert auf jeder Maschine, heute
 und in Jahren noch.
 
-Wir betreiben Nix und NixOS seit Jahren produktiv und auf unseren eigenen
-Rechnern und helfen Teams dabei, sie ohne Trial-and-Error einzuführen.
+Als Nix- und NixOS-Experten betreiben wir sie seit Jahren produktiv und auf
+unseren eigenen Rechnern und helfen Teams dabei, sie ohne Trial-and-Error
+einzuführen.
 """
 intro_business = """
 Verlässlichkeit und Vorhersehbarkeit senken direkt eure Betriebskosten.

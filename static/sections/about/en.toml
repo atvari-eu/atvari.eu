@@ -5,7 +5,8 @@ description = """
   ## About atvari
 
   atvari GmbH is a software and cloud engineering consultancy founded in
-  2026 and based in Lüneburg, Germany, operating worldwide.
+  2026 and based in Lüneburg, Germany, working as independent consultants
+  and contractors for clients worldwide.
 """
 content = """
   ### With ❤️ for Rust, Nix & Open Source
@@ -13,7 +14,7 @@ content = """
   We help teams design, build, and operate secure, scalable, and
   easy-to-maintain systems, offering software & cloud architecture, custom
   software engineering, cloud engineering, and DevOps consulting, with
-  particular depth in Rust and the Nix/NixOS ecosystem.
+  particular depth as Rust experts and Nix/NixOS experts.
 
   We're active contributors to the open source community, including
   Nixpkgs, the largest open source package repository, and care deeply

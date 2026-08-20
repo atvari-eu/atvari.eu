@@ -5,7 +5,8 @@ description = """
   ## Über atvari
 
   Die atvari GmbH ist eine 2026 gegründete Software- und
-  Cloud-Engineering-Beratung mit Sitz in Lüneburg, die weltweit tätig ist.
+  Cloud-Engineering-Beratung mit Sitz in Lüneburg, die als unabhängige
+  Consultants und Contractors weltweit für Kunden tätig ist.
 """
 content = """
   ### Mit ❤️ für Rust, Nix & Open Source
@@ -13,7 +14,7 @@ content = """
   Wir helfen Teams dabei, sichere, skalierbare und leicht wartbare Systeme
   zu entwickeln und zu betreiben, mit Beratung in den Bereichen Software-
   & Cloud-Architektur, individuelle Softwareentwicklung, Cloud-Engineering
-  und DevOps, mit besonderer Tiefe in Rust und dem Nix/NixOS-Ökosystem.
+  und DevOps, mit besonderer Tiefe als Rust-Experten und Nix/NixOS-Experten.
 
   Wir sind aktive Mitglieder der Open-Source-Community, unter anderem bei
   Nixpkgs, dem größten Open-Source-Paketarchiv, und legen großen Wert auf

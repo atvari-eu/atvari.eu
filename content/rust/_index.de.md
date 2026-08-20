@@ -19,8 +19,9 @@ setzt.
 
 Ursprünglich von Graydon Hoare bei Mozilla entwickelt und heute von der
 unabhängigen Rust Foundation getragen, führt Rust seit 2016 jedes Jahr die
-„most loved language“-Umfrage von Stack Overflow an, und wir schreiben es
-seit Jahren, von Backend-Services über CLIs bis hin zu Systemsoftware.
+„most loved language“-Umfrage von Stack Overflow an, und als Rust-Experten
+schreiben wir es seit Jahren, von Backend-Services über CLIs bis hin zu
+Systemsoftware.
 """
 intro_business = """
 Rust tauscht eine kleine anfängliche Lernkurve gegen große, sich

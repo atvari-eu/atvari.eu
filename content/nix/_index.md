@@ -20,8 +20,9 @@ they make builds, deployments, and development environments genuinely
 reproducible: what works on one machine works on every machine, today and
 years from now.
 
-We've been running Nix and NixOS in production and on our own machines for
-years, and we help teams adopt them without the trial and error.
+As Nix and NixOS experts, we've been running them in production and on our
+own machines for years, and we help teams adopt them without the trial and
+error.
 """
 intro_business = """
 Reliability and predictability translate directly into lower operating
