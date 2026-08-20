@@ -17,6 +17,7 @@ $dark-shape-color: darken($dark-surface-color, 5%);
   --color-surface: #ffffff;
   --color-decorative: #f1f6f9;
   --color-shape: #f1f6f9;
+  --color-divider: rgba(0, 0, 0, 0.08);
   --bs-link-color: #{$primary-color};
   --bs-link-color-rgb: #{red($primary-color)}, #{green($primary-color)}, #{blue($primary-color)};
   --bs-link-hover-color: #{$light-link-hover-color};
@@ -30,6 +31,7 @@ $dark-shape-color: darken($dark-surface-color, 5%);
   --color-surface: #{$dark-surface-color};
   --color-decorative: #{$dark-surface-color};
   --color-shape: #{$dark-shape-color};
+  --color-divider: rgba(255, 255, 255, 0.14);
 
   // Bootstrap components/utilities (.text-reset, .text-body-secondary, plain
   // <body> inheritance, etc.) read these directly, so without overriding them
