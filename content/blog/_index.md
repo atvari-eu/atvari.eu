@@ -1,6 +1,6 @@
 +++
 title = "Blog"
-description = "Enjoy team diversity and increase their networks among others people in various fields by provided."
+description = "Updates and insights from atvari GmbH on software engineering, cloud infrastructure, Rust, Nix, and NixOS."
 template = "blog/section.html"
 page_template = "blog/page.html"
 paginate_by = 9

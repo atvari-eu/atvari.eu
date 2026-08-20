@@ -13,9 +13,14 @@
         {% else %}
             {% set meta_title = config.title %}
         {% endif %}
+        {% if meta_title is starting_with(config.title) %}
+            {% set full_title = meta_title %}
+        {% else %}
+            {% set full_title = meta_title ~ " | " ~ config.title %}
+        {% endif %}
         <title>
             {% block title %}
-            {{ meta_title }}
+            {{ full_title }}
             {% endblock %}
         </title>
 
@@ -54,6 +59,38 @@
             {% set canonical_path = "/" ~ canonical_path %}
         {% endif %}
         <link rel="canonical" href="{{ config.base_url ~ canonical_path }}">
+        {% endblock %}
+        {% block hreflang %}
+        {% if config.languages | length >= 1 %}
+        {# Same current_relative_path derivation as the navbar language switcher. #}
+        {% set normalized_path = current_path %}
+        {% if not (normalized_path is starting_with("/")) %}
+            {% set normalized_path = "/" ~ normalized_path %}
+        {% endif %}
+        {% set lang_prefix = "/" ~ lang ~ "/" %}
+        {% if normalized_path == "/" or normalized_path == lang_prefix %}
+            {% set current_relative_path = "/" %}
+        {% elif lang != config.default_language and normalized_path is starting_with(lang_prefix) %}
+            {% set current_relative_path = normalized_path | replace(from=lang_prefix, to="") %}
+        {% else %}
+            {% set current_relative_path = normalized_path | trim_start_matches(pat="/") %}
+        {% endif %}
+        {# config.languages (as used by the nav language switcher) excludes the
+           current page's own language, so add a self-referencing tag too. #}
+        <link rel="alternate" hreflang="{{ lang }}" href="{{ config.base_url ~ normalized_path }}">
+        {% for language, _ in config.languages %}
+            {% set alt_href = get_url(path=current_relative_path, lang=language) %}
+            {% if not (alt_href is ending_with("/")) %}
+                {% set alt_href = alt_href ~ "/" %}
+            {% endif %}
+        <link rel="alternate" hreflang="{{ language }}" href="{{ alt_href }}">
+        {% endfor %}
+        {% set default_href = get_url(path=current_relative_path, lang=config.default_language) %}
+        {% if not (default_href is ending_with("/")) %}
+            {% set default_href = default_href ~ "/" %}
+        {% endif %}
+        <link rel="alternate" hreflang="x-default" href="{{ default_href }}">
+        {% endif %}
         {% endblock %}
         {% block opengraph %}
         {% if page is defined and page.extra.feature_image %}
@@ -101,6 +138,24 @@
         {{ macros::icons(path="static/images/symbol.png", apple=true, sizes=[57, 72, 76, 114, 120, 144, 152, 180]) }}
         {{ macros::icons(path="static/images/symbol.png", sizes=[16, 32, 36, 48, 72, 96, 144, 192]) }}
         {{ macros::analytics() }}
+        {% set_global org_same_as = [] %}
+        {% for social in extra.socials %}
+            {% if social.url is starting_with("http") %}
+                {% set_global org_same_as = org_same_as | concat(with=[social.url]) %}
+            {% endif %}
+        {% endfor %}
+        <script type="application/ld+json">
+        {
+            "@context": "https://schema.org",
+            "@type": "Organization",
+            "name": {{ config.title | json_encode() | safe }},
+            "url": {{ config.base_url | json_encode() | safe }},
+            "logo": {{ get_url(path=extra.logo) | json_encode() | safe }},
+            "description": {{ config.description | json_encode() | safe }},
+            "email": {{ extra.address.email | json_encode() | safe }},
+            "sameAs": {{ org_same_as | json_encode() | safe }}
+        }
+        </script>
         {% endblock %}
     </head>
 
