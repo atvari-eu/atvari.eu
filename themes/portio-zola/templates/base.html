@@ -171,6 +171,7 @@
             "email": {{ extra.address.email | json_encode() | safe }},
             "telephone": {{ extra.address.phone | json_encode() | safe }},
             "duns": {{ extra.legal.duns | json_encode() | safe }},
+            "vatID": {{ extra.legal.vat_id | json_encode() | safe }},
             "identifier": {
                 "@type": "PropertyValue",
                 "propertyID": "DE-HRB",

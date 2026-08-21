@@ -18,7 +18,7 @@ Website: [atvari.eu](https://atvari.eu)
 
 Court of registration: Amtsgericht Lüneburg\
 Registration number: HRB 213941\
-VAT ID pursuant to § 27a UStG: pending\
+VAT ID pursuant to § 27a UStG: DE464341559\
 Managing director: Felix Schröter
 
 Responsible for content pursuant to § 55 (2) RStV: Felix Schröter (address as above)

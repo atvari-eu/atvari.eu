@@ -18,7 +18,7 @@ Website: [atvari.eu](https://atvari.eu)
 
 Registergericht: Amtsgericht Lüneburg\
 Registernummer: HRB 213941\
-Umsatzsteuer-Identifikationsnummer gem. § 27a UStG: ausstehend\
+Umsatzsteuer-Identifikationsnummer gem. § 27a UStG: DE464341559\
 Vertretungsberechtigter Geschäftsführer: Felix Schröter
 
 Verantwortlich für den Inhalt nach § 55 Abs. 2 RStV: Felix Schröter (Anschrift s.o.)
