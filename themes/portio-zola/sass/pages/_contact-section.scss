@@ -149,9 +149,14 @@
                 width: 178px;
                 height: auto;
             }
+            .contact__widget_seals{
+                display: flex;
+                align-items: center;
+                gap: 15px;
+                margin-top: 15px;
+            }
             .contact__widget_seal{
                 display: block;
-                margin-top: 15px;
                 img{
                     border: 0;
                 }
