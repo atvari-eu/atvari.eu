@@ -40,6 +40,11 @@ url = "https://www.freelancermap.de/profil/felix-schroeter"
 icon = "freelancermap"
 
 [[extra.members.links]]
+label = "GULP"
+url = "https://www.gulp.de/gulp2/g/spezialisten/resume/schroeter"
+icon = "gulp"
+
+[[extra.members.links]]
 label = "Bluesky"
 url = "https://bsky.app/profile/felschr.com"
 icon = "bluesky"
