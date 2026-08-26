@@ -157,6 +157,7 @@ socials = [
   { label = "Bluesky", icon = "bluesky", url = "https://bsky.app/profile/atvari.eu" },
   { label = "Mastodon", icon = "mastodon", url = "https://fosstodon.org/@atvari" },
   { label = "GitHub", icon = "github-original", url = "https://github.com/atvari-eu" },
+  { label = "Crunchbase", icon = "crunchbase", url = "https://www.crunchbase.com/organization/atvari" },
   { label = "Email", icon = "envelope", url = "mailto:hi@atvari.eu" },
 ]
 

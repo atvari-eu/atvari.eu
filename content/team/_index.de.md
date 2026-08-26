@@ -45,6 +45,11 @@ url = "https://www.gulp.de/gulp2/g/spezialisten/resume/schroeter"
 icon = "gulp"
 
 [[extra.members.links]]
+label = "Crunchbase"
+url = "https://www.crunchbase.com/person/felix-schröter"
+icon = "crunchbase"
+
+[[extra.members.links]]
 label = "Bluesky"
 url = "https://bsky.app/profile/felschr.com"
 icon = "bluesky"
