@@ -35,6 +35,11 @@ url = "https://www.linkedin.com/in/schroeter/"
 icon = "linkedin-original"
 
 [[extra.members.links]]
+label = "freelancermap"
+url = "https://www.freelancermap.de/profil/felix-schroeter"
+icon = "freelancermap"
+
+[[extra.members.links]]
 label = "Bluesky"
 url = "https://bsky.app/profile/felschr.com"
 icon = "bluesky"
