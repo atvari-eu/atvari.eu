@@ -3,59 +3,58 @@
 
   inputs = {
     nixpkgs.url = "github:nixos/nixpkgs?ref=nixos-unstable";
-    flake-utils.url = "github:numtide/flake-utils";
   };
 
-  outputs =
-    {
-      self,
-      nixpkgs,
-      flake-utils,
-    }:
-    flake-utils.lib.eachDefaultSystem (
-      system:
-      let
-        pkgs = nixpkgs.legacyPackages.${system};
-      in
-      {
-        packages.default = pkgs.stdenv.mkDerivation {
-          pname = "atvari-eu";
-          version = "0.1.0";
+  outputs = inputs: {
+    devShells = builtins.mapAttrs (system: pkgs: {
 
-          src = ./.;
+      default = pkgs.mkShell {
+        packages = with pkgs; [
+          zola
+          typescript-language-server
+        ];
+      };
 
-          nativeBuildInputs = [ pkgs.zola ];
+    }) inputs.nixpkgs.legacyPackages;
 
-          buildPhase = ''
-            runHook preBuild
-            zola build --minify
-            runHook postBuild
+    packages = builtins.mapAttrs (system: pkgs: {
+
+      default = pkgs.stdenv.mkDerivation {
+        pname = "atvari-eu";
+        version = "0.1.0";
+
+        src = ./.;
+
+        nativeBuildInputs = [ pkgs.zola ];
+
+        buildPhase = ''
+          runHook preBuild
+          zola build --minify
+          runHook postBuild
+        '';
+
+        installPhase = ''
+          runHook preInstall
+          cp -r public $out
+          runHook postInstall
+        '';
+      };
+
+    }) inputs.nixpkgs.legacyPackages;
+
+    apps = builtins.mapAttrs (system: pkgs: {
+
+      default = {
+        type = "app";
+        program = "${pkgs.writeShellApplication {
+          name = "atvari-eu-serve";
+          runtimeInputs = [ pkgs.static-web-server ];
+          text = ''
+            exec static-web-server --root ${inputs.self.packages.${system}.default} "$@"
           '';
+        }}/bin/atvari-eu-serve";
+      };
 
-          installPhase = ''
-            runHook preInstall
-            cp -r public $out
-            runHook postInstall
-          '';
-        };
-
-        apps.default = {
-          type = "app";
-          program = "${pkgs.writeShellApplication {
-            name = "atvari-eu-serve";
-            runtimeInputs = [ pkgs.static-web-server ];
-            text = ''
-              exec static-web-server --root ${self.packages.${system}.default} "$@"
-            '';
-          }}/bin/atvari-eu-serve";
-        };
-
-        devShells.default = pkgs.mkShell {
-          packages = with pkgs; [
-            zola
-            typescript-language-server
-          ];
-        };
-      }
-    );
+    }) inputs.nixpkgs.legacyPackages;
+  };
 }
