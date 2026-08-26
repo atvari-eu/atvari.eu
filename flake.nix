@@ -27,6 +27,14 @@
 
         nativeBuildInputs = [ pkgs.zola ];
 
+        # --skip-external-links so the check runs in the sandbox
+        doCheck = true;
+        checkPhase = ''
+          runHook preCheck
+          zola check --drafts --skip-external-links
+          runHook postCheck
+        '';
+
         buildPhase = ''
           runHook preBuild
           zola build --minify

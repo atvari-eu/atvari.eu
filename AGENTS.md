@@ -23,6 +23,7 @@ The flake also exposes package/app outputs for building and previewing a product
 ```sh
 nix build               # builds the site (zola build --minify) to ./result
 nix run .                # serves ./result via static-web-server (pass flags after --, e.g. `nix run . -- --port 8080`)
+nix flake check          # builds the site and validates content/links via `zola check --drafts --skip-external-links`
 ```
 
 ## Architecture
