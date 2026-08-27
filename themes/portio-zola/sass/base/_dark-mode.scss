@@ -78,6 +78,8 @@ body {
   --bs-dropdown-bg: var(--color-surface);
   --bs-dropdown-link-hover-bg: rgba(255, 255, 255, 0.08);
   --bs-dropdown-link-hover-color: var(--color-heading);
+  --bs-dropdown-link-active-bg: rgba(255, 255, 255, 0.14);
+  --bs-dropdown-link-active-color: var(--color-heading);
 }
 
 .navbar {
@@ -311,4 +313,31 @@ html[data-theme="light"] .theme-toggle__icon--light {
 }
 html[data-theme="dark"] .theme-toggle__icon--dark {
   display: inline-block;
+}
+
+// Language switcher toggle button
+.lang-switch-toggle {
+  display: inline-flex !important;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  font-size: 20px;
+  color: var(--color-heading);
+  // Beats Bootstrap's .nav-link:hover (which would otherwise pull in
+  // --bs-link-hover-color, the brand green) with equal specificity by
+  // being declared later in the stylesheet.
+  &:hover {
+    color: var(--color-heading);
+  }
+}
+
+// Sized to its content (just "EN"/"DE") instead of Bootstrap's 10rem
+// dropdown-menu default, and centered under the icon rather than the
+// toggle's left edge.
+.lang-switch-menu {
+  --bs-dropdown-min-width: 0;
+  width: max-content;
+  left: 50%;
+  transform: translateX(-50%);
 }

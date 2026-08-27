@@ -51,6 +51,7 @@ copyright = "Copyright © atvari GmbH 2026"
 made_with_love = "Made in Europe"
 for_engineers = "For Engineers"
 for_business = "For Decision-Makers"
+language = "Language"
 
 # Menus
 home = "Home"
@@ -108,6 +109,7 @@ copyright = "Copyright © atvari GmbH 2026"
 made_with_love = "Made in Europe"
 for_engineers = "Für Entwickler"
 for_business = "Für Entscheider"
+language = "Sprache"
 
 # Menus
 home = "Start"
