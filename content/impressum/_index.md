@@ -1,5 +1,5 @@
 +++
-title = "Impressum"
+title = "Imprint"
 description = "Legal notice for atvari GmbH pursuant to § 5 TMG."
 template = "impressum.html"
 +++
