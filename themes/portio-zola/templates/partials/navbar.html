@@ -13,22 +13,48 @@
         </button>
 
         <div class="collapse navbar-collapse justify-content-between" id="navbarCollapse">
+            {# Zola omits the leading slash from `current_path` specifically for a
+               non-default language's homepage (e.g. "de/" instead of "/de/"),
+               unlike every other page -- normalize before matching the prefix. #}
+            {% set normalized_path = current_path %}
+            {% if not (normalized_path is starting_with("/")) %}
+                {% set normalized_path = "/" ~ normalized_path %}
+            {% endif %}
+            {% set lang_prefix = "/" ~ lang ~ "/" %}
+            {% if normalized_path == "/" or normalized_path == lang_prefix %}
+                {% set current_relative_path = "/" %}
+            {% elif lang != config.default_language and normalized_path is starting_with(lang_prefix) %}
+                {% set current_relative_path = normalized_path | replace(from=lang_prefix, to="") %}
+            {% else %}
+                {% set current_relative_path = normalized_path | trim_start_matches(pat="/") %}
+            {% endif %}
+
             <ul class="nav navbar-nav main-navigation">
                 {% for menu in extra.menus %}
                 {% if menu.name == "service" %}
+                {% set nix_active = current_relative_path is starting_with("nix") %}
+                {% set rust_active = current_relative_path is starting_with("rust") %}
+                {% set service_active = nix_active or rust_active %}
                 <li class="nav-item dropdown">
-                    <a href="{{ get_url(path=menu.url, lang=lang) }}" class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    <a href="{{ get_url(path=menu.url, lang=lang) }}" class="nav-link dropdown-toggle{% if service_active %} active{% endif %}" role="button" data-bs-toggle="dropdown" aria-expanded="false" data-nav-anchor="service">
                         {{ trans(key=menu.name, lang=lang) }}
                     </a>
                     <ul class="dropdown-menu">
-                        <li><a class="dropdown-item" href="{{ get_url(path="#service", lang=lang) }}">{{ trans(key="service_overview", lang=lang) }}</a></li>
-                        <li><a class="dropdown-item" href="{{ get_url(path="@/nix/_index.md", lang=lang) }}">{{ trans(key="nix", lang=lang) }}</a></li>
-                        <li><a class="dropdown-item" href="{{ get_url(path="@/rust/_index.md", lang=lang) }}">{{ trans(key="rust", lang=lang) }}</a></li>
+                        <li><a class="dropdown-item" href="{{ get_url(path="#service", lang=lang) }}" data-nav-anchor="service">{{ trans(key="service_overview", lang=lang) }}</a></li>
+                        <li><a class="dropdown-item{% if nix_active %} active{% endif %}" href="{{ get_url(path="@/nix/_index.md", lang=lang) }}">{{ trans(key="nix", lang=lang) }}</a></li>
+                        <li><a class="dropdown-item{% if rust_active %} active{% endif %}" href="{{ get_url(path="@/rust/_index.md", lang=lang) }}">{{ trans(key="rust", lang=lang) }}</a></li>
                     </ul>
                 </li>
                 {% else %}
+                {% set is_anchor = menu.url is starting_with("#") %}
+                {% set item_active = false %}
+                {% if menu.name == "home" %}
+                    {% set item_active = current_relative_path == "/" %}
+                {% elif not is_anchor %}
+                    {% set item_active = current_relative_path is starting_with(menu.name) %}
+                {% endif %}
                 <li class="nav-item">
-                    <a href="{{ get_url(path=menu.url, lang=lang) }}" class="nav-link">
+                    <a href="{{ get_url(path=menu.url, lang=lang) }}" class="nav-link{% if item_active %} active{% endif %}"{% if is_anchor %} data-nav-anchor="{{ menu.name }}"{% endif %}>
                         {{ trans(key=menu.name, lang=lang) }}
                     </a>
                 </li>
@@ -42,21 +68,6 @@
                 </li>
 
                 {% if config.languages | length >= 1 %}
-                {# Zola omits the leading slash from `current_path` specifically for a
-                   non-default language's homepage (e.g. "de/" instead of "/de/"),
-                   unlike every other page -- normalize before matching the prefix. #}
-                {% set normalized_path = current_path %}
-                {% if not (normalized_path is starting_with("/")) %}
-                    {% set normalized_path = "/" ~ normalized_path %}
-                {% endif %}
-                {% set lang_prefix = "/" ~ lang ~ "/" %}
-                {% if normalized_path == "/" or normalized_path == lang_prefix %}
-                    {% set current_relative_path = "/" %}
-                {% elif lang != config.default_language and normalized_path is starting_with(lang_prefix) %}
-                    {% set current_relative_path = normalized_path | replace(from=lang_prefix, to="") %}
-                {% else %}
-                    {% set current_relative_path = normalized_path | trim_start_matches(pat="/") %}
-                {% endif %}
                 <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle lang-switch-toggle" href="#" role="button" data-bs-toggle="dropdown" data-bs-display="static" aria-expanded="false" aria-label="{{ trans(key="language", lang=lang) }}">
                         <svg class="icon-svg" viewBox="0 -960 960 960" xmlns="http://www.w3.org/2000/svg" fill="currentColor" aria-hidden="true">

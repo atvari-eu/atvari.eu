@@ -18,6 +18,7 @@ $dark-shape-color: darken($dark-surface-color, 5%);
   --color-decorative: #f1f6f9;
   --color-shape: #f1f6f9;
   --color-divider: rgba(0, 0, 0, 0.08);
+  --color-nav-active-bg: rgba(0, 0, 0, 0.035);
   --bs-link-color: #{$primary-color};
   --bs-link-color-rgb: #{red($primary-color)}, #{green($primary-color)}, #{blue($primary-color)};
   --bs-link-hover-color: #{$light-link-hover-color};
@@ -32,6 +33,7 @@ $dark-shape-color: darken($dark-surface-color, 5%);
   --color-decorative: #{$dark-surface-color};
   --color-shape: #{$dark-shape-color};
   --color-divider: rgba(255, 255, 255, 0.14);
+  --color-nav-active-bg: rgba(255, 255, 255, 0.06);
 
   // Bootstrap components/utilities (.text-reset, .text-body-secondary, plain
   // <body> inheritance, etc.) read these directly, so without overriding them
@@ -332,10 +334,22 @@ html[data-theme="dark"] .theme-toggle__icon--dark {
   }
 }
 
+// While open, Bootstrap's dropdown JS adds a "show" class to the toggle
+// itself (not just the menu), which would otherwise turn the icon near-black
+// via Bootstrap's own `.navbar-nav .nav-link.show` rule -- this needs the
+// full ancestor chain to outrank that rule's specificity.
+.navbar .navbar-nav .lang-switch-toggle.show {
+  color: var(--color-heading);
+}
+
 // Sized to its content (just "EN"/"DE") instead of Bootstrap's 10rem
 // dropdown-menu default, and centered under the icon rather than the
-// toggle's left edge.
-.lang-switch-menu {
+// toggle's left edge. Needs `.dropdown-menu` in the selector too: Bootstrap's
+// own `.dropdown-menu[data-bs-popper]` (added by its JS once the dropdown is
+// actually opened via click, unlike the CSS-only hover path) is otherwise
+// more specific and resets `left` back to 0, shifting the menu sideways only
+// on click.
+.navbar .dropdown-menu.lang-switch-menu {
   --bs-dropdown-min-width: 0;
   width: max-content;
   left: 50%;

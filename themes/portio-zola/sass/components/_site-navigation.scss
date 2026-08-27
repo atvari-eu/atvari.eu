@@ -27,7 +27,8 @@
             .nav-link{
                 color: $secondary-color;
                 font-family: $secondary-font;
-                padding: 0 15px;
+                padding: 8px 15px;
+                border-radius: 8px;
                 transition: all .3s ease;
                 font-weight: 500;
                 &:hover{
@@ -35,12 +36,18 @@
                 }
                 @include desktop{
                     text-align: center;
-                    padding: 15px 0;
+                    padding: 10px 14px;
                     cursor: pointer;
                 }
             }
-            .active{
-                color: $primary_color;
+            // Scoped to .nav-link so this doesn't also match .dropdown-item.active
+            // in the Services dropdown menu, which uses its own (non-primary)
+            // active-item color via the --bs-dropdown-link-active-* variables.
+            // The primary color is reserved for :hover; active items are marked
+            // by the pill background alone, keeping the ordinary heading color.
+            .nav-link.active{
+                color: var(--color-heading);
+                background: var(--color-nav-active-bg);
             }
         }
     }
