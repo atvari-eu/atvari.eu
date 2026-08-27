@@ -109,13 +109,18 @@
                 </div>
             </div>
         </div>
-        <div class="row contact__footer">
-            <div class="col-lg-6">
+        <div class="row contact__footer align-items-center">
+            <div class="col-lg-4">
                 <div class="contact__footer_copy">
                     <p>{{ trans(key="copyright", lang=lang) }}</p>
                 </div>
             </div>
-            <div class="col-lg-6">
+            <div class="col-lg-4 text-center">
+                <div class="contact__footer_made_with_love">
+                    <p>{{ trans(key="made_with_love", lang=lang) }}</p>
+                </div>
+            </div>
+            <div class="col-lg-4">
                 <div class="contact__footer_social">
                     <ul>
                         {% for social in extra.socials %}
