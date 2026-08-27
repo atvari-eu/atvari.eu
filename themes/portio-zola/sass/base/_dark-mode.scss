@@ -326,10 +326,13 @@ html[data-theme="dark"] .theme-toggle__icon--dark {
   height: 40px;
   font-size: 20px;
   color: var(--color-heading);
-  // Beats Bootstrap's .nav-link:hover (which would otherwise pull in
-  // --bs-link-hover-color, the brand green) with equal specificity by
-  // being declared later in the stylesheet.
-  &:hover {
+  // Beats Bootstrap's .nav-link:focus,.nav-link:hover (which would otherwise
+  // pull in --bs-nav-link-hover-color) with equal specificity by being
+  // declared later in the stylesheet. :focus lingers after clicking the
+  // toggle to open/close the dropdown and then clicking elsewhere, so it
+  // needs the same override as :hover.
+  &:hover,
+  &:focus {
     color: var(--color-heading);
   }
 }
