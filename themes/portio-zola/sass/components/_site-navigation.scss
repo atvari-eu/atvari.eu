@@ -118,6 +118,8 @@
             border-radius: 8px;
             &:focus, &:active{
                 box-shadow: none;
+            }
+            &:not(.collapsed){
                 background: var(--color-nav-active-bg);
             }
             &-icon {

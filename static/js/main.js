@@ -3,9 +3,13 @@ const hamburger = document.querySelector("nav button");
 function processClick(event) {
     event.preventDefault();
 
-    document.getElementById("navbarCollapse")
+    const stillCollapsed = document.getElementById("navbarCollapse")
         .classList
         .toggle("collapse");
+    const expanded = !stillCollapsed;
+
+    hamburger.classList.toggle("collapsed", !expanded);
+    hamburger.setAttribute("aria-expanded", String(expanded));
 }
 
 function animateProgress() {
