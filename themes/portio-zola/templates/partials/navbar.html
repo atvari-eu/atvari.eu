@@ -48,9 +48,7 @@
                 {% else %}
                 {% set is_anchor = menu.url is starting_with("#") %}
                 {% set item_active = false %}
-                {% if menu.name == "home" %}
-                    {% set item_active = current_relative_path == "/" %}
-                {% elif not is_anchor %}
+                {% if not is_anchor %}
                     {% set item_active = current_relative_path is starting_with(menu.name) %}
                 {% endif %}
                 <li class="nav-item">
