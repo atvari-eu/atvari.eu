@@ -87,6 +87,9 @@ body {
 .navbar {
   @include desktop {
     background: var(--color-surface);
+    .navbar-collapse {
+      background: var(--color-surface);
+    }
   }
   &.nav__color__change {
     background: var(--color-surface);
