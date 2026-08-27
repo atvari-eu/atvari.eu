@@ -269,6 +269,10 @@
                 font-size: 16px;
                 font-family: $secondary-font;
                 margin: 0;
+                .icon-svg{
+                    font-size: 1.4em;
+                    vertical-align: middle;
+                }
             }
         }
         &_social{
