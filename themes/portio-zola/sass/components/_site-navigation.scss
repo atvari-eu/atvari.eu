@@ -113,7 +113,13 @@
     @include desktop{
         .navbar-toggler{
             outline: 0;
-            padding: 0;
+            padding: 8px;
+            border: 0;
+            border-radius: 8px;
+            &:focus, &:active{
+                box-shadow: none;
+                background: var(--color-nav-active-bg);
+            }
             &-icon {
                 height: 2px;
                 width: 25px;
