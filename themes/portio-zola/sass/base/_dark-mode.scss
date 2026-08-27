@@ -19,6 +19,8 @@ $dark-shape-color: darken($dark-surface-color, 5%);
   --color-shape: #f1f6f9;
   --color-divider: rgba(0, 0, 0, 0.08);
   --color-nav-active-bg: rgba(0, 0, 0, 0.035);
+  --color-dropdown-hover-bg: rgba(0, 0, 0, 0.06);
+  --color-dropdown-active-bg: rgba(0, 0, 0, 0.1);
   --bs-link-color: #{$primary-color};
   --bs-link-color-rgb: #{red($primary-color)}, #{green($primary-color)}, #{blue($primary-color)};
   --bs-link-hover-color: #{$light-link-hover-color};
@@ -34,6 +36,8 @@ $dark-shape-color: darken($dark-surface-color, 5%);
   --color-shape: #{$dark-shape-color};
   --color-divider: rgba(255, 255, 255, 0.14);
   --color-nav-active-bg: rgba(255, 255, 255, 0.06);
+  --color-dropdown-hover-bg: rgba(255, 255, 255, 0.08);
+  --color-dropdown-active-bg: rgba(255, 255, 255, 0.14);
 
   // Bootstrap components/utilities (.text-reset, .text-body-secondary, plain
   // <body> inheritance, etc.) read these directly, so without overriding them
@@ -78,9 +82,9 @@ body {
 // property directly on the component instead.
 .dropdown-menu {
   --bs-dropdown-bg: var(--color-surface);
-  --bs-dropdown-link-hover-bg: rgba(255, 255, 255, 0.08);
+  --bs-dropdown-link-hover-bg: var(--color-dropdown-hover-bg);
   --bs-dropdown-link-hover-color: var(--color-heading);
-  --bs-dropdown-link-active-bg: rgba(255, 255, 255, 0.14);
+  --bs-dropdown-link-active-bg: var(--color-dropdown-active-bg);
   --bs-dropdown-link-active-color: var(--color-heading);
 }
 
