@@ -34,6 +34,12 @@
                 </li>
                 {% endif %}
                 {% endfor %}
+            </ul>
+
+            <ul class="nav navbar-nav navbar-nav--utility">
+                <li class="nav-item">
+                    {{ macros::theme_toggle() }}
+                </li>
 
                 {% if config.languages | length >= 1 %}
                 {# Zola omits the leading slash from `current_path` specifically for a
@@ -74,17 +80,7 @@
                     </ul>
                 </li>
                 {% endif %}
-
-                <li class="nav-item">
-                    {{ macros::theme_toggle() }}
-                </li>
             </ul>
-
-            <div class="navbar-nav">
-                <a href="{{get_url(path='@/contact/_index.md', lang=lang) }}" class="hire_button">
-                    {{ trans(key="hire_me_now", lang=lang) }}
-                </a>
-            </div>
         </div>
     </div>
 </nav>

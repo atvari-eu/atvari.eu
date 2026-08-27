@@ -43,39 +43,24 @@
                 color: $primary_color;
             }
         }
-        // On wide viewports the nav is a horizontal bar (not the collapsed
-        // hamburger menu), so dropdowns can open on hover in addition to
-        // Bootstrap's default click/JS toggle.
-        @media (min-width: 992px) {
-            .dropdown:hover > .dropdown-menu {
-                display: block;
-                margin-top: 0;
-            }
+    }
+
+    .navbar-nav--utility{
+        align-items: center;
+        gap: 8px;
+    }
+
+    // On wide viewports the nav is a horizontal bar (not the collapsed
+    // hamburger menu), so dropdowns can open on hover in addition to
+    // Bootstrap's default click/JS toggle. Scoped to the navbar as a whole
+    // (not just .main-navigation) so it also covers .navbar-nav--utility.
+    @media (min-width: 992px) {
+        .dropdown:hover > .dropdown-menu {
+            display: block;
+            margin-top: 0;
         }
     }
-    
-    .hire_button{
-        background: $primary_color;
-        padding: 15px 30px;
-        color: #fff;
-        text-decoration: none;
-        border-radius: 7px;
-        font-size: 16px;
-        font-family: $secondary-font;
-        font-weight: 400;
-        border: 1px solid transparent;
-        transition: all .3s ease;
-        transform: scale(1);
-        &:hover{
-            background: darken($primary-color, 8%);
-            box-shadow: 0 8px 20px rgba($primary-color, 0.3);
-            transform: scale(1.03);
-        }
-        @include desktop{
-            text-align: center;
-        }
-    }
-    
+
     &.nav__color__change{
         background: $white;
         padding: 20px 0;
