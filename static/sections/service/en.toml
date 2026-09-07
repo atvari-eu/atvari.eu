@@ -4,17 +4,22 @@ subtitle  = "Consulting and hands-on engineering for teams that need software an
 [[services]]
 title   = "Software & Cloud Architecture"
 content = "Designing secure, scalable, and maintainable systems from the ground up."
+image   = "images/service/branding.svg"
 
 [[services]]
 title   = "Cloud Engineering & DevOps"
 content = "Building and operating cloud-native infrastructure with Kubernetes, infrastructure-as-code, and modern DevOps practices."
+image   = "images/service/web.svg"
 
 [[services]]
 title   = "Rust Development"
 content = "Building reliable, high-performance software in Rust."
 url     = "@/rust/_index.md"
+image   = "images/service/rust.svg"
+image_dark = "images/service/rust-white.svg"
 
 [[services]]
 title   = "Nix & NixOS Consulting"
 content = "Declarative infrastructure and reproducible systems with Nix, NixOS, and Nixpkgs."
 url     = "@/nix/_index.md"
+image   = "images/service/nixos.svg"
