@@ -107,5 +107,7 @@ ourselves. Our founder has been a Nixpkgs contributor since 2019, a
 maintainer since 2020, and a committer since 2024, helping maintain the
 largest open source package repository. See his contributions on
 [GitHub](https://github.com/felschr).
+
+We are listed on the official NixOS website's [Commercial support](https://nixos.org/community/commercial-support/) page as a company offering commercial NixOS support.
 """
 +++
