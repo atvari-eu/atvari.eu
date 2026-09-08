@@ -61,17 +61,15 @@
   <div class="container">
     <div class="d-flex justify-content-center flex-wrap">
       {% for page in term.pages %}
-      <div class="card col-lg-3 m-2 blog__post-card">
+      <a class="card col-lg-3 m-2 blog__post-card text-reset text-decoration-none" href="{{ page.permalink }}">
         <img class="blog__post-card-image" src="{{ get_url(path=page.extra.feature_image) }}" alt="post-image">
         <div class="blog__post-card-body">
-            <a class="text-reset text-decoration-none" href="{{ page.permalink }}">
                 <h2 class="blog__post-card-title">{{ page.title }}</h2>
                 <p class="blog__post-card-meta">
                     {{ page.date | date(format=config.extra.date_format) }}
                 </p>
-            </a>
         </div>
-      </div>
+      </a>
       {% endfor %}
     </div>
 
