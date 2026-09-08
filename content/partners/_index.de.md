@@ -21,10 +21,10 @@ verantwortlichen Unternehmen. Wenn dir das wichtig ist,
 [[extra.values]]
 icon = "cogs"
 logo = "images/service/nixos.svg"
-title = "Kommerzieller NixOS-Support"
+title = "Kommerzieller Nix-Support"
 link = "https://nixos.org/community/commercial-support/"
-link_title = "atvari GmbH bietet kommerziellen NixOS-Support"
-content = "Auf der offiziellen NixOS-Seite für Commercial Support gelistet. Wir betreiben NixOS produktiv und begleiten Teams bei der Einführung."
+link_title = "atvari GmbH bietet kommerziellen Nix-Support"
+content = "Auf der offiziellen NixOS-Seite für Commercial Support gelistet. Wir betreiben Nix und NixOS produktiv und begleiten Teams bei der Einführung."
 
 [[extra.values]]
 icon = "network"

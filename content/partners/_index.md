@@ -21,10 +21,10 @@ and accountable. If that matters to you,
 [[extra.values]]
 icon = "cogs"
 logo = "images/service/nixos.svg"
-title = "NixOS commercial support"
+title = "Nix commercial support"
 link = "https://nixos.org/community/commercial-support/"
-link_title = "atvari GmbH offers commercial NixOS support"
-content = "Listed on the official NixOS commercial support page. We run NixOS in production and help teams adopt it."
+link_title = "atvari GmbH offers commercial Nix support"
+content = "Listed on the official NixOS commercial support page. We run Nix and NixOS in production and help teams adopt them."
 
 [[extra.values]]
 icon = "network"
