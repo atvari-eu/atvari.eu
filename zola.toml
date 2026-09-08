@@ -60,6 +60,7 @@ service_overview = "Overview"
 nix = "Nix Consulting"
 rust = "Rust Consulting"
 team = "Team"
+values = "Values"
 blog = "Blog"
 contact = "Contact"
 
@@ -117,6 +118,7 @@ service_overview = "Übersicht"
 nix = "Nix-Consulting"
 rust = "Rust-Consulting"
 team = "Team"
+values = "Werte"
 blog = "Blog"
 contact = "Kontakt"
 
@@ -138,6 +140,7 @@ menus = [
   { name = "about", url = "#about" },
   { name = "service", url = "#service" },
   { name = "team", url = "@/team/_index.md" },
+  { name = "values", url = "@/values/_index.md" },
   { name = "blog", url = "@/blog/_index.md" },
   { name = "contact", url = "@/contact/_index.md" }
 ]
@@ -147,6 +150,7 @@ sitemaps = [
   { name = "nix", url = "@/nix/_index.md" },
   { name = "rust", url = "@/rust/_index.md" },
   { name = "team", url = "@/team/_index.md" },
+  { name = "values", url = "@/values/_index.md" },
   { name = "blog", url = "@/blog/_index.md" },
   { name = "press", url = "@/press/_index.md" },
   { name = "contact", url = "@/contact/_index.md" },
