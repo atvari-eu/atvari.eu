@@ -8,10 +8,7 @@ values_heading = "Memberships & collaborations"
 cta = "Work with us: get in touch"
 intro = """
 We build on open ecosystems, and we give back to them. This page collects
-our formal memberships, listings, and collaborations in one place:
-commercial [Nix support](@/nix/_index.md), patent non-aggression through
-the Open Invention Network, IT-security cooperation via the Allianz für
-Cyber-Sicherheit, and the declarations we have signed.
+our formal memberships, listings, collaborations, and signed declarations in one place.
 
 Working with us means working with a company that is insured, connected,
 and accountable. If that matters to you,

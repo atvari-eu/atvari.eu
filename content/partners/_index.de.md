@@ -8,10 +8,7 @@ values_heading = "Mitgliedschaften & Zusammenarbeit"
 cta = "Arbeite mit uns: nimm Kontakt auf"
 intro = """
 Wir bauen auf offenen Ökosystemen auf und geben an sie zurück. Diese Seite
-bündelt unsere formellen Mitgliedschaften, Listungen und Kooperationen:
-kommerzieller [Nix-Support](@/nix/_index.md), Patent-Nichtangriff über das
-Open Invention Network, IT-Sicherheitskooperation über die Allianz für
-Cyber-Sicherheit sowie die Erklärungen, die wir unterzeichnet haben.
+bündelt unsere formellen Mitgliedschaften, Listungen, Kooperationen und unterzeichneten Erklärungen.
 
 Wer mit uns arbeitet, arbeitet mit einem versicherten, vernetzten und
 verantwortlichen Unternehmen. Wenn dir das wichtig ist,
