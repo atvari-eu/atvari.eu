@@ -58,6 +58,19 @@
       <div class="col-lg-10 offset-lg-1">
         <div class="contact-booking-card text-start expertise__intro">
           {{ section.extra.intro | markdown | safe }}
+          {% set_global intro_logos = [] %}
+          {% for item in section.extra.values %}
+          {% if item.logo and item.link %}
+          {% set_global intro_logos = intro_logos | concat(with=[item]) %}
+          {% endif %}
+          {% endfor %}
+          {% if intro_logos | length > 0 %}
+          <div class="expertise__intro-logos">
+            {% for item in intro_logos %}
+            {{ macros::logo_link(item=item) }}
+            {% endfor %}
+          </div>
+          {% endif %}
         </div>
       </div>
     </div>
@@ -71,11 +84,25 @@
     </div>
     <div class="expertise__grid">
       {% for item in section.extra.values %}
+      {% if item.link %}
+      <a href="{{ item.link }}"{% if item.link_title %} title="{{ item.link_title }}"{% endif %}{% if item.link_external %} rel="nofollow" target="_blank"{% endif %} class="expertise__grid-item">
+      {% else %}
       <div class="expertise__grid-item">
+      {% endif %}
+        {% if item.logo %}
+        <div class="expertise__grid-item-logo">
+          {{ macros::logo_link(item=item, link=false) }}
+        </div>
+        {% elif item.icon %}
         <div class="expertise__grid-item-icon"><i class="lni lni-{{ item.icon }}"></i></div>
+        {% endif %}
         <h4>{{ item.title }}</h4>
         <p>{{ item.content | markdown(inline=true) | safe }}</p>
+      {% if item.link %}
+      </a>
+      {% else %}
       </div>
+      {% endif %}
       {% endfor %}
     </div>
     {% endif %}

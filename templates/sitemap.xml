@@ -30,6 +30,8 @@
     "contact/_index.md",
     "nix/_index.md",
     "rust/_index.md",
+    "values/_index.md",
+    "partners/_index.md",
     "impressum/_index.md",
     "press/_index.md"
 ] -%}

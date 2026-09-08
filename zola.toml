@@ -66,6 +66,7 @@ contact = "Contact"
 
 # Sitemaps
 impressum = "Imprint"
+partners = "Partners"
 press = "Press"
 press_releases = "Press releases"
 
@@ -124,6 +125,7 @@ contact = "Kontakt"
 
 # Sitemaps
 impressum = "Impressum"
+partners = "Partner"
 press = "Presse"
 press_releases = "Pressemitteilungen"
 
@@ -152,6 +154,7 @@ sitemaps = [
   { name = "team", url = "@/team/_index.md" },
   { name = "values", url = "@/values/_index.md" },
   { name = "blog", url = "@/blog/_index.md" },
+  { name = "partners", url = "@/partners/_index.md" },
   { name = "press", url = "@/press/_index.md" },
   { name = "contact", url = "@/contact/_index.md" },
   { name = "impressum", url = "@/impressum/_index.md" }

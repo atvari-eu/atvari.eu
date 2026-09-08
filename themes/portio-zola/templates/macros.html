@@ -128,6 +128,36 @@
 </script>
 {% endmacro %}
 
+{# Linked logo image for partner/membership entries: wraps item.logo in
+   item.link (with item.link_title / item.link_external), swaps in
+   item.logo_dark for dark mode, and resolves local paths via get_url
+   (remote URLs pass through). Pass link=false where an ancestor is
+   already the link (e.g. whole-card links) to avoid nested anchors. #}
+{% macro logo_link(item, link=true) %}
+{% if link and item.link %}
+<a href="{{ item.link }}"{% if item.link_title %} title="{{ item.link_title }}"{% endif %}{% if item.link_external %} rel="nofollow" target="_blank"{% endif %}>
+{% endif %}
+{% if item.logo_dark %}
+{% if item.logo is starting_with("http") %}
+<img class="expertise__logo--light" src="{{ item.logo }}" alt="{{ item.title }} logo" />
+{% else %}
+<img class="expertise__logo--light" src="{{ get_url(path=item.logo) }}" alt="{{ item.title }} logo" />
+{% endif %}
+{% if item.logo_dark is starting_with("http") %}
+<img class="expertise__logo--dark" src="{{ item.logo_dark }}" alt="{{ item.title }} logo" />
+{% else %}
+<img class="expertise__logo--dark" src="{{ get_url(path=item.logo_dark) }}" alt="{{ item.title }} logo" />
+{% endif %}
+{% elif item.logo is starting_with("http") %}
+<img src="{{ item.logo }}" alt="{{ item.title }} logo" />
+{% else %}
+<img src="{{ get_url(path=item.logo) }}" alt="{{ item.title }} logo" />
+{% endif %}
+{% if link and item.link %}
+</a>
+{% endif %}
+{% endmacro logo_link %}
+
 {% macro analytics() %}
     {% if config.extra.ganalytics %}
       <script async src="https://www.googletagmanager.com/gtag/js?id={{config.extra.ganalytics}}"></script>
