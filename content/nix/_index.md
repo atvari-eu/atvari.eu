@@ -40,6 +40,15 @@ lock-in.
 We help you get these benefits without the steep learning curve, from a
 first pilot project to running your whole platform on it.
 """
+track_record = """
+Nix and NixOS are more than a service we sell: they're what we run
+ourselves. Our founder has been a Nixpkgs contributor since 2019, a
+maintainer since 2020, and a committer since 2024, helping maintain the
+largest open source package repository. See his contributions on
+[GitHub](https://github.com/felschr).
+
+We are listed on the official NixOS website's [Commercial support](https://nixos.org/community/commercial-support/) page as a company offering commercial NixOS support.
+"""
 
 [[extra.benefits]]
 icon = "reload"
@@ -100,14 +109,4 @@ content = "Migrating existing infrastructure or CI to Nix, and hands-on training
 icon = "database"
 title = "Ongoing maintenance"
 content = "Keeping packages, NixOS modules, and flake inputs up to date and secure over time."
-
-track_record = """
-Nix and NixOS are more than a service we sell: they're what we run
-ourselves. Our founder has been a Nixpkgs contributor since 2019, a
-maintainer since 2020, and a committer since 2024, helping maintain the
-largest open source package repository. See his contributions on
-[GitHub](https://github.com/felschr).
-
-We are listed on the official NixOS website's [Commercial support](https://nixos.org/community/commercial-support/) page as a company offering commercial NixOS support.
-"""
 +++

@@ -35,6 +35,13 @@ language makes it easier to attract and retain strong engineers.
 We help you evaluate where Rust pays off fastest, then design, build, or
 migrate the systems that benefit most.
 """
+track_record = """
+We reach for Rust wherever reliability and performance matter, and favor
+its functional idioms: iterators over loops, `Option`/`Result` over
+exceptions, immutability by default, for code that's easier to reason
+about and to review. See our public work on
+[GitHub](https://github.com/felschr).
+"""
 
 [[extra.benefits]]
 icon = "shield"
@@ -95,12 +102,4 @@ content = "Hands-on training to bring a team from zero to productive, idiomatic 
 icon = "database"
 title = "Ongoing maintenance"
 content = "Keeping crates, toolchains, and CI up to date, and dependencies free of known vulnerabilities."
-
-track_record = """
-We reach for Rust wherever reliability and performance matter, and favor
-its functional idioms: iterators over loops, `Option`/`Result` over
-exceptions, immutability by default, for code that's easier to reason
-about and to review. See our public work on
-[GitHub](https://github.com/felschr).
-"""
 +++

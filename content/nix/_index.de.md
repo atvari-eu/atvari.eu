@@ -41,6 +41,15 @@ On-Premises hinweg betreiben, ganz ohne Vendor-Lock-in.
 Wir helfen euch, diese Vorteile ohne steile Lernkurve zu erreichen, vom
 ersten Pilotprojekt bis zum Betrieb eurer gesamten Plattform.
 """
+track_record = """
+Nix und NixOS sind für uns mehr als eine Dienstleistung: wir betreiben
+sie selbst. Unser Gründer ist seit 2019 Nixpkgs-Contributor, seit 2020
+Maintainer und seit 2024 Committer und hilft damit, das größte
+Open-Source-Paketarchiv zu pflegen. Seine Beiträge gibt es auf
+[GitHub](https://github.com/felschr).
+
+Wir sind auf der offiziellen NixOS-Website unter [Commercial Support](https://nixos.org/community/commercial-support/) als Unternehmen mit kommerziellem NixOS-Support gelistet.
+"""
 
 [[extra.benefits]]
 icon = "reload"
@@ -101,14 +110,4 @@ content = "Migration bestehender Infrastruktur oder CI zu Nix sowie praxisnahe S
 icon = "database"
 title = "Laufende Wartung"
 content = "Pakete, NixOS-Module und Flake-Inputs dauerhaft aktuell und sicher halten."
-
-track_record = """
-Nix und NixOS sind für uns mehr als eine Dienstleistung: wir betreiben
-sie selbst. Unser Gründer ist seit 2019 Nixpkgs-Contributor, seit 2020
-Maintainer und seit 2024 Committer und hilft damit, das größte
-Open-Source-Paketarchiv zu pflegen. Seine Beiträge gibt es auf
-[GitHub](https://github.com/felschr).
-
-Wir sind auf der offiziellen NixOS-Website unter [Commercial Support](https://nixos.org/community/commercial-support/) als Unternehmen mit kommerziellem NixOS-Support gelistet.
-"""
 +++

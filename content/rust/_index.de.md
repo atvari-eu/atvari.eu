@@ -40,6 +40,14 @@ Wir helfen euch zu bewerten, wo sich Rust am schnellsten auszahlt, und
 entwerfen, bauen oder migrieren dann die Systeme, die am meisten
 profitieren.
 """
+track_record = """
+Wir setzen Rust überall dort ein, wo Verlässlichkeit und Performance zählen,
+und bevorzugen dabei seine funktionalen Idiome: Iteratoren statt
+Schleifen, `Option`/`Result` statt Exceptions, Unveränderlichkeit per
+Default, für Code, der sich leichter nachvollziehen und reviewen lässt.
+Unsere öffentliche Arbeit gibt es auf
+[GitHub](https://github.com/felschr).
+"""
 
 [[extra.benefits]]
 icon = "shield"
@@ -100,13 +108,4 @@ content = "Praxisnahe Schulungen, die ein Team von null zu produktivem, idiomati
 icon = "database"
 title = "Laufende Wartung"
 content = "Crates, Toolchain und CI dauerhaft aktuell halten und Abhängigkeiten frei von bekannten Sicherheitslücken."
-
-track_record = """
-Wir setzen Rust überall dort ein, wo Verlässlichkeit und Performance zählen,
-und bevorzugen dabei seine funktionalen Idiome: Iteratoren statt
-Schleifen, `Option`/`Result` statt Exceptions, Unveränderlichkeit per
-Default, für Code, der sich leichter nachvollziehen und reviewen lässt.
-Unsere öffentliche Arbeit gibt es auf
-[GitHub](https://github.com/felschr).
-"""
 +++
