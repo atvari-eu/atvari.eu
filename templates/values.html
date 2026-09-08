@@ -58,19 +58,6 @@
       <div class="col-lg-10 offset-lg-1">
         <div class="contact-booking-card text-start expertise__intro">
           {{ section.extra.intro | markdown | safe }}
-          {% set_global intro_logos = [] %}
-          {% for item in section.extra.values %}
-          {% if item.logo and item.link %}
-          {% set_global intro_logos = intro_logos | concat(with=[item]) %}
-          {% endif %}
-          {% endfor %}
-          {% if intro_logos | length > 0 %}
-          <div class="expertise__intro-logos">
-            {% for item in intro_logos %}
-            {{ macros::logo_link(item=item) }}
-            {% endfor %}
-          </div>
-          {% endif %}
         </div>
       </div>
     </div>

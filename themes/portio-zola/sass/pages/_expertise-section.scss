@@ -14,22 +14,6 @@
       margin: 0 auto 16px auto;
     }
   }
-  &__intro-logos {
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    justify-content: center;
-    gap: 24px;
-    margin: 16px 0 0 0;
-    img {
-      max-height: 80px;
-      width: auto;
-      max-width: 100%;
-    }
-    .expertise__logo--dark {
-      display: none;
-    }
-  }
   &__audience-toggle {
     display: inline-flex;
     margin-bottom: 20px;
