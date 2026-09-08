@@ -4,6 +4,8 @@ description = "Rust-Consulting: speichersichere, performante Systeme in einem id
 template = "expertise.html"
 
 [extra]
+logo = "images/service/rust.svg"
+logo_dark = "images/service/rust-white.svg"
 benefits_heading = "Warum Rust"
 services_heading = "Unsere Leistungen"
 cta = "Sprich mit uns über dein Rust-Projekt"

@@ -1,4 +1,19 @@
 .expertise {
+  &__intro {
+    overflow: auto;
+  }
+  &__intro-logo {
+    float: right;
+    height: 72px;
+    width: auto;
+    max-width: 160px;
+    margin: 0 0 16px 20px;
+    @include mobile {
+      float: none;
+      display: block;
+      margin: 0 auto 16px auto;
+    }
+  }
   &__audience-toggle {
     display: inline-flex;
     margin-bottom: 20px;

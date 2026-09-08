@@ -293,17 +293,21 @@ body {
 
 // Service logo swap: cards with an image_dark variant ship two <img> tags,
 // only one shown per theme (same pattern as the navbar logo).
-[data-theme="dark"] .service__slider_item-logo--light {
+[data-theme="dark"] .service__slider_item-logo--light,
+[data-theme="dark"] .expertise__logo--light {
   display: none;
 }
-[data-theme="dark"] .service__slider_item-logo--dark {
+[data-theme="dark"] .service__slider_item-logo--dark,
+[data-theme="dark"] .expertise__logo--dark {
   display: inline-block;
 }
 @media (prefers-color-scheme: dark) {
-  :root:not([data-theme="light"]):not([data-theme="dark"]) .service__slider_item-logo--light {
+  :root:not([data-theme="light"]):not([data-theme="dark"]) .service__slider_item-logo--light,
+  :root:not([data-theme="light"]):not([data-theme="dark"]) .expertise__logo--light {
     display: none;
   }
-  :root:not([data-theme="light"]):not([data-theme="dark"]) .service__slider_item-logo--dark {
+  :root:not([data-theme="light"]):not([data-theme="dark"]) .service__slider_item-logo--dark,
+  :root:not([data-theme="light"]):not([data-theme="dark"]) .expertise__logo--dark {
     display: inline-block;
   }
 }

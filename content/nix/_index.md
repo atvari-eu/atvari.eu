@@ -4,6 +4,7 @@ description = "Nix and NixOS consulting: reproducible builds, declarative infras
 template = "expertise.html"
 
 [extra]
+logo = "images/service/nixos.svg"
 benefits_heading = "Why Nix & NixOS"
 services_heading = "What We Offer"
 cta = "Talk to us about your Nix project"
