@@ -151,6 +151,7 @@
             }
             .contact__widget_seals{
                 display: flex;
+                flex-wrap: wrap;
                 align-items: center;
                 gap: 15px;
                 margin-top: 15px;
