@@ -133,9 +133,9 @@
    item.logo_dark for dark mode, and resolves local paths via get_url
    (remote URLs pass through). Pass link=false where an ancestor is
    already the link (e.g. whole-card links) to avoid nested anchors. #}
-{% macro logo_link(item, link=true) %}
+{% macro logo_link(item, link=true, tab="") %}
 {% if link and item.link %}
-<a href="{{ item.link }}"{% if item.link_title %} title="{{ item.link_title }}"{% endif %}{% if item.link_external %} rel="nofollow" target="_blank"{% endif %}>
+<a href="{{ item.link }}"{% if item.link_title %} title="{{ item.link_title }}"{% endif %}{% if item.link_external %} rel="nofollow" target="_blank"{% endif %}{% if tab %} tabindex="{{ tab }}"{% endif %}>
 {% endif %}
 {% if item.logo_dark %}
 {% if item.logo is starting_with("http") %}

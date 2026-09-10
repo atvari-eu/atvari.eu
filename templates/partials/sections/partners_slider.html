@@ -1,0 +1,31 @@
+{% import "macros.html" as macros %}
+{# Logo marquee reusing the partners section entries (single source of
+   truth: content/partners/_index[.de].md). Pure CSS animation, pauses on
+   hover/focus; logos keep their partners-page links via macros::logo_link. #}
+{% set partners = get_section(path="partners/_index.md", lang=lang) %}
+{% if partners and partners.extra.values %}
+<section class="section partners-slider" aria-label="{{ partners.title }}">
+  <div class="partners-slider__viewport">
+    <div class="partners-slider__track">
+      {% for copy in [1, 2, 3, 4] %}
+      <div class="partners-slider__group"{% if copy != 1 %} aria-hidden="true"{% endif %}>
+        {% for item in partners.extra.values %}
+        {% if item.logo %}
+        <span class="partners-slider__item">
+          {% if copy == 1 %}{{ macros::logo_link(item=item) }}{% else %}{{ macros::logo_link(item=item, tab="-1") }}{% endif %}
+        </span>
+        {% endif %}
+        {% endfor %}
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+  <div class="container">
+    <div class="row text-center">
+      <div class="col-12">
+        <a class="partners-slider__more" href="{{ partners.permalink }}">{{ partners.title }} →</a>
+      </div>
+    </div>
+  </div>
+</section>
+{% endif %}
