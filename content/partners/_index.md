@@ -17,8 +17,8 @@ and accountable. If that matters to you,
 
 [[extra.values]]
 icon = "cogs"
-logo = "images/service/nixos.svg"
-title = "Nix commercial support"
+logo = "images/badges/nixos-commercial-support.svg"
+title = "Nix Commercial Support"
 link = "https://nixos.org/community/commercial-support/"
 link_title = "atvari GmbH offers commercial Nix support"
 content = "Listed on the official NixOS commercial support page. We run Nix and NixOS in production and help teams adopt them."
