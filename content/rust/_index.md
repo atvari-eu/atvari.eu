@@ -19,24 +19,21 @@ compile time, while its type system (enums, pattern matching, `Option` and
 style](https://rust-unofficial.github.io/patterns/functional/) built on
 iterators, combinators, and closures rather than mutable loops.
 
-Originally created by Graydon Hoare at Mozilla and now stewarded by the
-independent Rust Foundation, Rust has topped Stack Overflow's "most loved
-language" survey every year since 2016, and as Rust experts, we've been
-writing it for years, from backend services to CLIs and systems software.
+We write Rust for backend services, async systems, CLIs, and systems
+software, with cargo, fearless concurrency, and zero-cost abstractions as
+standard toolkit, and help teams get productive with idiomatic Rust.
 """
 intro_business = """
-Rust trades a small upfront investment in learning curve for large,
-compounding savings later: fewer production incidents caused by memory
-bugs or crashes, lower cloud bills thanks to Rust's C-like performance and
-efficiency, and less time spent firefighting instead of shipping features.
+[Rust](https://www.rust-lang.org/) is a programming language for fast,
+reliable software without crashes and memory bugs: the compiler catches
+entire bug categories before code ever reaches production.
 
-Because the compiler catches entire categories of bugs before code ever
-reaches production, teams spend less time on incident response and more
-on building, and Rust's consistent popularity as developers' most-loved
-language makes it easier to attract and retain strong engineers.
+That means fewer incidents, lower cloud bills through C-like efficiency,
+and more time shipping features instead of firefighting.
 
-We help you evaluate where Rust pays off fastest, then design, build, or
-migrate the systems that benefit most.
+Because developers love working with Rust, it also helps you attract and
+retain strong engineers. We help you find where Rust pays off fastest,
+then design, build, or migrate the systems that benefit most.
 """
 track_record = """
 We reach for Rust wherever reliability and performance matter, and favor

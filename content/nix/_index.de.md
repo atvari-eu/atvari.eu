@@ -23,25 +23,25 @@ Builds, Deployments und Entwicklungsumgebungen wirklich reproduzierbar: Was
 auf einer Maschine funktioniert, funktioniert auf jeder Maschine, heute
 und in Jahren noch.
 
-Als Nix- und NixOS-Experten betreiben wir sie seit Jahren produktiv und auf
-unseren eigenen Rechnern und helfen Teams dabei, sie ohne Trial-and-Error
+Wir betreiben Nix und NixOS produktiv und auf unseren eigenen Rechnern,
+von Flakes und Dev-Shells bis zu NixOS-Modulen und deklarativen
+Server-Flotten, und helfen Teams dabei, sie ohne Trial-and-Error
 einzuführen.
 """
 intro_business = """
-Verlässlichkeit und Vorhersehbarkeit senken direkt eure Betriebskosten.
-Mit Nix und NixOS ist „läuft bei mir“ keine Ausrede mehr: was
-Entwickler:innen bauen und testen, läuft exakt so in Produktion. Das
-bedeutet weniger Ausfälle, schnellere Wiederherstellung nach Störungen
-(ein fehlgeschlagenes Deployment ist in Sekunden zurückgerollt) und
-weniger Zeit für die Fehlersuche wegen unterschiedlicher Umgebungen.
+[Nix](https://nixos.org/) und NixOS definieren Builds, Server und
+Entwicklungsumgebungen als Code: Was Entwickler:innen bauen und testen,
+läuft exakt so in Produktion.
 
-Teams, die Nix einführen, onboarden neue Entwickler:innen außerdem
-schneller, da eine funktionierende Entwicklungsumgebung nur einen Befehl
-entfernt ist, und können dieselbe Infrastruktur über Cloud-Anbieter oder
-On-Premises hinweg betreiben, ganz ohne Vendor-Lock-in.
+Diese Vorhersehbarkeit senkt direkt eure Betriebskosten: weniger Ausfälle
+durch abweichende Umgebungen, Rollbacks in Sekunden statt lange
+Fehlersuche und kein „läuft bei mir“ mehr.
 
-Wir helfen euch, diese Vorteile ohne steile Lernkurve zu erreichen, vom
-ersten Pilotprojekt bis zum Betrieb eurer gesamten Plattform.
+Neue Entwickler:innen starten mit einem Befehl in einer funktionierenden
+Umgebung, und dieselbe Konfiguration läuft auf jeder Cloud oder
+on-premises ganz ohne Vendor-Lock-in. Wir machen den Weg dorthin
+planbar, vom ersten Pilotprojekt bis zur gesamten Plattform, ohne euer
+Team auszubremsen.
 """
 track_record = """
 Nix und NixOS sind für uns mehr als eine Dienstleistung: wir betreiben

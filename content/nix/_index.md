@@ -22,25 +22,23 @@ they make builds, deployments, and development environments genuinely
 reproducible: what works on one machine works on every machine, today and
 years from now.
 
-As Nix and NixOS experts, we've been running them in production and on our
-own machines for years, and we help teams adopt them without the trial and
-error.
+As Nix and NixOS experts, we run them in production and on our own
+machines, from flakes and dev shells to NixOS modules and declarative
+server fleets, and help teams adopt them without the trial and error.
 """
 intro_business = """
-Reliability and predictability translate directly into lower operating
-costs. With Nix and NixOS, "it works on my machine" stops being an
-excuse: what a developer builds and tests is exactly what runs in
-production, which means fewer outages, faster incident recovery (a broken
-deployment rolls back in seconds), and less time spent debugging
-environment drift.
+[Nix](https://nixos.org/) and NixOS define builds, servers, and dev
+environments as code, so what developers build and test is exactly what
+runs in production.
 
-Teams that adopt Nix also onboard new engineers faster, since a working
-development setup is one command away, and can run the same
-infrastructure across cloud providers or on-premises without vendor
-lock-in.
+That predictability lowers operating costs: fewer outages from
+environment drift, rollbacks in seconds instead of firefighting, and no
+more "works on my machine".
 
-We help you get these benefits without the steep learning curve, from a
-first pilot project to running your whole platform on it.
+New engineers get a working setup with a single command, and the same
+configuration runs on any cloud or on-premises without vendor lock-in.
+We de-risk the path there, from a first pilot to your whole platform,
+without slowing your team down.
 """
 track_record = """
 Nix and NixOS are more than a service we sell: they're what we run

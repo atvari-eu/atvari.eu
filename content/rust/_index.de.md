@@ -20,28 +20,23 @@ Stil](https://rust-unofficial.github.io/patterns/functional/) fördert, der
 auf Iteratoren, Kombinatoren und Closures statt auf veränderliche Schleifen
 setzt.
 
-Ursprünglich von Graydon Hoare bei Mozilla entwickelt und heute von der
-unabhängigen Rust Foundation getragen, führt Rust seit 2016 jedes Jahr die
-„most loved language“-Umfrage von Stack Overflow an, und als Rust-Experten
-schreiben wir es seit Jahren, von Backend-Services über CLIs bis hin zu
-Systemsoftware.
+Wir schreiben Rust für Backend-Services, asynchrone Systeme, CLIs und
+Systemsoftware, mit Cargo, Fearless Concurrency und Zero-Cost-Abstraktionen
+als Standardwerkzeug, und helfen Teams dabei, mit idiomatischem Rust
+produktiv zu werden.
 """
 intro_business = """
-Rust tauscht eine kleine anfängliche Lernkurve gegen große, sich
-summierende Einsparungen später: weniger Produktionsvorfälle durch
-Speicherfehler oder Abstürze, niedrigere Cloud-Kosten dank C-ähnlicher
-Performance und Effizienz, und weniger Zeit für Brandbekämpfung statt für
-neue Features.
+[Rust](https://www.rust-lang.org/) ist eine Programmiersprache für
+schnelle, verlässliche Software ohne Abstürze und Speicherfehler: Der
+Compiler erkennt ganze Fehlerklassen, bevor Code in Produktion geht.
 
-Weil der Compiler ganze Fehlerklassen erkennt, bevor Code überhaupt in
-Produktion läuft, verbringen Teams weniger Zeit mit Incident-Response und
-mehr mit dem eigentlichen Bauen, und Rusts anhaltende Beliebtheit als von
-Entwickler:innen meistgeliebte Sprache erleichtert es, starke Engineers zu
-gewinnen und zu halten.
+Das bedeutet weniger Vorfälle, niedrigere Cloud-Kosten durch C-ähnliche
+Effizienz und mehr Zeit für Features statt Brandbekämpfung.
 
-Wir helfen euch zu bewerten, wo sich Rust am schnellsten auszahlt, und
-entwerfen, bauen oder migrieren dann die Systeme, die am meisten
-profitieren.
+Weil Entwickler:innen Rust lieben, hilft es euch zudem, starke Engineers
+zu gewinnen und zu halten. Wir helfen euch zu bewerten, wo sich Rust am
+schnellsten auszahlt, und entwerfen, bauen oder migrieren dann die
+Systeme, die am meisten profitieren.
 """
 track_record = """
 Wir setzen Rust überall dort ein, wo Verlässlichkeit und Performance zählen,
