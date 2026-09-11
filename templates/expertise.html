@@ -68,23 +68,14 @@
         {% if section.extra.intro_business %}
         <div class="expertise__intro-header">
           <div class="expertise__audience-toggle" role="tablist">
-            <button type="button" class="expertise__audience-btn is-active" data-audience="technical">{{ trans(key="for_engineers", lang=lang) }}</button>
-            <button type="button" class="expertise__audience-btn" data-audience="business">{{ trans(key="for_business", lang=lang) }}</button>
+            <button type="button" class="expertise__audience-btn is-active" data-audience="business">{{ trans(key="for_business", lang=lang) }}</button>
+            <button type="button" class="expertise__audience-btn" data-audience="technical">{{ trans(key="for_engineers", lang=lang) }}</button>
           </div>
           {% if section.extra.credential %}
           {{ macros::credential_pill(credential=section.extra.credential, lang=lang, permalink=section.permalink) }}
           {% endif %}
         </div>
-        <div class="contact-booking-card text-start expertise__intro is-active" data-audience="technical">
-          {% if section.extra.logo %}
-          <img {% if section.extra.logo_dark %}class="expertise__intro-logo expertise__logo--light"{% else %}class="expertise__intro-logo"{% endif %} src="{{ get_url(path=section.extra.logo) }}" alt="{{ section.title }} logo">
-          {% if section.extra.logo_dark %}
-          <img class="expertise__intro-logo expertise__logo--dark" src="{{ get_url(path=section.extra.logo_dark) }}" alt="{{ section.title }} logo">
-          {% endif %}
-          {% endif %}
-          {{ section.extra.intro | markdown | safe }}
-        </div>
-        <div class="contact-booking-card text-start expertise__intro" data-audience="business" hidden>
+        <div class="contact-booking-card text-start expertise__intro is-active" data-audience="business">
           {% if section.extra.logo %}
           <img {% if section.extra.logo_dark %}class="expertise__intro-logo expertise__logo--light"{% else %}class="expertise__intro-logo"{% endif %} src="{{ get_url(path=section.extra.logo) }}" alt="{{ section.title }} logo">
           {% if section.extra.logo_dark %}
@@ -92,6 +83,15 @@
           {% endif %}
           {% endif %}
           {{ section.extra.intro_business | markdown | safe }}
+        </div>
+        <div class="contact-booking-card text-start expertise__intro" data-audience="technical" hidden>
+          {% if section.extra.logo %}
+          <img {% if section.extra.logo_dark %}class="expertise__intro-logo expertise__logo--light"{% else %}class="expertise__intro-logo"{% endif %} src="{{ get_url(path=section.extra.logo) }}" alt="{{ section.title }} logo">
+          {% if section.extra.logo_dark %}
+          <img class="expertise__intro-logo expertise__logo--dark" src="{{ get_url(path=section.extra.logo_dark) }}" alt="{{ section.title }} logo">
+          {% endif %}
+          {% endif %}
+          {{ section.extra.intro | markdown | safe }}
         </div>
         {% else %}
         {% if section.extra.credential %}
