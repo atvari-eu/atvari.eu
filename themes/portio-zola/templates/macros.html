@@ -160,20 +160,35 @@
 
 {# Compact credential pill for expertise pages: looks up a partners-section
    entry by title (single source of truth:
-   content/partners/_index[.de].md) and renders it as one pill-shaped link
-   (logo + title) for the bottom of the intro card. #}
-{% macro credential_pill(credential, lang) %}
+   content/partners/_index[.de].md) and renders its logo as a pill-shaped
+   link. Pass the page permalink to link at the partnership details section
+   (#partnership); otherwise it links out to the partner listing. #}
+{% macro credential_pill(credential, lang, permalink="") %}
 {% set partners_section = get_section(path="partners/_index.md", lang=lang) %}
 {% if partners_section and partners_section.extra.values %}
 {% for item in partners_section.extra.values %}
 {% if item.title == credential and item.link %}
-<a class="expertise__credential" href="{{ item.link }}"{% if item.link_title %} title="{{ item.link_title }}"{% endif %}{% if item.link_external %} rel="nofollow" target="_blank"{% endif %}>
+<a class="expertise__credential" href="{% if permalink %}{{ permalink }}#partnership{% else %}{{ item.link }}{% endif %}"{% if item.link_title %} title="{{ item.link_title }}"{% endif %}{% if not permalink and item.link_external %} rel="nofollow" target="_blank"{% endif %}>
   <span class="expertise__credential-logo">{{ self::logo_link(item=item, link=false) }}</span>
 </a>
 {% endif %}
 {% endfor %}
 {% endif %}
 {% endmacro credential_pill %}
+
+{# Floated partner logo for the expertise track-record card: same partners
+   lookup as credential_pill, rendered as a linked logo that the card text
+   wraps around. #}
+{% macro credential_logo(credential, lang) %}
+{% set partners_section = get_section(path="partners/_index.md", lang=lang) %}
+{% if partners_section and partners_section.extra.values %}
+{% for item in partners_section.extra.values %}
+{% if item.title == credential and item.logo %}
+<span class="expertise__track-logo">{{ self::logo_link(item=item) }}</span>
+{% endif %}
+{% endfor %}
+{% endif %}
+{% endmacro credential_logo %}
 
 {% macro analytics() %}
     {% if config.extra.ganalytics %}

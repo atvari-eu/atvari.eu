@@ -52,6 +52,7 @@ Unsere öffentliche Arbeit gibt es auf
 [GitHub](https://github.com/felschr).
 
 Wir sind Mitglied im [Rust Commercial Network](https://rustfoundation.org/rust-commercial-network/), gelistet im [Mitgliederverzeichnis](https://rust-commercial-network.github.io/rcn/members.html).
+Das Netzwerk wird von der Rust Foundation getragen und verbindet Unternehmen, die kommerziell auf Rust setzen, mit dem Rust-Projekt, um Einführung und Produktionseinsatz voranzubringen. [Zur Ankündigung](@/blog/rust-commercial-network.de.md).
 """
 
 [[extra.benefits]]

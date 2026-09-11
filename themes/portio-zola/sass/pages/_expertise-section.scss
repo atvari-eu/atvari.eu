@@ -29,6 +29,35 @@
       align-items: flex-start;
     }
   }
+  &__track {
+    overflow: auto;
+    &-logo {
+      float: right;
+      margin: 0 0 16px 20px;
+      img {
+        height: auto;
+        width: auto;
+        max-width: 300px;
+        max-height: 180px;
+        object-fit: contain;
+      }
+    }
+    &-logo .expertise__logo--dark {
+      display: none;
+    }
+    @include mobile {
+      &-logo {
+        float: none;
+        display: block;
+        text-align: center;
+        margin: 0 auto 16px auto;
+        img {
+          max-width: 200px;
+          max-height: 120px;
+        }
+      }
+    }
+  }
   &__credential {
     display: inline-flex;
     align-items: center;

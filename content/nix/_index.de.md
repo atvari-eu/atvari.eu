@@ -50,7 +50,8 @@ Maintainer und seit 2024 Committer und hilft damit, das größte
 Open-Source-Paketarchiv zu pflegen. Seine Beiträge gibt es auf
 [GitHub](https://github.com/felschr).
 
-Wir sind auf der offiziellen NixOS-Website unter [Commercial Support](https://nixos.org/community/commercial-support/) als Unternehmen mit kommerziellem NixOS-Support gelistet.
+Wir sind auf der offiziellen NixOS-Website unter [Commercial Support](https://nixos.org/community/commercial-support/) gelistet.
+Die Listung bedeutet, dass das NixOS-Projekt selbst Unternehmen und Teams, die Nix oder NixOS für die Produktion evaluieren, auf uns verweist. [Zur Ankündigung](@/blog/nixos-commercial-support.de.md).
 """
 
 [[extra.benefits]]

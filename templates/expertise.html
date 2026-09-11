@@ -72,7 +72,7 @@
             <button type="button" class="expertise__audience-btn" data-audience="business">{{ trans(key="for_business", lang=lang) }}</button>
           </div>
           {% if section.extra.credential %}
-          {{ macros::credential_pill(credential=section.extra.credential, lang=lang) }}
+          {{ macros::credential_pill(credential=section.extra.credential, lang=lang, permalink=section.permalink) }}
           {% endif %}
         </div>
         <div class="contact-booking-card text-start expertise__intro is-active" data-audience="technical">
@@ -96,7 +96,7 @@
         {% else %}
         {% if section.extra.credential %}
         <div class="expertise__intro-header expertise__intro-header--single">
-          {{ macros::credential_pill(credential=section.extra.credential, lang=lang) }}
+          {{ macros::credential_pill(credential=section.extra.credential, lang=lang, permalink=section.permalink) }}
         </div>
         {% endif %}
         <div class="contact-booking-card text-start expertise__intro">
@@ -150,8 +150,30 @@
     {% if section.extra.track_record %}
     <div class="row mt-5">
       <div class="col-lg-10 offset-lg-1">
-        <div class="contact-booking-card text-start">
-          {{ section.extra.track_record | markdown | safe }}
+        <div class="contact-booking-card text-start expertise__track" id="partnership">
+          {% set paras = section.extra.track_record | split(pat="\n\n") %}
+          {% set_global track_body = [] %}
+          {% for p in paras %}
+            {% if p | trim %}
+              {% set_global track_body = track_body | concat(with=p) %}
+            {% endif %}
+          {% endfor %}
+          {% if track_body | length > 1 %}
+            {% for p in track_body %}
+              {% if not loop.last %}
+                {{ p | markdown | safe }}
+              {% endif %}
+            {% endfor %}
+            {% if section.extra.credential %}
+            {{ macros::credential_logo(credential=section.extra.credential, lang=lang) }}
+            {% endif %}
+            {{ track_body | last | markdown | safe }}
+          {% else %}
+            {% if section.extra.credential %}
+            {{ macros::credential_logo(credential=section.extra.credential, lang=lang) }}
+            {% endif %}
+            {{ section.extra.track_record | markdown | safe }}
+          {% endif %}
         </div>
       </div>
     </div>
