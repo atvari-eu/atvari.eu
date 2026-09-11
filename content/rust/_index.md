@@ -6,6 +6,7 @@ template = "expertise.html"
 [extra]
 logo = "images/service/rust.svg"
 logo_dark = "images/service/rust-white.svg"
+credential = "Rust Commercial Network"
 benefits_heading = "Why Rust"
 services_heading = "What We Offer"
 cta = "Talk to us about your Rust project"
@@ -43,6 +44,8 @@ its functional idioms: iterators over loops, `Option`/`Result` over
 exceptions, immutability by default, for code that's easier to reason
 about and to review. See our public work on
 [GitHub](https://github.com/felschr).
+
+We are a member of the [Rust Commercial Network](https://rustfoundation.org/rust-commercial-network/), listed in the [member directory](https://rust-commercial-network.github.io/rcn/members.html).
 """
 
 [[extra.benefits]]

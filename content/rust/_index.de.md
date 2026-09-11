@@ -6,6 +6,7 @@ template = "expertise.html"
 [extra]
 logo = "images/service/rust.svg"
 logo_dark = "images/service/rust-white.svg"
+credential = "Rust Commercial Network"
 benefits_heading = "Warum Rust"
 services_heading = "Unsere Leistungen"
 cta = "Sprich mit uns über dein Rust-Projekt"
@@ -49,6 +50,8 @@ Schleifen, `Option`/`Result` statt Exceptions, Unveränderlichkeit per
 Default, für Code, der sich leichter nachvollziehen und reviewen lässt.
 Unsere öffentliche Arbeit gibt es auf
 [GitHub](https://github.com/felschr).
+
+Wir sind Mitglied im [Rust Commercial Network](https://rustfoundation.org/rust-commercial-network/), gelistet im [Mitgliederverzeichnis](https://rust-commercial-network.github.io/rcn/members.html).
 """
 
 [[extra.benefits]]

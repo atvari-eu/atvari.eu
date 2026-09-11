@@ -1,9 +1,12 @@
 (function () {
     document.addEventListener('DOMContentLoaded', function () {
         document.querySelectorAll('.expertise__audience-toggle').forEach(function (toggle) {
-            var wrapper = toggle.parentElement;
             var buttons = toggle.querySelectorAll('.expertise__audience-btn');
-            var panels = wrapper.querySelectorAll('.expertise__intro');
+            var scope = toggle.parentElement;
+            while (scope && !scope.querySelector('.expertise__intro')) {
+                scope = scope.parentElement;
+            }
+            var panels = (scope || document).querySelectorAll('.expertise__intro');
 
             toggle.addEventListener('click', function (event) {
                 var button = event.target.closest('.expertise__audience-btn');

@@ -5,6 +5,7 @@ template = "expertise.html"
 
 [extra]
 logo = "images/service/nixos.svg"
+credential = "Nix Commercial Support"
 benefits_heading = "Why Nix & NixOS"
 services_heading = "What We Offer"
 cta = "Talk to us about your Nix project"
