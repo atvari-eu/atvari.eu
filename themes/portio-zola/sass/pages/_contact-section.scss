@@ -157,9 +157,15 @@
                 margin-top: 15px;
             }
             .contact__widget_seal{
-                display: block;
+                display: flex;
+                align-items: center;
+                justify-content: center;
                 img{
                     border: 0;
+                    width: auto;
+                    height: auto;
+                    max-width: 140px;
+                    max-height: 65px;
                 }
             }
         }
