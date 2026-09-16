@@ -40,7 +40,7 @@
                     <div class="contact__widget_seals">
                         {% set partners_section = get_section(path="partners/_index.md", lang=lang) %}
                         {% if partners_section and partners_section.extra.values %}
-                        {% for title in ["Nix Commercial Support", "Rust Commercial Network", "Insured IT liability"] %}
+                        {% for title in ["Nix Commercial Support", "Rust Commercial Network"] %}
                         {% for item in partners_section.extra.values %}
                         {% if item.title == title and item.logo %}
                         <a rel="nofollow" href="{{ item.link }}" target="_blank"{% if item.link_title %} title="{{ item.link_title }}"{% endif %} class="contact__widget_seal">
