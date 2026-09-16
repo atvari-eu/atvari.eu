@@ -7,6 +7,8 @@
         top: 30%;
         left: -7%;
         animation: move_top 5s infinite linear;
+        pointer-events: none;
+        z-index: -1;
         @include desktop{
             display: none;
         }
@@ -17,6 +19,8 @@
         right: 4%;
         height: 300px;
         width: 300px;
+        pointer-events: none;
+        z-index: -1;
         svg{
             width: 100%;
         }
@@ -31,6 +35,8 @@
         height: 100px;
         width: 100px;
         animation: move_top 3s infinite linear;
+        pointer-events: none;
+        z-index: -1;
         img{
             height: 100%;
             width: 100%;
@@ -38,6 +44,13 @@
         @include desktop{
             display: none;
         }
+    }
+    .container{
+        position: relative;
+        z-index: 1;
+    }
+    &.singleBlog{
+        position: relative;
     }
     .singleBlog{
         &__feature{
