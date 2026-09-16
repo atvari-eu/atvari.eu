@@ -1,6 +1,6 @@
 +++
 title = "Partners"
-description = "atvari GmbH memberships and collaborations: NixOS commercial support, Rust Commercial Network, Open Invention Network, Allianz für Cyber-Sicherheit, insured IT liability, and signed declarations."
+description = "atvari GmbH memberships and collaborations: NixOS commercial support, NixCon 2026 sponsorship, Rust Commercial Network, Open Invention Network, Allianz für Cyber-Sicherheit, insured IT liability, and signed declarations."
 template = "values.html"
 
 [extra]
@@ -31,6 +31,15 @@ link = "https://rust-commercial-network.github.io/rcn/members.html"
 link_title = "atvari GmbH is a member of the Rust Commercial Network"
 link_external = true
 content = "Member of the Rust Commercial Network, where companies and community advance Rust adoption and production readiness."
+
+[[extra.values]]
+icon = "users"
+logo = "images/badges/nixcon-2026.svg"
+title = "NixCon 2026 sponsor"
+link = "https://2026.nixcon.org/#sponsors"
+link_title = "atvari GmbH is a Bronze sponsor of NixCon 2026"
+link_external = true
+content = "Bronze sponsor of NixCon 2026, the annual gathering of the Nix community in Kraków."
 
 [[extra.values]]
 icon = "network"
