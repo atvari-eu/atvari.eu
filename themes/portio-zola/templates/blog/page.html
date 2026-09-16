@@ -187,4 +187,44 @@
     </div>
   </div>
 </div>
+{% set post_tags = page.taxonomies.tags | default(value=[]) %}
+{% if "nix" in post_tags or "rust" in post_tags %}
+<!-- atvari project addition: consulting CTA in its own section below nix/rust-tagged posts -->
+<section class="section blog-consulting-cta-section">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-10 offset-lg-1">
+        <div class="card blog__post-card blog-consulting-cta">
+          <div class="blog__post-card-body text-center">
+            {% if "nix" in post_tags %}
+            <div class="row align-items-center">
+              <div class="col-md-8">
+                <h3>{{ trans(key="nix_cta_title", lang=lang) }}</h3>
+                <p>{{ trans(key="nix_cta_text", lang=lang) }}</p>
+                <a href="{{ get_url(path='@/nix/_index.md', lang=lang) }}" class="btn btn-primary">{{ trans(key="nix_cta_button", lang=lang) }}</a>
+              </div>
+              <div class="col-md-4 mt-4 mt-md-0">
+                <img src="{{ get_url(path='images/badges/nixos-commercial-support.svg') }}" alt="NixOS Commercial Support" class="img-fluid" loading="lazy">
+              </div>
+            </div>
+            {% endif %}
+            {% if "rust" in post_tags %}
+            <div class="row align-items-center{% if "nix" in post_tags %} mt-5{% endif %}">
+              <div class="col-md-8">
+                <h3>{{ trans(key="rust_cta_title", lang=lang) }}</h3>
+                <p>{{ trans(key="rust_cta_text", lang=lang) }}</p>
+                <a href="{{ get_url(path='@/rust/_index.md', lang=lang) }}" class="btn btn-primary">{{ trans(key="rust_cta_button", lang=lang) }}</a>
+              </div>
+              <div class="col-md-4 mt-4 mt-md-0">
+                <img src="{{ get_url(path='images/badges/rcn-logo.svg') }}" alt="Rust Commercial Network" class="img-fluid" loading="lazy">
+              </div>
+            </div>
+            {% endif %}
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+{% endif %}
 {% endblock %}
