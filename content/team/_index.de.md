@@ -25,6 +25,16 @@ skills = [
 ]
 
 [[extra.members.links]]
+label = "E-Mail"
+url = "mailto:felix@atvari.eu"
+icon = "envelope"
+
+[[extra.members.links]]
+label = "Website"
+url = "https://felschr.com"
+icon = "world"
+
+[[extra.members.links]]
 label = "Sifa ID"
 url = "https://sifa.id/p/felschr.com"
 icon = "sifa"
@@ -75,17 +85,8 @@ url = "https://git.felschr.com/felschr"
 icon = "forgejo"
 
 [[extra.members.links]]
-label = "Website"
-url = "https://felschr.com"
-icon = "world"
-
-[[extra.members.links]]
 label = "Matrix"
 url = "https://matrix.to/#/@felschr:matrix.org"
 icon = "matrix"
 
-[[extra.members.links]]
-label = "E-Mail"
-url = "mailto:felix@atvari.eu"
-icon = "envelope"
 +++
