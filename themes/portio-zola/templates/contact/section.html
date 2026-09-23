@@ -74,7 +74,9 @@
       </div>
       {% endif %}
 
-      {% if extra.address.phone and extra.address.email %}
+      {% set contact_phone = extra.address.phone %}
+      {% if lang == "de" and extra.address.phone_de %}{% set contact_phone = extra.address.phone_de %}{% endif %}
+      {% if contact_phone and extra.address.email %}
       <div class="col-lg-4 d-flex">
         <div class="contact__info_item flex-fill">
           <div class="contact__info_item-icon">
@@ -90,7 +92,7 @@
             </div>
           </div>
           <h3>{{ trans(key="phone", lang=lang) }} & {{ trans(key="email", lang=lang) }}</h3>
-          <p>{{ extra.address.phone }}<br>
+          <p>{{ contact_phone }}<br>
             <a href="mailto:{{ extra.address.email }}">{{ extra.address.email }}</a>
           </p>
         </div>

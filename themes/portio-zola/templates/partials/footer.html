@@ -87,13 +87,15 @@
             <div class="col-lg-4">
                 <div class="contact__widget_address">
                     <h3>{{ trans(key="address", lang=lang) }}</h3>
+                    {% set contact_phone = extra.address.phone %}
+                    {% if lang == "de" and extra.address.phone_de %}{% set contact_phone = extra.address.phone_de %}{% endif %}
                     <ul>
-                        {% if extra.address.phone %}
+                        {% if contact_phone %}
                         <li>
-                            <a href="tel:{{ extra.address.phone }}">
-                                <i class="lni lni-phone"></i>{{ extra.address.phone }}
+                            <a href="tel:{{ contact_phone }}">
+                                <i class="lni lni-phone"></i>{{ contact_phone }}
                             </a>
-                        </li> 
+                        </li>
                         {% endif %}
 
                         {% if extra.address.email %}

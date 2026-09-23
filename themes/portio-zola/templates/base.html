@@ -158,6 +158,8 @@
                 {% endif %}
             {% endfor %}
         {% endif %}
+        {% set contact_phone = extra.address.phone %}
+        {% if lang == "de" and extra.address.phone_de %}{% set contact_phone = extra.address.phone_de %}{% endif %}
         <script type="application/ld+json">
         {
             "@context": "https://schema.org",
@@ -169,7 +171,7 @@
             "image": {{ get_url(path="images/logo.png") | json_encode() | safe }},
             "description": {{ config.description | json_encode() | safe }},
             "email": {{ extra.address.email | json_encode() | safe }},
-            "telephone": {{ extra.address.phone | json_encode() | safe }},
+            "telephone": {{ contact_phone | json_encode() | safe }},
             "duns": {{ extra.legal.duns | json_encode() | safe }},
             "vatID": {{ extra.legal.vat_id | json_encode() | safe }},
             "identifier": {

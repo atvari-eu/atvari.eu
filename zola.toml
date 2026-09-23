@@ -185,6 +185,8 @@ socials = [
 
 [extra.address]
 phone = "+49 4131 2190617"
+# German-site override; falls back to `phone` above when unset.
+phone_de = "+49 4131 2190634"
 email = "hi@atvari.eu"
 address = "Salzstr. 1, 21335 Lüneburg, Germany"
 # opening_hours = "Open from 10am to 6pm (close at 5pm Sundays) "
