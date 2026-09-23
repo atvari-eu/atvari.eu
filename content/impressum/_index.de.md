@@ -12,7 +12,7 @@ Salzstr. 1\
 
 **Kontakt:**
 
-Telefon: [+49 30 82684221](tel:+493082684221)\
+Telefon: [+49 4131 2190617](tel:+4941312190617)\
 E-Mail: [hi@atvari.eu](mailto:hi@atvari.eu)\
 Website: [atvari.eu](https://atvari.eu)
 
