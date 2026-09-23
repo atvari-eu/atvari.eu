@@ -52,7 +52,45 @@
         </a>
     </div>
     {% endif %}
-    <div class="row d-flex align-items-stretch gy-4{% if extra.booking.active and extra.booking.url %} mt-4{% endif %}">
+
+    {% if extra.form.active %}
+    <div class="contact-booking-card{% if extra.booking.active and extra.booking.url %} mt-4{% endif %}">
+        <h2>{{ trans(key='form_title', lang=lang) }}</h2>
+
+        <div class="contact-form-input">
+            <form id="contact-form"
+                  data-mailto="{{ extra.address.email }}"
+                  data-mailto-subject="{{ trans(key='form_mailto_subject', lang=lang) }}"
+                  data-mailto-status="{{ trans(key='form_mailto_status', lang=lang) }}">
+                <div class="form-group">
+                    <input type="text"
+                           class="form-control"
+                           name="Name"
+                           placeholder="{{ trans(key='form_input_name', lang=lang) }}"
+                           required>
+                </div>
+
+                <div class="form-group">
+                    <textarea class="form-control"
+                              id="message"
+                              rows="6"
+                              name="message"
+                              placeholder="{{ trans(key='form_input_message', lang=lang) }}"></textarea>
+                </div>
+
+                <a href="mailto:{{ extra.address.email | urlencode }}?subject={{ trans(key='form_mailto_subject', lang=lang) | urlencode }}"
+                   class="contact-booking-btn"
+                   id="contact-form-button">
+                    {{ trans(key='form_button', lang=lang) }}
+                </a>
+                <p id="contact-form-status" class="m-0"></p>
+            </form>
+        </div>
+    </div>
+    <script src="{{ get_url(path='js/contact-mailto-form.js') }}"></script>
+    {% endif %}
+
+    <div class="row d-flex align-items-stretch gy-4{% if (extra.booking.active and extra.booking.url) or extra.form.active %} mt-4{% endif %}">
       {% if extra.address.address %}
       <div class="col-lg-4 d-flex">
         <div class="contact__info_item flex-fill">
@@ -145,70 +183,17 @@
   </div>
 </section>
 
+{% if extra.map.active and extra.map.longitude and extra.map.latitude %}
 <div class="contact-form">
     <div class="container">
         <div class="d-flex flex-wrap gap-4">
-            {% if extra.form.active and extra.form.formspree_url %}
-            <div class="flex-fill" style="min-height: 500px;">
-                <div class="contact-form-title">
-                    <h3>{{ trans(key='form_title', lang=lang) }}</h3>
-                </div>
-                
-                <div class="contact-form-input">
-                    <form id="contact-form" action="{{ extra.form.formspree_url }}" method="POST">
-                        <div class="form-row">
-                            <div class="form-group col-md-6 pr-3">
-                                <input type="text" 
-                                       class="form-control" 
-                                       name="Name" 
-                                       placeholder="{{ trans(key='form_input_name', lang=lang) }}" 
-                                       required>
-                            </div>
-                            
-                            <div class="form-group col-md-6">
-                                <input type="email" 
-                                       class="form-control" 
-                                       name="email" 
-                                       placeholder="{{ trans(key='form_input_email', lang=lang) }}" 
-                                       required>
-                            </div>
-                        </div>
-
-                        <div class="form-group">
-                            <textarea class="form-control" 
-                                      id="message" 
-                                      rows="6" 
-                                      name="message" 
-                                      placeholder="{{ trans(key='form_input_message', lang=lang) }}">
-                            </textarea>
-                        </div>
-
-                        <div class="form-group">
-                            <div class="form-check small">
-                                <input type="checkbox" class="form-check-input" name="agreement" id="aggrement" required />
-                                <label class="form-check-label" for="aggrement">
-                                    {{ trans(key='form_input_agreement', lang=lang) }}
-                                </label>
-                            </div>
-                        </div>
-
-                        <button type="submit" class="btn btn-primary btn-zoom contact-form-btn" id="contact-form-button" formtarget="_blank">
-                            {{ trans(key='form_button', lang=lang) }}
-                        </button>
-                        <p id="contact-form-status" class="mt-3"></p>
-                    </form>
-                </div>
-            </div>
-            {% endif %}
-           
-            {% if extra.map.active and extra.map.longitude and extra.map.latitude %}
             <div class="flex-fill" style="min-height: 500px;">
                 {{ macros::map(zoom=20, lng=extra.map.longitude, lat=extra.map.latitude) }}
             </div>
-            {% endif %}
         </div>
     </div>
 </div>
+{% endif %}
 
 {% if extra.address.address %}
 <script src="{{ get_url(path='js/contact-address-link.js') }}"></script>

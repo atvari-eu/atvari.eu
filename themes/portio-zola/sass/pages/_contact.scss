@@ -76,35 +76,29 @@
 }
 .contact-form {
   padding: 50px 0 100px 0;
-  &-title {
-    h4 {
-      font-family: $primary-font;
-      color: $secondary-color;
-      margin: 0 0 30px 0;
-      font-size: 24px;
-    }
-  }
   &-input {
+    text-align: left;
     .form-group {
       margin-bottom: 30px;
       .form-control {
-        border: 1px solid #aeb8be;
+        background: var(--color-bg);
+        border: 1px solid var(--color-input-border);
         border-radius: 7px;
-        padding: 10px 30px;
+        padding: 10px 15px;
         font-size: 14px;
         font-family: $secondary-font;
-        color: #282f49;
+        color: var(--color-heading);
         &::placeholder {
           /* Chrome, Firefox, Opera, Safari 10.1+ */
-          color: #282f49;
+          color: var(--color-heading);
         }
         &:-ms-input-placeholder {
           /* Internet Explorer 10-11 */
-          color: #282f49;
+          color: var(--color-heading);
         }
         &::-ms-input-placeholder {
           /* Microsoft Edge */
-          color: #282f49;
+          color: var(--color-heading);
         }
         &:focus {
           outline: 0;
@@ -113,72 +107,7 @@
       }
       input.form-control {
         height: 55px;
-        border: 1px solid #aeb8be;
-      }
-    }
-    .form-check {
-      padding: 0;
-      margin-bottom: 30px;
-      margin-top: -10px;
-      &-input {
-        padding: 0;
-        height: initial;
-        width: initial;
-        margin-bottom: 0;
-        // display: none;
-        cursor: pointer;
-        width: 1px;
-        height: 1px;
-        opacity: 0;
-        margin-left: 10px;
-        margin-top: 23px;
-      }
-      &-label {
-        position: relative;
-        cursor: pointer;
-        &::before {
-          content: "";
-          -webkit-appearance: none;
-          background-color: transparent;
-          border: 1px solid #aeb8be;
-          height: 20px;
-          width: 20px;
-          border-radius: 4px;
-          display: inline-block;
-          position: relative;
-          vertical-align: middle;
-          cursor: pointer;
-          margin-right: 8px;
-        }
-      }
-
-      input:checked + label:after {
-        content: "";
-        display: block;
-        position: absolute;
-        top: 6px;
-        left: 7px;
-        width: 6px;
-        height: 12px;
-        border: solid #0079bf;
-        border-width: 0 2px 2px 0;
-        transform: rotate(45deg);
-      }
-    }
-    .contact-form-btn {
-      padding: 20px 45px;
-      display: inline-block;
-      font-size: 16px;
-      font-family: $secondary-font;
-      background: $primary-color;
-      border-radius: 7px;
-      color: #fff;
-      transition: all 0.3s ease;
-      &:hover {
-        background: darken($primary-color, 8%);
-        box-shadow: 0 8px 20px rgba($primary-color, 0.3);
-        transform: scale(1.03);
-        text-decoration: none;
+        border: 1px solid var(--color-input-border);
       }
     }
   }

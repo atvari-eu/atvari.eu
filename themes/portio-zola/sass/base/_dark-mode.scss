@@ -8,6 +8,9 @@ $dark-shape-color: darken($dark-surface-color, 5%);
 // Contact page icon-background sits directly on a card using
 // $dark-surface-color, so it needs more contrast than $dark-shape-color.
 $dark-icon-shape-color: darken($dark-surface-color, 2%);
+// Light mode's #aeb8be input border reads as washed-out on a dark card;
+// a shade lifted off the surface color keeps it visible without glaring.
+$dark-input-border-color: lighten($dark-surface-color, 18%);
 
 // Theme custom properties. Most light values match the site's existing
 // design exactly; the link colors are a deliberate exception, overriding
@@ -22,6 +25,7 @@ $dark-icon-shape-color: darken($dark-surface-color, 2%);
   --color-shape: #f1f6f9;
   --color-icon-shape: #f1f6f9;
   --color-divider: rgba(0, 0, 0, 0.08);
+  --color-input-border: #aeb8be;
   --color-nav-active-bg: rgba(0, 0, 0, 0.035);
   --color-dropdown-hover-bg: rgba(0, 0, 0, 0.06);
   --color-dropdown-active-bg: rgba(0, 0, 0, 0.1);
@@ -40,6 +44,7 @@ $dark-icon-shape-color: darken($dark-surface-color, 2%);
   --color-shape: #{$dark-shape-color};
   --color-icon-shape: #{$dark-icon-shape-color};
   --color-divider: rgba(255, 255, 255, 0.14);
+  --color-input-border: #{$dark-input-border-color};
   --color-nav-active-bg: rgba(255, 255, 255, 0.06);
   --color-dropdown-hover-bg: rgba(255, 255, 255, 0.08);
   --color-dropdown-active-bg: rgba(255, 255, 255, 0.14);
