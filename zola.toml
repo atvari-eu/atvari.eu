@@ -147,6 +147,7 @@ logo = "images/logo.svg"
 logo_dark = "images/logo-white.svg"
 footer_logo = "images/logo-white.svg"
 # google_analytics = "YOUR TOKEN FOR GOOGLE ANALYTICS"
+plausible_script = "pa-ODCGu3ITtt5UJG9sNwScE"
 display_cta = true
 
 menus = [
