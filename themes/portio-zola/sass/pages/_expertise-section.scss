@@ -155,9 +155,10 @@
     &-logo {
       padding-bottom: 25px;
       img {
-        max-height: 80px;
+        height: 80px;
         width: auto;
         max-width: 100%;
+        object-fit: contain;
       }
     }
     &-logo .expertise__logo--dark {
