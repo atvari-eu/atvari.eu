@@ -70,7 +70,7 @@
           </div>
           <h3>{{ trans(key='address', lang=lang) }}</h3>
           {% set address_parts = extra.address.address | split(pat=", ") %}
-          <p>{{ address_parts | join(sep="<br>") | safe }}</p>
+          <address>{{ address_parts | join(sep="<br>") | safe }}</address>
         </div>
       </div>
       {% endif %}
