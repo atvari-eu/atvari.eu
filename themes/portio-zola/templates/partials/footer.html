@@ -53,67 +53,24 @@
                     </div>
                 </div>
             </div>
-            <div class="col-lg-4">
+            <div class="col-lg-8">
                 <div class="contact__widget_sitemap">
-                    <h3>{{ trans(key="sitemap", lang=lang) }}</h3>
-                    {% set sitemap_half = extra.sitemaps | length / 2 %}
-                    {% set sitemap_split = sitemap_half | round(method="ceil") %}
                     <div class="contact__widget_sitemap_columns">
-                        <ul>
-                            {% for sitemap in extra.sitemaps %}
-                              {% if loop.index <= sitemap_split %}
-                              <li>
-                                  <a href="{{ get_url(path=sitemap.url, lang=lang) }}">
-                                      {{ trans(key=sitemap.name, lang=lang) }}
-                                  </a>
-                              </li>
-                              {% endif %}
-                            {% endfor %}
-                        </ul>
-                        <ul>
-                            {% for sitemap in extra.sitemaps %}
-                              {% if loop.index > sitemap_split %}
-                              <li>
-                                  <a href="{{ get_url(path=sitemap.url, lang=lang) }}">
-                                      {{ trans(key=sitemap.name, lang=lang) }}
-                                  </a>
-                              </li>
-                              {% endif %}
-                            {% endfor %}
-                        </ul>
+                        {% for group in extra.sitemap_groups %}
+                        <div class="contact__widget_sitemap_group">
+                            <h4>{{ trans(key=group.name, lang=lang) }}</h4>
+                            <ul>
+                                {% for link in group.links %}
+                                <li>
+                                    <a href="{{ get_url(path=link.url, lang=lang) }}">
+                                        {{ trans(key=link.name, lang=lang) }}
+                                    </a>
+                                </li>
+                                {% endfor %}
+                            </ul>
+                        </div>
+                        {% endfor %}
                     </div>
-                </div>
-            </div>
-            <div class="col-lg-4">
-                <div class="contact__widget_address">
-                    <h3>{{ trans(key="address", lang=lang) }}</h3>
-                    {% set contact_phone = extra.address.phone %}
-                    {% if lang == "de" and extra.address.phone_de %}{% set contact_phone = extra.address.phone_de %}{% endif %}
-                    <ul>
-                        {% if contact_phone %}
-                        <li>
-                            <a href="tel:{{ contact_phone }}">
-                                <i class="lni lni-phone"></i>{{ contact_phone }}
-                            </a>
-                        </li>
-                        {% endif %}
-
-                        {% if extra.address.email %}
-                        <li>
-                            <a href="mailto:{{ extra.address.email }}">
-                                <i class="lni lni-envelope"></i>{{ extra.address.email }}
-                            </a>
-                        </li>
-                        {% endif %}
-
-                        {% if extra.address.address %}
-                        <li>
-                            <p>
-                                <i class="lni lni-map-marker"></i>{{ extra.address.address }}
-                            </p>
-                        </li>
-                        {% endif %}
-                    </ul>
                 </div>
             </div>
         </div>

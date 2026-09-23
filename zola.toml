@@ -29,7 +29,10 @@ start_project = "Let's start a project"
 showing_all = "Showing all"
 get_in_touch = "Get in touch"
 see_details = "See details"
-sitemap = "Sitemap"
+sitemap_consulting = "Consulting"
+sitemap_company = "Company"
+sitemap_resources = "Resources"
+sitemap_legal = "Legal"
 address = "Address"
 phone = "Phone"
 email = "Email"
@@ -94,7 +97,10 @@ start_project = "Projekt starten"
 showing_all = "Alle anzeigen"
 get_in_touch = "Kontakt aufnehmen"
 see_details = "Details ansehen"
-sitemap = "Sitemap"
+sitemap_consulting = "Consulting"
+sitemap_company = "Unternehmen"
+sitemap_resources = "Ressourcen"
+sitemap_legal = "Rechtliches"
 address = "Adresse"
 phone = "Telefon"
 email = "E-Mail"
@@ -160,17 +166,25 @@ menus = [
   { name = "contact", url = "@/contact/_index.md" }
 ]
 
-sitemaps = [
-  { name = "home", url = "/" },
-  { name = "nix", url = "@/nix/_index.md" },
-  { name = "rust", url = "@/rust/_index.md" },
-  { name = "team", url = "@/team/_index.md" },
-  { name = "values", url = "@/values/_index.md" },
-  { name = "blog", url = "@/blog/_index.md" },
-  { name = "partners", url = "@/partners/_index.md" },
-  { name = "press", url = "@/press/_index.md" },
-  { name = "contact", url = "@/contact/_index.md" },
-  { name = "impressum", url = "@/impressum/_index.md" }
+sitemap_groups = [
+  { name = "sitemap_company", links = [
+    { name = "team", url = "@/team/_index.md" },
+    { name = "values", url = "@/values/_index.md" },
+    { name = "partners", url = "@/partners/_index.md" },
+    { name = "contact", url = "@/contact/_index.md" },
+  ] },
+  { name = "sitemap_consulting", links = [
+    { name = "service_overview", url = "#service" },
+    { name = "nix", url = "@/nix/_index.md" },
+    { name = "rust", url = "@/rust/_index.md" },
+  ] },
+  { name = "sitemap_resources", links = [
+    { name = "blog", url = "@/blog/_index.md" },
+    { name = "press", url = "@/press/_index.md" },
+  ] },
+  { name = "sitemap_legal", links = [
+    { name = "impressum", url = "@/impressum/_index.md" },
+  ] },
 ]
 
 socials = [
