@@ -1,7 +1,7 @@
 .team {
   &__grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(320px, 500px));
+    grid-template-columns: repeat(auto-fit, minmax(320px, 700px));
     justify-content: center;
     gap: 60px;
     @include mobile {
