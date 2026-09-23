@@ -43,54 +43,65 @@
 
 <section class="section contact__info">
   <div class="container">
-    {% if extra.booking.active and extra.booking.url %}
-    <div class="contact-booking-card">
-        <h2>{{ trans(key='booking_title', lang=lang) }}</h2>
-        <p>{{ trans(key='booking_description', lang=lang) }}</p>
-        <a href="{{ extra.booking.url }}" target="_blank" rel="noopener" class="contact-booking-btn">
-            {{ trans(key='booking_button', lang=lang) }}
-        </a>
-    </div>
-    {% endif %}
+    {% set booking_active = extra.booking.active and extra.booking.url %}
+    {% set both_cards_active = booking_active and extra.form.active %}
 
-    {% if extra.form.active %}
-    <div class="contact-booking-card{% if extra.booking.active and extra.booking.url %} mt-4{% endif %}">
-        <h2>{{ trans(key='form_title', lang=lang) }}</h2>
-
-        <div class="contact-form-input">
-            <form id="contact-form"
-                  data-mailto="{{ extra.address.email }}"
-                  data-mailto-subject="{{ trans(key='form_mailto_subject', lang=lang) }}"
-                  data-mailto-status="{{ trans(key='form_mailto_status', lang=lang) }}">
-                <div class="form-group">
-                    <input type="text"
-                           class="form-control"
-                           name="Name"
-                           placeholder="{{ trans(key='form_input_name', lang=lang) }}"
-                           required>
-                </div>
-
-                <div class="form-group">
-                    <textarea class="form-control"
-                              id="message"
-                              rows="6"
-                              name="message"
-                              placeholder="{{ trans(key='form_input_message', lang=lang) }}"></textarea>
-                </div>
-
-                <a href="mailto:{{ extra.address.email | urlencode }}?subject={{ trans(key='form_mailto_subject', lang=lang) | urlencode }}"
-                   class="contact-booking-btn"
-                   id="contact-form-button">
-                    {{ trans(key='form_button', lang=lang) }}
-                </a>
-                <p id="contact-form-status" class="m-0"></p>
-            </form>
+    {% if booking_active or extra.form.active %}
+    <div class="row d-flex align-items-stretch gy-4">
+      {% if booking_active %}
+      <div class="{% if both_cards_active %}col-xl-4{% else %}col-12{% endif %}">
+        <div class="contact-booking-card h-100">
+            <h2>{{ trans(key='booking_title', lang=lang) }}</h2>
+            <p>{{ trans(key='booking_description', lang=lang) }}</p>
+            <a href="{{ extra.booking.url }}" target="_blank" rel="noopener" class="contact-booking-btn">
+                {{ trans(key='booking_button', lang=lang) }}
+            </a>
         </div>
+      </div>
+      {% endif %}
+
+      {% if extra.form.active %}
+      <div class="{% if both_cards_active %}col-xl-8{% else %}col-12{% endif %}">
+        <div class="contact-booking-card h-100">
+            <h2>{{ trans(key='form_title', lang=lang) }}</h2>
+
+            <div class="contact-form-input">
+                <form id="contact-form"
+                      data-mailto="{{ extra.address.email }}"
+                      data-mailto-subject="{{ trans(key='form_mailto_subject', lang=lang) }}"
+                      data-mailto-status="{{ trans(key='form_mailto_status', lang=lang) }}">
+                    <div class="form-group">
+                        <input type="text"
+                               class="form-control"
+                               name="Name"
+                               placeholder="{{ trans(key='form_input_name', lang=lang) }}"
+                               required>
+                    </div>
+
+                    <div class="form-group">
+                        <textarea class="form-control"
+                                  id="message"
+                                  rows="6"
+                                  name="message"
+                                  placeholder="{{ trans(key='form_input_message', lang=lang) }}"></textarea>
+                    </div>
+
+                    <a href="mailto:{{ extra.address.email | urlencode }}?subject={{ trans(key='form_mailto_subject', lang=lang) | urlencode }}"
+                       class="contact-booking-btn"
+                       id="contact-form-button">
+                        {{ trans(key='form_button', lang=lang) }}
+                    </a>
+                    <p id="contact-form-status" class="m-0"></p>
+                </form>
+            </div>
+        </div>
+      </div>
+      <script src="{{ get_url(path='js/contact-mailto-form.js') }}"></script>
+      {% endif %}
     </div>
-    <script src="{{ get_url(path='js/contact-mailto-form.js') }}"></script>
     {% endif %}
 
-    <div class="row d-flex align-items-stretch gy-4{% if (extra.booking.active and extra.booking.url) or extra.form.active %} mt-4{% endif %}">
+    <div class="row d-flex align-items-stretch gy-4{% if booking_active or extra.form.active %} mt-4{% endif %}">
       {% if extra.address.address %}
       <div class="col-lg-4 d-flex">
         <div class="contact__info_item flex-fill">
