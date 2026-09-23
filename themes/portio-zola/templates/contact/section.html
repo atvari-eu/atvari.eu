@@ -92,7 +92,7 @@
             </div>
           </div>
           <h3>{{ trans(key="phone", lang=lang) }} & {{ trans(key="email", lang=lang) }}</h3>
-          <p>{{ contact_phone }}<br>
+          <p><a href="tel:{{ contact_phone }}">{{ contact_phone }}</a>
             <a href="mailto:{{ extra.address.email }}">{{ extra.address.email }}</a>
           </p>
         </div>
