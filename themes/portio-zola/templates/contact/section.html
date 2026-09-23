@@ -70,7 +70,7 @@
           </div>
           <h3>{{ trans(key='address', lang=lang) }}</h3>
           {% set address_parts = extra.address.address | split(pat=", ") %}
-          <address>{{ address_parts | join(sep="<br>") | safe }}</address>
+          <address><a id="contact-address-link" href="https://www.openstreetmap.org/search?query={{ extra.address.address | urlencode }}" data-geo-query="{{ extra.address.address | urlencode }}" target="_blank" rel="noopener">{{ address_parts | join(sep="<br>") | safe }}</a></address>
         </div>
       </div>
       {% endif %}
@@ -210,4 +210,7 @@
     </div>
 </div>
 
+{% if extra.address.address %}
+<script src="{{ get_url(path='js/contact-address-link.js') }}"></script>
+{% endif %}
 {% endblock %}
