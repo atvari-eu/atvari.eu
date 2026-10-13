@@ -86,6 +86,8 @@ partners = "Partners"
 open_source = "Open Source"
 press = "Press"
 press_releases = "Press releases"
+digital_sovereignty = "Digital Sovereignty"
+related_posts = "Related reading"
 
 [languages.de]
 title = "atvari"
@@ -162,6 +164,8 @@ partners = "Partner"
 open_source = "Open Source"
 press = "Presse"
 press_releases = "Pressemitteilungen"
+digital_sovereignty = "Digitale Souveränität"
+related_posts = "Weiterlesen"
 
 [extra]
 date_format = "%d %B, %Y"
@@ -199,6 +203,7 @@ sitemap_groups = [
   ] },
   { name = "sitemap_resources", links = [
     { name = "blog", url = "@/blog/_index.md" },
+    { name = "digital_sovereignty", url = "@/digital-sovereignty/_index.md" },
     { name = "press", url = "@/press/_index.md" },
   ] },
   { name = "sitemap_legal", links = [

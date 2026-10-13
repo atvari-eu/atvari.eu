@@ -117,6 +117,16 @@
     margin: 0 0 30px 0;
     text-align: center;
   }
+  // Optional prose lead between a group heading and its card grid.
+  &__lead {
+    max-width: 820px;
+    margin: 0 auto 40px;
+    text-align: center;
+    font-family: $secondary-font;
+    font-size: 16px;
+    line-height: 28px;
+    color: #7e7e8a;
+  }
   &__grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -163,7 +173,8 @@
       border-radius: 50%;
       background: rgba($primary-color, 0.1);
       margin-bottom: 25px;
-      i {
+      i,
+      .icon-svg {
         font-size: 26px;
         color: $primary-color;
       }

@@ -1,0 +1,156 @@
+{% extends "base.html" %}
+{% import "macros.html" as macros %}
+
+{% block seo %}
+{{ super() }}
+{#
+  Digital sovereignty hub. It's a thought-leadership page, so instead of
+  hand-listing links it surfaces every blog post tagged `digital-sovereignty`
+  (see `[taxonomies]` in the blog posts), keeping the page in sync with the
+  blog automatically. Computed here with `set_global` (top-level `set` isn't
+  in scope inside blocks) so the `content` block can reuse it.
+#}
+{% set_global sovereignty_pages = [] %}
+{% set tag_taxonomy = get_taxonomy(kind="tags", lang=lang, required=false) %}
+{% if tag_taxonomy %}
+  {% for item in tag_taxonomy.items %}
+    {% if item.name == "digital-sovereignty" %}{% set_global sovereignty_pages = item.pages %}{% endif %}
+  {% endfor %}
+{% endif %}
+<script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@type": "CollectionPage",
+    "name": {{ section.title | json_encode() | safe }},
+    "description": {{ section.description | json_encode() | safe }},
+    "url": {{ section.permalink | json_encode() | safe }},
+    "isPartOf": {
+        "@type": "WebSite",
+        "name": {{ config.title | json_encode() | safe }},
+        "url": {{ config.base_url | json_encode() | safe }}
+    }{% if sovereignty_pages | length > 0 %},
+    "hasPart": [
+        {% for post in sovereignty_pages %}
+        {
+            "@type": "BlogPosting",
+            "headline": {{ post.title | json_encode() | safe }},
+            "url": {{ post.permalink | json_encode() | safe }},
+            "datePublished": {{ post.date | date(format="%Y-%m-%d") | json_encode() | safe }}{% if post.extra.author %},
+            "author": {"@type": "Person", "name": {{ post.extra.author | json_encode() | safe }}}{% endif %}
+        }{% if not loop.last %},{% endif %}
+        {% endfor %}
+    ]{% endif %}
+}
+</script>
+{% endblock %}
+
+{% block content %}
+<header class="breadCrumb">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-10 col-md-12 offset-lg-1 offset-md-0 text-center">
+        <h1 class="breadCrumb__title">{{ section.title }}</h1>
+        <nav aria-label="breadcrumb" class="d-flex justify-content-center">
+          <ol class="breadcrumb align-items-center">
+            <li class="breadcrumb-item"><a href="{{ get_url(path="/", lang=lang) }}">{{ trans(key="home", lang=lang) }}</a></li>
+            <li class="breadcrumb-item active" aria-current="page">{{ section.title }}</li>
+          </ol>
+        </nav>
+        {{ macros::breadcrumb_jsonld(items=[
+          trans(key="home", lang=lang) ~ "|||" ~ get_url(path="/", lang=lang),
+          section.title ~ "|||" ~ section.permalink
+        ]) }}
+      </div>
+    </div>
+  </div>
+</header>
+
+{#
+  Content is a list of card groups in `extra.sections` (each with a heading,
+  an optional intro, and `items`). Items render like the values/opensource
+  grids: `logo` for an image, `brand` for a `brand_icon` (e.g. the EU flag),
+  or `icon` for a Lineicons name.
+#}
+<section class="section expertise">
+  <div class="container">
+    {% if section.content %}
+    <div class="row mt-5">
+      <div class="col-lg-10 offset-lg-1">
+        <div class="contact-booking-card text-start expertise__intro">
+          {{ section.content | safe }}
+        </div>
+      </div>
+    </div>
+    {% endif %}
+
+    {% for group in section.extra.sections %}
+    <div class="row mt-5">
+      <div class="col-12">
+        <h2 class="expertise__heading">{{ group.heading }}</h2>
+      </div>
+    </div>
+    {% if group.intro %}
+    <div class="row">
+      <div class="col-12">
+        <p class="expertise__lead">{{ group.intro | markdown(inline=true) | safe }}</p>
+      </div>
+    </div>
+    {% endif %}
+    <div class="expertise__grid{% if group.items | length % 2 == 0 and group.items | length <= 4 %} expertise__grid--centered{% endif %}">
+      {% for item in group.items %}
+      {% if item.link %}
+      <a href="{% if item.link is starting_with("@/") %}{{ get_url(path=item.link, lang=lang) }}{% else %}{{ item.link }}{% endif %}"{% if item.link_title %} title="{{ item.link_title }}"{% endif %}{% if item.link_external %} rel="nofollow" target="_blank"{% endif %} class="expertise__grid-item">
+      {% else %}
+      <div class="expertise__grid-item">
+      {% endif %}
+        {% if item.logo %}
+        <div class="expertise__grid-item-logo">
+          {{ macros::logo_link(item=item, link=false) }}
+        </div>
+        {% elif item.brand %}
+        <div class="expertise__grid-item-icon">{{ macros::brand_icon(name=item.brand) }}</div>
+        {% elif item.icon %}
+        <div class="expertise__grid-item-icon"><i class="lni lni-{{ item.icon }}"></i></div>
+        {% endif %}
+        <h4>{{ item.title }}</h4>
+        {{ item.content | markdown | safe }}
+      {% if item.link %}
+      </a>
+      {% else %}
+      </div>
+      {% endif %}
+      {% endfor %}
+    </div>
+    {% endfor %}
+
+    {% if sovereignty_pages | length > 0 %}
+    <div class="row mt-5">
+      <div class="col-12">
+        <h2 class="expertise__heading">{{ trans(key="related_posts", lang=lang) }}</h2>
+      </div>
+    </div>
+    <div class="d-flex justify-content-center flex-wrap">
+      {% for post in sovereignty_pages %}
+      <a class="card col-lg-3 m-2 blog__post-card text-reset text-decoration-none" href="{{ post.permalink }}">
+        {% if post.extra.feature_image %}
+        <img class="blog__post-card-image" src="{{ get_url(path=post.extra.feature_image) }}" alt="{{ post.title }}">
+        {% endif %}
+        <div class="blog__post-card-body">
+          <h3 class="blog__post-card-title">{{ post.title }}</h3>
+          <p class="blog__post-card-meta">
+            <time datetime="{{ post.date | date(format='%Y-%m-%d') }}">{{ post.date | date(format=config.extra.date_format) }}</time>
+          </p>
+        </div>
+      </a>
+      {% endfor %}
+    </div>
+    {% endif %}
+
+    <div class="row mt-5">
+      <div class="col-12 text-center">
+        <a href="{{ get_url(path='@/contact/_index.md', lang=lang) }}" class="contact-booking-btn">{{ section.extra.cta | default(value=trans(key="start_project", lang=lang)) }}</a>
+      </div>
+    </div>
+  </div>
+</section>
+{% endblock %}
