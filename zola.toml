@@ -29,7 +29,7 @@ start_project = "Let's start a project"
 showing_all = "Showing all"
 get_in_touch = "Get in touch"
 see_details = "See details"
-sitemap_consulting = "Consulting"
+sitemap_consulting = "Services"
 sitemap_company = "Company"
 sitemap_resources = "Resources"
 sitemap_legal = "Legal"
@@ -70,6 +70,8 @@ software_engineering = "Software Engineering"
 cloud_engineering = "Cloud & DevOps"
 software_engineering_short = "Software"
 cloud_engineering_short = "Cloud & DevOps"
+nix_short = "Nix & NixOS"
+rust_short = "Rust"
 nix = "Nix Consulting"
 rust = "Rust Consulting"
 team = "Team"
@@ -103,7 +105,7 @@ start_project = "Projekt starten"
 showing_all = "Alle anzeigen"
 get_in_touch = "Kontakt aufnehmen"
 see_details = "Details ansehen"
-sitemap_consulting = "Consulting"
+sitemap_consulting = "Leistungen"
 sitemap_company = "Unternehmen"
 sitemap_resources = "Ressourcen"
 sitemap_legal = "Rechtliches"
@@ -144,6 +146,8 @@ software_engineering = "Software-Engineering"
 cloud_engineering = "Cloud & DevOps"
 software_engineering_short = "Software"
 cloud_engineering_short = "Cloud & DevOps"
+nix_short = "Nix & NixOS"
+rust_short = "Rust"
 nix = "Nix-Consulting"
 rust = "Rust-Consulting"
 team = "Team"
@@ -188,8 +192,8 @@ sitemap_groups = [
   ] },
   { name = "sitemap_consulting", links = [
     { name = "service_overview", url = "#service" },
-    { name = "rust", url = "@/rust/_index.md" },
-    { name = "nix", url = "@/nix/_index.md" },
+    { name = "rust_short", url = "@/rust/_index.md" },
+    { name = "nix_short", url = "@/nix/_index.md" },
     { name = "software_engineering_short", url = "@/software-engineering/_index.md" },
     { name = "cloud_engineering_short", url = "@/cloud-engineering/_index.md" },
   ] },

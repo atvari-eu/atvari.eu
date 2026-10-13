@@ -2,7 +2,7 @@ title     = "Our Services"
 subtitle  = "Consulting and hands-on engineering for teams that need software and infrastructure they can trust."
 
 [[services]]
-title   = "Rust Development"
+title   = "Rust Consulting"
 content = "Building reliable, high-performance software in Rust."
 url     = "@/rust/_index.md"
 image   = "images/service/rust.svg"

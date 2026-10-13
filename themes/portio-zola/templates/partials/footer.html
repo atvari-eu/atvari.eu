@@ -61,8 +61,14 @@
                             <h4>{{ trans(key=group.name, lang=lang) }}</h4>
                             <ul>
                                 {% for link in group.links %}
+                                {% set link_title = "" %}
+                                {% if group.name == "sitemap_consulting" and link.url is starting_with("@/") %}
+                                {% set link_path = link.url | replace(from="@/", to="") %}
+                                {% set link_section = get_section(path=link_path, lang=lang) %}
+                                {% set link_title = link_section.title %}
+                                {% endif %}
                                 <li>
-                                    <a href="{{ get_url(path=link.url, lang=lang) }}">
+                                    <a href="{{ get_url(path=link.url, lang=lang) }}"{% if link_title != "" %} title="{{ link_title }}"{% endif %}>
                                         {{ trans(key=link.name, lang=lang) }}
                                     </a>
                                 </li>

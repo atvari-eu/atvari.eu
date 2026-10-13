@@ -37,16 +37,20 @@
                 {% set nix_active = current_relative_path is starting_with("nix") %}
                 {% set rust_active = current_relative_path is starting_with("rust") %}
                 {% set service_active = software_engineering_active or cloud_engineering_active or nix_active or rust_active %}
+                {% set rust_section = get_section(path="rust/_index.md", lang=lang) %}
+                {% set nix_section = get_section(path="nix/_index.md", lang=lang) %}
+                {% set software_engineering_section = get_section(path="software-engineering/_index.md", lang=lang) %}
+                {% set cloud_engineering_section = get_section(path="cloud-engineering/_index.md", lang=lang) %}
                 <li class="nav-item dropdown">
                     <a href="{{ get_url(path=menu.url, lang=lang) }}" class="nav-link dropdown-toggle{% if service_active %} active{% endif %}" role="button" data-bs-toggle="dropdown" aria-expanded="false" data-nav-anchor="service">
                         {{ trans(key=menu.name, lang=lang) }}
                     </a>
                     <ul class="dropdown-menu">
                         <li><a class="dropdown-item" href="{{ get_url(path="#service", lang=lang) }}" data-nav-anchor="service">{{ trans(key="service_overview", lang=lang) }}</a></li>
-                        <li><a class="dropdown-item{% if rust_active %} active{% endif %}" href="{{ get_url(path="@/rust/_index.md", lang=lang) }}">{{ trans(key="rust", lang=lang) }}</a></li>
-                        <li><a class="dropdown-item{% if nix_active %} active{% endif %}" href="{{ get_url(path="@/nix/_index.md", lang=lang) }}">{{ trans(key="nix", lang=lang) }}</a></li>
-                        <li><a class="dropdown-item{% if software_engineering_active %} active{% endif %}" href="{{ get_url(path="@/software-engineering/_index.md", lang=lang) }}">{{ trans(key="software_engineering", lang=lang) }}</a></li>
-                        <li><a class="dropdown-item{% if cloud_engineering_active %} active{% endif %}" href="{{ get_url(path="@/cloud-engineering/_index.md", lang=lang) }}">{{ trans(key="cloud_engineering", lang=lang) }}</a></li>
+                        <li><a class="dropdown-item{% if rust_active %} active{% endif %}" href="{{ get_url(path="@/rust/_index.md", lang=lang) }}" title="{{ rust_section.title }}">{{ trans(key="rust_short", lang=lang) }}</a></li>
+                        <li><a class="dropdown-item{% if nix_active %} active{% endif %}" href="{{ get_url(path="@/nix/_index.md", lang=lang) }}" title="{{ nix_section.title }}">{{ trans(key="nix_short", lang=lang) }}</a></li>
+                        <li><a class="dropdown-item{% if software_engineering_active %} active{% endif %}" href="{{ get_url(path="@/software-engineering/_index.md", lang=lang) }}" title="{{ software_engineering_section.title }}">{{ trans(key="software_engineering_short", lang=lang) }}</a></li>
+                        <li><a class="dropdown-item{% if cloud_engineering_active %} active{% endif %}" href="{{ get_url(path="@/cloud-engineering/_index.md", lang=lang) }}" title="{{ cloud_engineering_section.title }}">{{ trans(key="cloud_engineering_short", lang=lang) }}</a></li>
                     </ul>
                 </li>
                 {% else %}
