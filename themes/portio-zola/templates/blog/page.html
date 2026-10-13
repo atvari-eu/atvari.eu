@@ -98,14 +98,6 @@
         <i class="lni lni-alarm-clock"></i>
         {{ page.reading_time }} mins read
       </li>
-      {% if page.taxonomies.categories %}
-      <li>
-        <i class="lni lni-folder"></i>
-        {% for category in page.taxonomies.categories %}
-          <a class="text-capitalize" href="{{ get_taxonomy_url(kind='categories', name=category, lang=lang) }}">{{ category }}</a>
-        {% endfor %}
-      </li>
-      {% endif %}
     </ul>
   </div>
 </header>
