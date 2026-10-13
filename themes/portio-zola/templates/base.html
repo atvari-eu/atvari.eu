@@ -222,24 +222,6 @@
             "makesOffer": [
                 {
                     "@type": "Offer",
-                    "url": {{ software_engineering_url | json_encode() | safe }},
-                    "itemOffered": {
-                        "@type": "Service",
-                        "name": "Software Engineering",
-                        "url": {{ software_engineering_url | json_encode() | safe }}
-                    }
-                },
-                {
-                    "@type": "Offer",
-                    "url": {{ cloud_engineering_url | json_encode() | safe }},
-                    "itemOffered": {
-                        "@type": "Service",
-                        "name": "Cloud Engineering & DevOps",
-                        "url": {{ cloud_engineering_url | json_encode() | safe }}
-                    }
-                },
-                {
-                    "@type": "Offer",
                     "url": {{ rust_url | json_encode() | safe }},
                     "itemOffered": {
                         "@type": "Service",
@@ -254,6 +236,24 @@
                         "@type": "Service",
                         "name": "Nix & NixOS Consulting",
                         "url": {{ nix_url | json_encode() | safe }}
+                    }
+                },
+                {
+                    "@type": "Offer",
+                    "url": {{ software_engineering_url | json_encode() | safe }},
+                    "itemOffered": {
+                        "@type": "Service",
+                        "name": "Software Engineering",
+                        "url": {{ software_engineering_url | json_encode() | safe }}
+                    }
+                },
+                {
+                    "@type": "Offer",
+                    "url": {{ cloud_engineering_url | json_encode() | safe }},
+                    "itemOffered": {
+                        "@type": "Service",
+                        "name": "Cloud Engineering & DevOps",
+                        "url": {{ cloud_engineering_url | json_encode() | safe }}
                     }
                 }
             ],

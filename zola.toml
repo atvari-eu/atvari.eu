@@ -186,10 +186,10 @@ sitemap_groups = [
   ] },
   { name = "sitemap_consulting", links = [
     { name = "service_overview", url = "#service" },
+    { name = "rust", url = "@/rust/_index.md" },
+    { name = "nix", url = "@/nix/_index.md" },
     { name = "software_engineering_short", url = "@/software-engineering/_index.md" },
     { name = "cloud_engineering_short", url = "@/cloud-engineering/_index.md" },
-    { name = "nix", url = "@/nix/_index.md" },
-    { name = "rust", url = "@/rust/_index.md" },
   ] },
   { name = "sitemap_resources", links = [
     { name = "blog", url = "@/blog/_index.md" },

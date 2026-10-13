@@ -2,18 +2,6 @@ title     = "Unsere Leistungen"
 subtitle  = "Beratung und praktisches Engineering für Teams, die verlässliche Software und Infrastruktur brauchen."
 
 [[services]]
-title   = "Software-Engineering"
-content = "Entwurf sicherer, skalierbarer und wartbarer Architekturen und Systeme von Grund auf."
-url     = "@/software-engineering/_index.md"
-image   = "images/service/branding.svg"
-
-[[services]]
-title   = "Cloud-Engineering & DevOps"
-content = "Aufbau und Betrieb von Cloud-nativer Infrastruktur mit Kubernetes, Infrastructure-as-Code und modernen DevOps-Praktiken."
-url     = "@/cloud-engineering/_index.md"
-image   = "images/service/web.svg"
-
-[[services]]
 title   = "Rust-Entwicklung"
 content = "Entwicklung zuverlässiger, performanter Software in Rust."
 url     = "@/rust/_index.md"
@@ -25,3 +13,15 @@ title   = "Nix- & NixOS-Beratung"
 content = "Deklarative Infrastruktur und reproduzierbare Systeme mit Nix, NixOS und Nixpkgs."
 url     = "@/nix/_index.md"
 image   = "images/service/nixos.svg"
+
+[[services]]
+title   = "Software-Engineering"
+content = "Entwurf sicherer, skalierbarer und wartbarer Architekturen und Systeme von Grund auf."
+url     = "@/software-engineering/_index.md"
+image   = "images/service/branding.svg"
+
+[[services]]
+title   = "Cloud-Engineering & DevOps"
+content = "Aufbau und Betrieb von Cloud-nativer Infrastruktur mit Kubernetes, Infrastructure-as-Code und modernen DevOps-Praktiken."
+url     = "@/cloud-engineering/_index.md"
+image   = "images/service/web.svg"
