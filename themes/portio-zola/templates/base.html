@@ -144,6 +144,7 @@
                 {% set_global org_same_as = org_same_as | concat(with=[social.url]) %}
             {% endif %}
         {% endfor %}
+        {% set software_engineering_url = get_url(path="@/software-engineering/_index.md", lang=lang) %}
         {% set nix_url = get_url(path="@/nix/_index.md", lang=lang) %}
         {% set rust_url = get_url(path="@/rust/_index.md", lang=lang) %}
         {% set service_url = config.base_url ~ "/#service" %}
@@ -221,11 +222,11 @@
             "makesOffer": [
                 {
                     "@type": "Offer",
-                    "url": {{ service_url | json_encode() | safe }},
+                    "url": {{ software_engineering_url | json_encode() | safe }},
                     "itemOffered": {
                         "@type": "Service",
                         "name": "Software Engineering",
-                        "url": {{ service_url | json_encode() | safe }}
+                        "url": {{ software_engineering_url | json_encode() | safe }}
                     }
                 },
                 {

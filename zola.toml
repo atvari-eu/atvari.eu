@@ -66,6 +66,8 @@ home = "Home"
 about = "About"
 service = "Services"
 service_overview = "Overview"
+software_engineering = "Software Engineering"
+software_engineering_short = "Software"
 nix = "Nix Consulting"
 rust = "Rust Consulting"
 team = "Team"
@@ -135,6 +137,8 @@ home = "Start"
 about = "Über uns"
 service = "Leistungen"
 service_overview = "Übersicht"
+software_engineering = "Software-Engineering"
+software_engineering_short = "Software"
 nix = "Nix-Consulting"
 rust = "Rust-Consulting"
 team = "Team"
@@ -178,6 +182,7 @@ sitemap_groups = [
   ] },
   { name = "sitemap_consulting", links = [
     { name = "service_overview", url = "#service" },
+    { name = "software_engineering_short", url = "@/software-engineering/_index.md" },
     { name = "nix", url = "@/nix/_index.md" },
     { name = "rust", url = "@/rust/_index.md" },
   ] },

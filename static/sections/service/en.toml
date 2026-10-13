@@ -4,6 +4,7 @@ subtitle  = "Consulting and hands-on engineering for teams that need software an
 [[services]]
 title   = "Software Engineering"
 content = "Designing secure, scalable, and maintainable architectures and systems from the ground up."
+url     = "@/software-engineering/_index.md"
 image   = "images/service/branding.svg"
 
 [[services]]

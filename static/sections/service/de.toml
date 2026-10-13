@@ -4,6 +4,7 @@ subtitle  = "Beratung und praktisches Engineering für Teams, die verlässliche 
 [[services]]
 title   = "Software-Engineering"
 content = "Entwurf sicherer, skalierbarer und wartbarer Architekturen und Systeme von Grund auf."
+url     = "@/software-engineering/_index.md"
 image   = "images/service/branding.svg"
 
 [[services]]
