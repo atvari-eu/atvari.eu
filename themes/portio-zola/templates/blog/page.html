@@ -98,14 +98,6 @@
         <i class="lni lni-alarm-clock"></i>
         {{ page.reading_time }} mins read
       </li>
-      {% if page.taxonomies.tags %}
-      <li>
-        <i class="lni lni-tag"></i>
-        {% for tag in page.taxonomies.tags %}
-          <a class="text-capitalize" href="{{ get_taxonomy_url(kind='tags', name=tag, lang=lang) }}">{{ tag }}</a>
-        {% endfor %}
-      </li>
-      {% endif %}
       {% if page.taxonomies.categories %}
       <li>
         <i class="lni lni-folder"></i>
@@ -178,6 +170,14 @@
                 {% endif %}
 
               {{ page.content | safe }}
+              {% if page.taxonomies.tags %}
+              <div class="post-tags">
+                <i class="lni lni-tag"></i>
+                {% for tag in page.taxonomies.tags %}
+                  <a class="post-tag text-capitalize" href="{{ get_taxonomy_url(kind='tags', name=tag, lang=lang) }}">{{ tag }}</a>
+                {% endfor %}
+              </div>
+              {% endif %}
           </div>
         </article>
       </div>
