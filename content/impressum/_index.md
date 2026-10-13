@@ -1,10 +1,10 @@
 +++
 title = "Imprint"
-description = "Legal notice for atvari GmbH pursuant to § 5 TMG."
+description = "Legal notice for atvari GmbH pursuant to § 5 DDG."
 template = "impressum.html"
 +++
 
-**Information pursuant to § 5 TMG:**
+**Information pursuant to § 5 DDG:**
 
 atvari GmbH\
 Salzstr. 1\
@@ -21,4 +21,4 @@ Registration number: HRB 213941\
 VAT ID pursuant to § 27a UStG: DE464341559\
 Managing director: Felix Schröter
 
-Responsible for content pursuant to § 55 (2) RStV: Felix Schröter (address as above)
+Responsible for content pursuant to § 18 (2) MStV: Felix Schröter (address as above)

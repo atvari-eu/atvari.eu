@@ -1,10 +1,10 @@
 +++
 title = "Impressum"
-description = "Impressum der atvari GmbH gemäß § 5 TMG."
+description = "Impressum der atvari GmbH gemäß § 5 DDG."
 template = "impressum.html"
 +++
 
-**Angaben gemäß § 5 TMG:**
+**Angaben gemäß § 5 DDG:**
 
 atvari GmbH\
 Salzstr. 1\
@@ -21,4 +21,4 @@ Registernummer: HRB 213941\
 Umsatzsteuer-Identifikationsnummer gem. § 27a UStG: DE464341559\
 Vertretungsberechtigter Geschäftsführer: Felix Schröter
 
-Verantwortlich für den Inhalt nach § 55 Abs. 2 RStV: Felix Schröter (Anschrift s.o.)
+Verantwortlich für den Inhalt nach § 18 Abs. 2 MStV: Felix Schröter (Anschrift s.o.)
