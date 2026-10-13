@@ -79,6 +79,7 @@ contact = "Contact"
 
 # Sitemaps
 impressum = "Imprint"
+privacy = "Privacy"
 partners = "Partners"
 open_source = "Open Source"
 press = "Press"
@@ -152,6 +153,7 @@ contact = "Kontakt"
 
 # Sitemaps
 impressum = "Impressum"
+privacy = "Datenschutz"
 partners = "Partner"
 open_source = "Open Source"
 press = "Presse"
@@ -197,6 +199,7 @@ sitemap_groups = [
   ] },
   { name = "sitemap_legal", links = [
     { name = "impressum", url = "@/impressum/_index.md" },
+    { name = "privacy", url = "@/privacy/_index.md" },
   ] },
 ]
 
