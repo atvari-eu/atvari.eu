@@ -145,9 +145,9 @@
             {% endif %}
         {% endfor %}
         {% set software_engineering_url = get_url(path="@/software-engineering/_index.md", lang=lang) %}
+        {% set cloud_engineering_url = get_url(path="@/cloud-engineering/_index.md", lang=lang) %}
         {% set nix_url = get_url(path="@/nix/_index.md", lang=lang) %}
         {% set rust_url = get_url(path="@/rust/_index.md", lang=lang) %}
-        {% set service_url = config.base_url ~ "/#service" %}
         {% set team_section = get_section(path="team/_index.md", lang=lang) %}
         {% set founder_members = team_section.extra.members | filter(attribute="name", value="Felix Schröter") %}
         {% set_global founder_same_as = [] %}
@@ -231,11 +231,11 @@
                 },
                 {
                     "@type": "Offer",
-                    "url": {{ service_url | json_encode() | safe }},
+                    "url": {{ cloud_engineering_url | json_encode() | safe }},
                     "itemOffered": {
                         "@type": "Service",
                         "name": "Cloud Engineering & DevOps",
-                        "url": {{ service_url | json_encode() | safe }}
+                        "url": {{ cloud_engineering_url | json_encode() | safe }}
                     }
                 },
                 {

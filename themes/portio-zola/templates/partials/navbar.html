@@ -33,9 +33,10 @@
                 {% for menu in extra.menus %}
                 {% if menu.name == "service" %}
                 {% set software_engineering_active = current_relative_path is starting_with("software-engineering") %}
+                {% set cloud_engineering_active = current_relative_path is starting_with("cloud-engineering") %}
                 {% set nix_active = current_relative_path is starting_with("nix") %}
                 {% set rust_active = current_relative_path is starting_with("rust") %}
-                {% set service_active = software_engineering_active or nix_active or rust_active %}
+                {% set service_active = software_engineering_active or cloud_engineering_active or nix_active or rust_active %}
                 <li class="nav-item dropdown">
                     <a href="{{ get_url(path=menu.url, lang=lang) }}" class="nav-link dropdown-toggle{% if service_active %} active{% endif %}" role="button" data-bs-toggle="dropdown" aria-expanded="false" data-nav-anchor="service">
                         {{ trans(key=menu.name, lang=lang) }}
@@ -43,6 +44,7 @@
                     <ul class="dropdown-menu">
                         <li><a class="dropdown-item" href="{{ get_url(path="#service", lang=lang) }}" data-nav-anchor="service">{{ trans(key="service_overview", lang=lang) }}</a></li>
                         <li><a class="dropdown-item{% if software_engineering_active %} active{% endif %}" href="{{ get_url(path="@/software-engineering/_index.md", lang=lang) }}">{{ trans(key="software_engineering", lang=lang) }}</a></li>
+                        <li><a class="dropdown-item{% if cloud_engineering_active %} active{% endif %}" href="{{ get_url(path="@/cloud-engineering/_index.md", lang=lang) }}">{{ trans(key="cloud_engineering", lang=lang) }}</a></li>
                         <li><a class="dropdown-item{% if nix_active %} active{% endif %}" href="{{ get_url(path="@/nix/_index.md", lang=lang) }}">{{ trans(key="nix", lang=lang) }}</a></li>
                         <li><a class="dropdown-item{% if rust_active %} active{% endif %}" href="{{ get_url(path="@/rust/_index.md", lang=lang) }}">{{ trans(key="rust", lang=lang) }}</a></li>
                     </ul>

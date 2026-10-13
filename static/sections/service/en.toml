@@ -10,6 +10,7 @@ image   = "images/service/branding.svg"
 [[services]]
 title   = "Cloud Engineering & DevOps"
 content = "Building and operating cloud-native infrastructure with Kubernetes, infrastructure-as-code, and modern DevOps practices."
+url     = "@/cloud-engineering/_index.md"
 image   = "images/service/web.svg"
 
 [[services]]
