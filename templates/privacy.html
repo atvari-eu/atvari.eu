@@ -9,12 +9,12 @@
         <h1 class="breadCrumb__title">{{ section.title }}</h1>
         <nav aria-label="breadcrumb" class="d-flex justify-content-center">
           <ol class="breadcrumb align-items-center">
-            <li class="breadcrumb-item"><a href="{{ get_url(path="/", lang=lang) }}">{{ trans(key="home", lang=lang) }}</a></li>
+            <li class="breadcrumb-item"><a href="{{ get_url(path="/", lang=lang) }}">{{ config.title }}</a></li>
             <li class="breadcrumb-item active" aria-current="page">{{ section.title }}</li>
           </ol>
         </nav>
         {{ macros::breadcrumb_jsonld(items=[
-          trans(key="home", lang=lang) ~ "|||" ~ get_url(path="/", lang=lang),
+          config.title ~ "|||" ~ get_url(path="/", lang=lang),
           section.title ~ "|||" ~ section.permalink
         ]) }}
       </div>

@@ -68,13 +68,13 @@
         <h1 class="breadCrumb__title">{{ page.title }}</h1>
         <nav aria-label="breadcrumb" class="d-flex justify-content-center">
           <ol class="breadcrumb align-items-center">
-            <li class="breadcrumb-item"><a href="{{ get_url(path="/", lang=lang) }}">Home</a></li>
+            <li class="breadcrumb-item"><a href="{{ get_url(path="/", lang=lang) }}">{{ config.title }}</a></li>
             <li class="breadcrumb-item"><a href="{{ get_url(path='@/blog/_index.md', lang=lang) }}">{{ trans(key="blog", lang=lang) }}</a></li>
             <li class="breadcrumb-item active" aria-current="page">{{ page.title }}</li>
           </ol>
         </nav>
         {{ macros::breadcrumb_jsonld(items=[
-          trans(key="home", lang=lang) ~ "|||" ~ get_url(path="/", lang=lang),
+          config.title ~ "|||" ~ get_url(path="/", lang=lang),
           trans(key="blog", lang=lang) ~ "|||" ~ get_url(path='@/blog/_index.md', lang=lang),
           page.title ~ "|||" ~ page.permalink
         ]) }}
