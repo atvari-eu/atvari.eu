@@ -2,8 +2,8 @@ title     = "Unsere Leistungen"
 subtitle  = "Beratung und praktisches Engineering für Teams, die verlässliche Software und Infrastruktur brauchen."
 
 [[services]]
-title   = "Software- & Cloud-Architektur"
-content = "Entwurf sicherer, skalierbarer und wartbarer Systeme von Grund auf."
+title   = "Software-Engineering"
+content = "Entwurf sicherer, skalierbarer und wartbarer Architekturen und Systeme von Grund auf."
 image   = "images/service/branding.svg"
 
 [[services]]
