@@ -76,6 +76,7 @@ contact = "Contact"
 # Sitemaps
 impressum = "Imprint"
 partners = "Partners"
+open_source = "Open Source"
 press = "Press"
 press_releases = "Press releases"
 
@@ -144,6 +145,7 @@ contact = "Kontakt"
 # Sitemaps
 impressum = "Impressum"
 partners = "Partner"
+open_source = "Open Source"
 press = "Presse"
 press_releases = "Pressemitteilungen"
 
@@ -171,6 +173,7 @@ sitemap_groups = [
     { name = "team", url = "@/team/_index.md" },
     { name = "values", url = "@/values/_index.md" },
     { name = "partners", url = "@/partners/_index.md" },
+    { name = "open_source", url = "@/open-source/_index.md" },
     { name = "contact", url = "@/contact/_index.md" },
   ] },
   { name = "sitemap_consulting", links = [

@@ -128,6 +128,22 @@
       grid-template-columns: repeat(1, 1fr);
     }
   }
+  // Centered, even-count grids (2 columns): keeps the usual card width
+  // and centers the block, so 2 cards sit as 1x2 and 4 cards as a 2x2
+  // instead of leaving empty tracks in the 3-column default.
+  // 66.67% of the container ≈ two 3-column tracks, so card size stays
+  // consistent with the other grids across container widths.
+  &__grid--centered {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    @media (min-width: 768px) {
+      max-width: 66.6667%;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    @include mobile {
+      grid-template-columns: repeat(1, minmax(0, 1fr));
+    }
+  }
   a#{&}__grid-item {
     display: block;
     color: inherit;

@@ -46,7 +46,7 @@ content = "Memory-safe languages, declarative infrastructure, reproducible build
 [[extra.values]]
 icon = "code-alt"
 title = "Open source as default"
-content = "Active contributors, not just consumers. We maintain Nixpkgs, publish our work, and give back to the commons we build on."
+content = "Active contributors, not just consumers. We maintain Nixpkgs, publish our work, and give back to the commons we build on. See [how we contribute to open source](@/open-source/_index.md)."
 
 [[extra.values]]
 icon = "network"

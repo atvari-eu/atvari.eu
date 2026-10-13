@@ -47,7 +47,7 @@ content = "Memory-sichere Sprachen, deklarative Infrastruktur, reproduzierbare B
 [[extra.values]]
 icon = "code-alt"
 title = "Open Source als Standard"
-content = "Aktive Mitwirkende statt nur Nutzer. Wir pflegen Nixpkgs, veröffentlichen unsere Arbeit und geben an die Commons zurück, auf denen wir aufbauen."
+content = "Aktive Mitwirkende statt nur Nutzer. Wir pflegen Nixpkgs, veröffentlichen unsere Arbeit und geben an die Commons zurück, auf denen wir aufbauen. Mehr dazu, [wie wir zu Open Source beitragen](@/open-source/_index.md)."
 
 [[extra.values]]
 icon = "network"
