@@ -58,6 +58,12 @@ icon = "key"
 title = "Die Schlüssel übergeben"
 content = "Dokumentation, Schulung und Mentoring, damit dein Team jede Schicht betreiben und ersetzen kann, mit uns oder ohne uns."
 
+[[extra.sections.items]]
+brand = "eu"
+title = "Europa & EU-Souveränität"
+content = "Unsere europäische Haltung und wie wir dir helfen, Workloads auf souveränem EU-Boden zu halten."
+link = "@/eu-sovereignty/_index.md"
+
 [[extra.sections]]
 heading = "Wie wir das umsetzen"
 

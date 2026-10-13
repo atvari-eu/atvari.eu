@@ -87,6 +87,7 @@ open_source = "Open Source"
 press = "Press"
 press_releases = "Press releases"
 digital_sovereignty = "Digital Sovereignty"
+eu_sovereignty = "EU Sovereignty"
 related_posts = "Related reading"
 
 [languages.de]
@@ -165,6 +166,7 @@ open_source = "Open Source"
 press = "Presse"
 press_releases = "Pressemitteilungen"
 digital_sovereignty = "Digitale Souveränität"
+eu_sovereignty = "EU-Souveränität"
 related_posts = "Weiterlesen"
 
 [extra]
@@ -204,6 +206,7 @@ sitemap_groups = [
   { name = "sitemap_resources", links = [
     { name = "blog", url = "@/blog/_index.md" },
     { name = "digital_sovereignty", url = "@/digital-sovereignty/_index.md" },
+    { name = "eu_sovereignty", url = "@/eu-sovereignty/_index.md" },
     { name = "press", url = "@/press/_index.md" },
   ] },
   { name = "sitemap_legal", links = [
