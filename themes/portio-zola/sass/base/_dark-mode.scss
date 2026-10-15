@@ -1,4 +1,4 @@
-$light-link-hover-color: darken($primary-color-button, 12%);
+$light-link-hover-color: darken($primary-color, 12%);
 $dark-link-hover-color: lighten($primary-color, 12%);
 $dark-surface-color: #1b2031;
 // Background SVG shapes (hero, service) sit behind foreground cards that
@@ -29,11 +29,8 @@ $dark-input-border-color: lighten($dark-surface-color, 18%);
   --color-nav-active-bg: rgba(0, 0, 0, 0.035);
   --color-dropdown-hover-bg: rgba(0, 0, 0, 0.06);
   --color-dropdown-active-bg: rgba(0, 0, 0, 0.1);
-  // Bootstrap's default link blue replaced with the brand green family:
-  // a darker shade in light mode (the brand green fails WCAG 4.5:1 as text
-  // on white), the original green in dark mode where it passes comfortably.
-  --bs-link-color: #{$primary-color-button};
-  --bs-link-color-rgb: #{red($primary-color-button)}, #{green($primary-color-button)}, #{blue($primary-color-button)};
+  --bs-link-color: #{$primary-color};
+  --bs-link-color-rgb: #{red($primary-color)}, #{green($primary-color)}, #{blue($primary-color)};
   --bs-link-hover-color: #{$light-link-hover-color};
   --bs-link-hover-color-rgb: #{red($light-link-hover-color)}, #{green($light-link-hover-color)}, #{blue($light-link-hover-color)};
 }

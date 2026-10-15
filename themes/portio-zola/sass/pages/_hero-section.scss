@@ -100,7 +100,7 @@
       padding: 20px 50px;
       font-family: $secondary-font;
       font-size: 16px;
-      background: $primary-color-button;
+      background: $primary-color;
       border-radius: 7px;
       color: #ffffff;
       text-decoration: none;
@@ -108,8 +108,8 @@
       transition: all 0.3s ease;
       transform: scale(1);
       &:hover {
-        background: darken($primary-color-button, 8%);
-        box-shadow: 0 8px 20px rgba($primary-color-button, 0.3);
+        background: darken($primary-color, 8%);
+        box-shadow: 0 8px 20px rgba($primary-color, 0.3);
         transform: scale(1.03);
       }
     }

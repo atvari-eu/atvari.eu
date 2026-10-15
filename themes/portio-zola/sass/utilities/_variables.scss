@@ -1,10 +1,6 @@
 //site color variables
 $body-color: #fff;
 $primary-color: #41B783;
-// Darkened brand green for solid button/CTA fills paired with white text:
-// #41B783 + white is 2.52:1 (WCAG needs 4.5:1 for normal text); this shade
-// keeps the hue at 5.0:1. Links and decorative accents keep $primary-color.
-$primary-color-button: #2F7D56;
 $secondary-color: #282F49;
 $text-color: #9D9EA5;
 $text-color-dark: #00113E;

@@ -128,17 +128,17 @@
 }
 
 // atvari project addition: consulting CTA card below nix/rust-tagged posts.
-// Scopes Bootstrap's btn-primary to the contrast-accessible button green
-// (same as the hero/contact form buttons) instead of Bootstrap blue.
+// Scopes Bootstrap's btn-primary to the site primary color (same as the
+// contact form button) instead of Bootstrap blue.
 .blog-consulting-cta {
   .btn-primary {
-    background-color: $primary-color-button;
-    border-color: $primary-color-button;
+    background-color: $primary-color;
+    border-color: $primary-color;
     &:hover,
     &:focus,
     &:active {
-      background-color: darken($primary-color-button, 8%);
-      border-color: darken($primary-color-button, 8%);
+      background-color: darken($primary-color, 8%);
+      border-color: darken($primary-color, 8%);
     }
   }
   // Cap the badge logo width and center it, so it doesn't stretch full-width
