@@ -25,6 +25,11 @@
     {# config.extra is not available in feed templates, so the legal
        name is hardcoded to match the footer's copyright line. #}
     <rights>Copyright © atvari GmbH</rights>
+    <author>
+        <name>atvari GmbH</name>
+        <email>hi@atvari.eu</email>
+        <uri>{{ config.base_url | escape_xml | safe }}/</uri>
+    </author>
     <generator uri="https://www.getzola.org/">Zola</generator>
     {% if last_updated is defined %}<updated>{{ last_updated | date(format="%Y-%m-%dT%H:%M:%S%:z") }}</updated>{% endif %}
     <id>{{ feed_url | safe }}</id>
