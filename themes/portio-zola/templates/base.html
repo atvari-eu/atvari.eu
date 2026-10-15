@@ -130,13 +130,15 @@
         <link rel="stylesheet" href="{{ get_url(path='main.css', cachebust=true) }}">
         {% endblock %}
 
-        <link rel="shortcut icon" type="image/x-icon" href="{{ get_url(path='images/favicon.ico') }}">
-        <link rel="icon" type="image/x-icon" href="{{ get_url(path='images/favicon.png') }}">
+        <link rel="icon" type="image/x-icon" sizes="16x16 32x32 48x48" href="{{ get_url(path='favicon.ico') }}">
+        <link rel="apple-touch-icon" href="{{ get_url(path='apple-touch-icon.png') }}">
+        <link rel="manifest" href="/site.webmanifest">
+        <meta name="theme-color" media="(prefers-color-scheme: light)" content="#ffffff">
+        <meta name="theme-color" media="(prefers-color-scheme: dark)" content="#12141c">
 
         {% block seo %}
-        {{ macros::ms_application(path="static/images/symbol.png") }}
-        {{ macros::icons(path="static/images/symbol.png", apple=true, sizes=[57, 72, 76, 114, 120, 144, 152, 180]) }}
-        {{ macros::icons(path="static/images/symbol.png", sizes=[16, 32, 36, 48, 72, 96, 144, 192]) }}
+        <meta name="msapplication-TileColor" content="#ffffff">
+        <meta name="msapplication-TileImage" content="/images/android-chrome-maskable-192x192.png">
         {{ macros::analytics() }}
         {% set_global org_same_as = [] %}
         {% for social in extra.socials %}
@@ -168,8 +170,8 @@
             "name": {{ config.title | json_encode() | safe }},
             "legalName": {{ extra.legal.name | json_encode() | safe }},
             "url": {{ config.base_url | json_encode() | safe }},
-            "logo": {{ get_url(path="images/logo.png") | json_encode() | safe }},
-            "image": {{ get_url(path="images/logo.png") | json_encode() | safe }},
+            "logo": {{ get_url(path="images/logo.svg") | json_encode() | safe }},
+            "image": {{ get_url(path="images/logo.svg") | json_encode() | safe }},
             "description": {{ config.description | json_encode() | safe }},
             "email": {{ extra.address.email | json_encode() | safe }},
             "telephone": {{ contact_phone | json_encode() | safe }},
