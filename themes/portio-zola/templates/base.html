@@ -267,6 +267,40 @@
         }
         </script>
         {% endblock %}
+
+        <!-- Prefetch the pages visitors are heading toward; prerender the contact CTA. -->
+        <script type="speculationrules">
+        {
+            "prefetch": [
+                {
+                    "source": "document",
+                    "where": {
+                        "and": [
+                            {
+                                "or": [
+                                    { "selector_matches": "a[href^='/']" },
+                                    { "selector_matches": "a[href^='{{ config.base_url }}/']" }
+                                ]
+                            },
+                            {
+                                "selector_matches": "a:not([target], [download], [href$='.xml'], [href$='.txt'], [href$='.json'], [href$='.webmanifest'])"
+                            }
+                        ]
+                    },
+                    "eagerness": "moderate"
+                }
+            ],
+            "prerender": [
+                {
+                    "source": "document",
+                    "where": {
+                        "selector_matches": "a[href$='/contact/']"
+                    },
+                    "eagerness": "moderate"
+                }
+            ]
+        }
+        </script>
     </head>
 
     <body>
