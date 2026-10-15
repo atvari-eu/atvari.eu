@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="robots" content="noindex">
+    <title>You're offline · atvari</title>
+    <style>
+        :root { color-scheme: light dark; }
+        body {
+            margin: 0;
+            min-height: 100vh;
+            display: grid;
+            place-items: center;
+            font: 16px/1.6 system-ui, sans-serif;
+            background: #ffffff;
+            color: #12141c;
+        }
+        .card { text-align: center; padding: 3rem 2rem; max-width: 28rem; }
+        .card svg { width: 72px; height: 72px; margin-bottom: 1.25rem; }
+        h1 { font-size: 1.35rem; margin: 0 0 0.5rem; }
+        p { margin: 0 0 1.5rem; color: #5a5f6e; }
+        .card a {
+            display: inline-block;
+            padding: 0.65rem 1.4rem;
+            border-radius: 0.5rem;
+            background: #41b883;
+            color: #ffffff;
+            text-decoration: none;
+        }
+        [data-lang="de"] { display: none; }
+        html.de [data-lang="de"] { display: initial; }
+        html.de [data-lang="en"] { display: none; }
+        @media (prefers-color-scheme: dark) {
+            body { background: #12141c; color: #ffffff; }
+            p { color: #a8acba; }
+        }
+    </style>
+</head>
+<body>
+    <main class="card">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="-1.0834975243814746 -0.013424873352050781 54.68487548828125 54.68487548828125" preserveAspectRatio="xMidYMid meet" aria-hidden="true"><g fill-rule="evenodd"><path d="M21.28 44.39l6.08 8.36c2.68 3.69 9 1.7 9-2.87V39.51l-15.08 4.88zm6.1-42.5l-6.1 8.4 15.05 4.89V4.85c0-4.56-6.26-6.65-8.95-3zM6.46 8.73c-4.33-1.41-8.26 3.9-5.58 7.6l8 11-8 11C-1.77 42 2.07 47.4 6.41 46l42.83-13.93c4.34-1.41 4.39-8 0-9.42L6.46 8.73z" fill="#41B883"></path></g></svg>
+        <h1 data-lang="en">You're offline</h1>
+        <h1 data-lang="de">Du bist offline</h1>
+        <p data-lang="en">No connection right now. The start page and everything you visited recently stays readable.</p>
+        <p data-lang="de">Gerade keine Verbindung. Die Startseite und kürzlich besuchte Seiten bleiben lesbar.</p>
+        <a data-lang="en" href="/">Back to start</a>
+        <a data-lang="de" href="/de/">Zur Startseite</a>
+    </main>
+    <script>
+        var preferred = String(
+            (navigator.languages && navigator.languages[0]) || navigator.language || 'en'
+        ).toLowerCase();
+        if (preferred.indexOf('de') === 0) {
+            document.documentElement.className = 'de';
+        }
+    </script>
+</body>
+</html>

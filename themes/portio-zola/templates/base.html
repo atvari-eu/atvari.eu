@@ -290,6 +290,15 @@
         <script src="{{ get_url(path='js/nav-active.js') }}"></script>
         <script src="{{ get_url(path='js/install-prompt.js') }}"></script>
         <script src="{{ get_url(path='js/negotiate-language.js') }}"></script>
+        <script>
+            // Offline safety net: register the service worker only after the
+            // page has loaded, so it never competes with first render.
+            if (navigator.serviceWorker) {
+                window.addEventListener('load', function () {
+                    navigator.serviceWorker.register('/sw.js').catch(function () {});
+                });
+            }
+        </script>
         {% endblock %}
     </body>
 </html>
