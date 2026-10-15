@@ -177,8 +177,14 @@
           <ul class="contact__info_social">
             {% for social in extra.socials %}
             <li>
-              <a target="_blank" rel="noopener me" href="{{ social.url }}" aria-label="{{ social.label }}" title="{{ social.label }}">
-                {% if social.icon in ["bluesky", "mastodon", "matrix", "codeberg", "forgejo", "sifa", "crunchbase"] %}
+              {# Local (non-http/mailto) social urls resolve via get_url,
+                 which also picks per-language feeds like de/atom.xml. #}
+              {% set social_href = social.url %}
+              {% if not (social.url is starting_with("http")) and not (social.url is starting_with("mailto")) %}
+              {% set social_href = get_url(path=social.url, lang=lang) %}
+              {% endif %}
+              <a target="_blank" rel="noopener me" href="{{ social_href }}" aria-label="{{ social.label }}" title="{{ social.label }}">
+                {% if social.icon in ["rss", "bluesky", "mastodon", "matrix", "codeberg", "forgejo", "sifa", "crunchbase"] %}
                 {{ macros::brand_icon(name=social.icon) }}
                 {% else %}
                 <i class="lni lni-{{ social.icon }}"></i>
