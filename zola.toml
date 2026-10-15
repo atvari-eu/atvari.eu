@@ -3,6 +3,7 @@ minify_html = true
 compile_sass = true
 default_language = "en"
 generate_feeds = true
+author = "Felix Schröter"
 theme = "portio-zola"
 
 [link_checker]
