@@ -1,0 +1,7 @@
+# Codeberg git-pages has no MIME map entry for .webmanifest and falls back to
+# text/plain (with nosniff, sniffing cannot rescue it); the manifest media type
+# is what browsers expect for <link rel="manifest">, so set it explicitly.
+/site.webmanifest
+    Content-Type: application/manifest+json
+/site.de.webmanifest
+    Content-Type: application/manifest+json
