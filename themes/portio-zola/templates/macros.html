@@ -23,7 +23,11 @@
 {% macro feeds(path="") %}
 {% for filename in config.feed_filenames %}
     {% set type = filename | replace(from=".xml", to="") %}
-    {% set url = get_url(path=path ~ "/" ~ filename, trailing_slash=false) %}
+    {# No leading slash: get_url prefixes the language path for non-default
+       languages, and a leading-slash feed path would collapse to "/de//". #}
+    {% set feed_path = filename %}
+    {% if path %}{% set feed_path = path ~ "/" ~ filename %}{% endif %}
+    {% set url = get_url(path=feed_path, trailing_slash=false, lang=lang) %}
     
     {% if type in ["atom", "rss"] %}
     <link rel="alternate" type="application/{{ type }}+xml" title="{{ type | title }}" href="{{ url }}">
