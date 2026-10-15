@@ -1,5 +1,6 @@
 .env
 .dotenv/
 public/
+result
 static/processed_images/
 .claude/
