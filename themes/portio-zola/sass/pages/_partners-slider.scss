@@ -6,7 +6,7 @@
     margin-top: 24px;
     font-size: 14px;
     font-family: $secondary-font;
-    color: #7e7e8a;
+    color: var(--color-muted);
     text-decoration: none;
     &:hover {
       color: $primary-color;

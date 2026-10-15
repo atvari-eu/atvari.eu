@@ -148,7 +148,7 @@
                     border: none;
                     box-shadow: 0 20px 40px rgba(50, 65, 141, .12);
                     border-radius: 10px;
-                    color: #7E7E8A;
+                    color: var(--color-muted);
                     font-family: $secondary-font;
                     font-size: 16px;
                 }
@@ -179,7 +179,7 @@
                     padding: 7px 0;
                     font-size: 16px;
                     font-family: $secondary-font;
-                    color: #7E7E8A;
+                    color: var(--color-muted);
                     transition: all .3s ease;
                     span{
                         float: right;

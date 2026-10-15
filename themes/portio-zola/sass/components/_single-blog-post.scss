@@ -89,7 +89,7 @@
       padding-right: 7px;
     }
     a {
-      color: #7e7e8a;
+      color: var(--color-muted);
       &:hover {
         color: $primary-color;
       }

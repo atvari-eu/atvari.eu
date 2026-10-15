@@ -74,7 +74,7 @@
         &-item{
             a{
                 font-family: $secondary-font;
-                color: #7e7e8a;
+                color: var(--color-muted);
                 font-size: 17px;
                 text-decoration: underline;
                 &:hover{

@@ -138,26 +138,31 @@
    item.link (with item.link_title / item.link_external), swaps in
    item.logo_dark for dark mode, and resolves local paths via get_url
    (remote URLs pass through). Pass link=false where an ancestor is
-   already the link (e.g. whole-card links) to avoid nested anchors. #}
-{% macro logo_link(item, link=true, tab="") %}
+   already the link (e.g. whole-card links) to avoid nested anchors.
+   Pass dims as "width height" (numbers only) for consumers whose CSS
+   leaves the intrinsic ratio to drive layout, preventing layout shift
+   while the image loads (Lighthouse unsized-images). #}
+{% macro logo_link(item, link=true, tab="", dims="") %}
 {% if link and item.link %}
 <a href="{{ item.link }}"{% if item.link_title %} title="{{ item.link_title }}"{% endif %}{% if item.link_external %} rel="nofollow" target="_blank"{% endif %}{% if tab %} tabindex="{{ tab }}"{% endif %}>
 {% endif %}
+{% set dims_attrs = "" %}
+{% if dims %}{% set params = dims | split(pat=" ") %}{% set_global dims_attrs = ' width="' ~ params.0 ~ '" height="' ~ params.1 ~ '"' %}{% endif %}
 {% if item.logo_dark %}
 {% if item.logo is starting_with("http") %}
-<img class="expertise__logo--light" src="{{ item.logo }}" alt="{{ item.title }} logo" />
+<img class="expertise__logo--light" src="{{ item.logo }}" alt="{{ item.title }} logo"{{ dims_attrs | safe }} />
 {% else %}
-<img class="expertise__logo--light" src="{{ get_url(path=item.logo) }}" alt="{{ item.title }} logo" />
+<img class="expertise__logo--light" src="{{ get_url(path=item.logo) }}" alt="{{ item.title }} logo"{{ dims_attrs | safe }} />
 {% endif %}
 {% if item.logo_dark is starting_with("http") %}
-<img class="expertise__logo--dark" src="{{ item.logo_dark }}" alt="{{ item.title }} logo" />
+<img class="expertise__logo--dark" src="{{ item.logo_dark }}" alt="{{ item.title }} logo"{{ dims_attrs | safe }} />
 {% else %}
-<img class="expertise__logo--dark" src="{{ get_url(path=item.logo_dark) }}" alt="{{ item.title }} logo" />
+<img class="expertise__logo--dark" src="{{ get_url(path=item.logo_dark) }}" alt="{{ item.title }} logo"{{ dims_attrs | safe }} />
 {% endif %}
 {% elif item.logo is starting_with("http") %}
-<img src="{{ item.logo }}" alt="{{ item.title }} logo" />
+<img src="{{ item.logo }}" alt="{{ item.title }} logo"{{ dims_attrs | safe }} />
 {% else %}
-<img src="{{ get_url(path=item.logo) }}" alt="{{ item.title }} logo" />
+<img src="{{ get_url(path=item.logo) }}" alt="{{ item.title }} logo"{{ dims_attrs | safe }} />
 {% endif %}
 {% if link and item.link %}
 </a>

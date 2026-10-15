@@ -19,7 +19,7 @@
         }
     }
     &__cta{
-        background: $primary-color;
+        background: $primary-color-button;
         padding: 100px 80px;
         border-radius: 20px;
         display: flex;
@@ -112,7 +112,7 @@
             }
             a{
                 float: right;
-                color: $primary-color;
+                color: $primary-color-button;
                 padding: 15px 40px;
                 background: #fff;
                 display: inline-block;
@@ -125,7 +125,7 @@
                     float: none;
                 }
                 &:hover{
-                    background: $primary-color;
+                    background: $primary-color-button;
                     color: #fff;
                 }
             }

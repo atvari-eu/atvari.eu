@@ -36,7 +36,7 @@
         <div class="row contact__widget">
             <div class="col-lg-3">
                 <div class="contact__widget_logo">
-                    <img src="{{ get_url(path=extra.footer_logo) }}" alt="widget-logo">
+                    <img src="{{ get_url(path=extra.footer_logo) }}" alt="widget-logo" width="178" height="48">
                     <div class="contact__widget_seals">
                         {% set partners_section = get_section(path="partners/_index.md", lang=lang) %}
                         {% if partners_section and partners_section.extra.values %}
@@ -44,7 +44,7 @@
                         {% for item in partners_section.extra.values %}
                         {% if item.title == title and item.logo %}
                         <a rel="nofollow" href="{{ item.link }}" target="_blank"{% if item.link_title %} title="{{ item.link_title }}"{% endif %} class="contact__widget_seal">
-                            {{ macros::logo_link(item=item, link=false) }}
+                            {{ macros::logo_link(item=item, link=false, dims="260 84") }}
                         </a>
                         {% endif %}
                         {% endfor %}
@@ -58,7 +58,7 @@
                     <div class="contact__widget_sitemap_columns">
                         {% for group in extra.sitemap_groups %}
                         <div class="contact__widget_sitemap_group">
-                            <h4>{{ trans(key=group.name, lang=lang) }}</h4>
+                            <h3>{{ trans(key=group.name, lang=lang) }}</h3>
                             <ul>
                                 {% for link in group.links %}
                                 {% set link_title = "" %}

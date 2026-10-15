@@ -122,7 +122,7 @@
       {% for item in section.extra.benefits %}
       <div class="expertise__grid-item">
         <div class="expertise__grid-item-icon"><i class="lni lni-{{ item.icon }}"></i></div>
-        <h4>{{ item.title }}</h4>
+        <h3>{{ item.title }}</h3>
         <p>{{ item.content | markdown(inline=true) | safe }}</p>
       </div>
       {% endfor %}
@@ -139,7 +139,7 @@
       {% for item in section.extra.services %}
       <div class="expertise__grid-item">
         <div class="expertise__grid-item-icon"><i class="lni lni-{{ item.icon }}"></i></div>
-        <h4>{{ item.title }}</h4>
+        <h3>{{ item.title }}</h3>
         <p>{{ item.content | markdown(inline=true) | safe }}</p>
       </div>
       {% endfor %}

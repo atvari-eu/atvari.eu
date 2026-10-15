@@ -115,7 +115,7 @@
                     object-fit: contain;
                 }
             }
-            h4{
+            h3{
                 font-size: 24px;
                 font-family: $primary-font;
                 color: $secondary-color;
@@ -123,7 +123,7 @@
             }
             p{
                 font-family: $secondary-font;
-                color: #7E7E8A;
+                color: var(--color-muted);
                 font-size: 16px;
                 line-height: 30px;
                 margin: 0;

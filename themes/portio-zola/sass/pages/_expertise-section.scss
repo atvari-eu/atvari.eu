@@ -102,11 +102,11 @@
     border-radius: 30px;
     font-size: 15px;
     font-family: $secondary-font;
-    color: #7e7e8a;
+    color: var(--color-muted);
     cursor: pointer;
     transition: all 0.3s ease;
     &.is-active {
-      background: $primary-color;
+      background: $primary-color-button;
       color: #fff;
     }
   }
@@ -125,7 +125,7 @@
     font-family: $secondary-font;
     font-size: 16px;
     line-height: 28px;
-    color: #7e7e8a;
+    color: var(--color-muted);
   }
   &__grid {
     display: grid;
@@ -191,7 +191,7 @@
     &-logo .expertise__logo--dark {
       display: none;
     }
-    h4 {
+    h3 {
       margin: 0 0 15px 0;
       font-family: $primary-font;
       font-size: 20px;
@@ -201,7 +201,7 @@
       margin: 0;
       font-size: 16px;
       line-height: 28px;
-      color: #7e7e8a;
+      color: var(--color-muted);
       font-family: $secondary-font;
     }
   }

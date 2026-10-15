@@ -12,7 +12,7 @@
         {% for item in partners.extra.values %}
         {% if item.logo %}
         <span class="partners-slider__item">
-          {% if copy == 1 %}{{ macros::logo_link(item=item) }}{% else %}{{ macros::logo_link(item=item, tab="-1") }}{% endif %}
+          {% if copy == 1 %}{{ macros::logo_link(item=item, dims="260 84") }}{% else %}{{ macros::logo_link(item=item, tab="-1", dims="260 84") }}{% endif %}
         </span>
         {% endif %}
         {% endfor %}
