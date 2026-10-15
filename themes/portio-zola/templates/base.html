@@ -39,6 +39,11 @@
         <meta name="theme-color" content="#ffffff" media="(prefers-color-scheme: light)">
         <meta name="theme-color" content="#12141c" media="(prefers-color-scheme: dark)">
         <meta name="viewport" content="width=device-width, initial-scale=1">
+        {% block robots %}
+        {# Redundant defaults are kept explicit so search engines also apply the
+           snippet/preview hints; child templates can override (e.g. 404 noindex). #}
+        <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large">
+        {% endblock %}
         {% if page is defined and page.description %}
             {% set meta_description = page.description %}
         {% elif section is defined and section.description %}
@@ -48,6 +53,7 @@
         {% endif %}
         <meta itemprop="name" content="{{ meta_title }}">
         <meta itemprop="description" content="{{ meta_description }}">
+        <meta name="description" content="{{ meta_description }}">
         {% if page is defined and page.extra.author %}
         <meta name="author" content="{{ page.extra.author }}">
         {% endif %}
@@ -107,10 +113,21 @@
             {% set meta_image_width = 1200 %}
             {% set meta_image_height = 630 %}
         {% endif %}
+        {# alt describes the image content: the site card/logo for the
+           language-neutral fallback, the page title for per-page images. #}
+        {% if page is defined and page.extra.feature_image %}
+            {% set meta_image_alt = meta_title %}
+        {% else %}
+            {% set meta_image_alt = config.title ~ " logo" %}
+        {% endif %}
         {# og:locale uses the RFC 4646 underscore form (en_US / de_DE). #}
         {% set og_locale = "en_US" %}
         {% if lang == "de" %}
             {% set og_locale = "de_DE" %}
+        {% endif %}
+        {% set og_locale_alt = "en_US" %}
+        {% if lang != "de" %}
+            {% set og_locale_alt = "de_DE" %}
         {% endif %}
         {% set meta_type = "website" %}
         {% if page is defined and page.date %}
@@ -118,6 +135,7 @@
         {% endif %}
         <meta property="og:type" content="{{ meta_type }}">
         <meta property="og:locale" content="{{ og_locale }}">
+        <meta property="og:locale:alternate" content="{{ og_locale_alt }}">
         <meta property="og:site_name" content="{{ config.title }}">
         <meta property="og:title" content="{{ meta_title }}">
         <meta property="og:description" content="{{ meta_description }}">
@@ -126,6 +144,7 @@
         {% if meta_image_width is defined and meta_image_height is defined %}
         <meta property="og:image:width" content="{{ meta_image_width }}">
         <meta property="og:image:height" content="{{ meta_image_height }}">
+        <meta property="og:image:alt" content="{{ meta_image_alt }}">
         {% endif %}
         {% if meta_type == "article" %}
         <meta property="article:published_time" content="{{ page.date | date(format='%+') }}">
@@ -143,6 +162,7 @@
         <meta name="twitter:title" content="{{ meta_title }}">
         <meta name="twitter:description" content="{{ meta_description }}">
         <meta name="twitter:image" content="{{ meta_image }}">
+        <meta name="twitter:image:alt" content="{{ meta_image_alt }}">
         {% endblock %}
         {% block rss %}
             {% if config.generate_feeds %}
@@ -216,6 +236,14 @@
             "description": {{ config.description | json_encode() | safe }},
             "email": {{ extra.address.email | json_encode() | safe }},
             "telephone": {{ contact_phone | json_encode() | safe }},
+            "contactPoint": {
+                "@type": "ContactPoint",
+                "contactType": "customer support",
+                "email": {{ extra.address.email | json_encode() | safe }},
+                "telephone": {{ contact_phone | json_encode() | safe }},
+                "areaServed": "Worldwide",
+                "availableLanguage": ["en", "de"]
+            },
             "duns": {{ extra.legal.duns | json_encode() | safe }},
             "vatID": {{ extra.legal.vat_id | json_encode() | safe }},
             "taxID": {{ extra.legal.tax_number | json_encode() | safe }},
@@ -255,6 +283,7 @@
                 }
             },
             "areaServed": "Worldwide",
+            "knowsLanguage": ["en", "de"],
             "knowsAbout": ["Rust", "Nix", "NixOS", "Cloud Engineering", "DevOps", "Kubernetes", "Software Architecture", "Cloud Architecture", "Infrastructure as Code"],
             "founder": {
                 "@type": "Person",
@@ -315,6 +344,9 @@
             "@type": "WebSite",
             "@id": {{ website_id | json_encode() | safe }},
             "url": {{ site_url | json_encode() | safe }},
+            {# Hardcoded like templates/sitemap.xml: this template has no
+               lang-aware config access pattern for the full language list. #}
+            "inLanguage": ["en", "de"],
             "name": {{ config.title | json_encode() | safe }},
             "alternateName": {{ site_alternate_names | json_encode() | safe }},
             "publisher": {
