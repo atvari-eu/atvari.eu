@@ -132,7 +132,11 @@
 
         <link rel="icon" type="image/x-icon" sizes="16x16 32x32 48x48" href="{{ get_url(path='favicon.ico') }}">
         <link rel="apple-touch-icon" href="{{ get_url(path='apple-touch-icon.png') }}">
-        <link rel="manifest" href="/site.webmanifest">
+        {% if lang == config.default_language %}
+        <link rel="manifest" hreflang="{{ lang }}" href="/site.webmanifest">
+        {% else %}
+        <link rel="manifest" hreflang="{{ lang }}" href="/site.{{ lang }}.webmanifest">
+        {% endif %}
         <meta name="theme-color" media="(prefers-color-scheme: light)" content="#ffffff">
         <meta name="theme-color" media="(prefers-color-scheme: dark)" content="#12141c">
 
@@ -284,6 +288,7 @@
         <script src="{{ get_url(path='js/theme.js') }}"></script>
         <script src="{{ get_url(path='js/lang-switch.js') }}"></script>
         <script src="{{ get_url(path='js/nav-active.js') }}"></script>
+        <script src="{{ get_url(path='js/install-prompt.js') }}"></script>
         {% endblock %}
     </body>
 </html>

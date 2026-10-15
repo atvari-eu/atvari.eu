@@ -1,11 +1,13 @@
 {
   "name": "atvari",
   "short_name": "atvari",
+  "description": "atvari GmbH is a software and cloud engineering consultancy based in Lüneburg, Germany, specializing in Nix and Rust.",
   "id": "/",
   "start_url": "/",
   "scope": "/",
-  "display": "browser",
+  "display": "standalone",
   "lang": "en",
+  "dir": "ltr",
   "background_color": "#ffffff",
   "theme_color": "#41b883",
   "icons": [

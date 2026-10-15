@@ -1,0 +1,51 @@
+{
+  "name": "atvari",
+  "short_name": "atvari",
+  "description": "atvari GmbH ist eine Software- und Cloud-Engineering-Beratung mit Sitz in Lüneburg, spezialisiert auf Nix und Rust.",
+  "id": "/de/",
+  "start_url": "/de/",
+  "scope": "/",
+  "display": "standalone",
+  "lang": "de",
+  "dir": "ltr",
+  "background_color": "#ffffff",
+  "theme_color": "#41b883",
+  "icons": [
+    {
+      "src": "/images/symbol.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any"
+    },
+    {
+      "src": "/images/android-chrome-192x192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "/images/android-chrome-512x512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "/images/android-chrome-maskable-192x192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "maskable"
+    },
+    {
+      "src": "/images/android-chrome-maskable-512x512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "maskable"
+    },
+    {
+      "src": "/images/android-chrome-monochrome-512x512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "monochrome"
+    }
+  ]
+}
