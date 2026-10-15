@@ -167,11 +167,23 @@
         {% endif %}
         {% set contact_phone = extra.address.phone %}
         {% if lang == "de" and extra.address.phone_de %}{% set contact_phone = extra.address.phone_de %}{% endif %}
+        {# Stable entity identifiers for the knowledge graph: fragment ids keep the
+           org-as-legal-entity and website-as-resource nodes distinct from each other
+           and from the homepage document itself. #}
+        {% set org_id = config.base_url ~ "/#organization" %}
+        {% set website_id = config.base_url ~ "/#website" %}
+        {% set site_url = config.base_url ~ "/" %}
+        {# Site-name variants per Google's guidance; the lowercase domain doubles as
+           the fallback site-name preference. #}
+        {% set site_domain = config.base_url | trim_start_matches(pat="https://") | trim_start_matches(pat="http://") | trim_end_matches(pat="/") %}
+        {% set site_alternate_names = [extra.legal.name, site_domain] %}
         <script type="application/ld+json">
         {
             "@context": "https://schema.org",
             "@type": "OnlineBusiness",
+            "@id": {{ org_id | json_encode() | safe }},
             "name": {{ config.title | json_encode() | safe }},
+            "alternateName": {{ site_alternate_names | json_encode() | safe }},
             "legalName": {{ extra.legal.name | json_encode() | safe }},
             "url": {{ config.base_url | json_encode() | safe }},
             "logo": {{ get_url(path="images/logo.svg") | json_encode() | safe }},
@@ -181,6 +193,12 @@
             "telephone": {{ contact_phone | json_encode() | safe }},
             "duns": {{ extra.legal.duns | json_encode() | safe }},
             "vatID": {{ extra.legal.vat_id | json_encode() | safe }},
+            "taxID": {{ extra.legal.tax_number | json_encode() | safe }},
+            {% if extra.legal.duns %}{% set iso6523 = "0060:" ~ extra.legal.duns %}{# Google recommends the iso6523 form (ICD 0060 = DUNS) for entity disambiguation; `duns` kept for compatibility. #}
+            "iso6523Code": {{ iso6523 | json_encode() | safe }},
+            {% endif %}
+            {% set naics = ["541511", "541512"] %}{# custom computer programming; computer systems design/services #}
+            "naics": {{ naics | json_encode() | safe }},
             "identifier": {
                 "@type": "PropertyValue",
                 "propertyID": "DE-HRB",
@@ -264,6 +282,20 @@
                 }
             ],
             "sameAs": {{ org_same_as | json_encode() | safe }}
+        }
+        </script>
+        <script type="application/ld+json">
+        {
+            "@context": "https://schema.org",
+            "@type": "WebSite",
+            "@id": {{ website_id | json_encode() | safe }},
+            "url": {{ site_url | json_encode() | safe }},
+            "name": {{ config.title | json_encode() | safe }},
+            "alternateName": {{ site_alternate_names | json_encode() | safe }},
+            "publisher": {
+                "@type": "Organization",
+                "@id": {{ org_id | json_encode() | safe }}
+            }
         }
         </script>
         {% endblock %}
