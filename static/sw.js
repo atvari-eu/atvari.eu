@@ -135,10 +135,11 @@ function fetchWithTimeout(request, ms) {
         fetch(request, { signal: controller.signal }).then(
             function (response) {
                 clearTimeout(timer);
-                if (!response || !response.ok) {
-                    reject(new Error('HTTP ' + (response ? response.status : 'error')));
-                    return;
-                }
+                // Non-ok responses (404, 502, …) are real answers, not network
+                // failures: resolve with them so the visitor sees the server's
+                // error page instead of silently getting a stale cached copy
+                // of a page that no longer exists. The ok-gate in
+                // handleNavigation keeps error responses out of the cache.
                 resolve(response);
             },
             function (error) {
