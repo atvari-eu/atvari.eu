@@ -64,6 +64,7 @@ rust_cta_button = "Explore Rust consulting"
 
 # Menus
 home = "Home"
+menu = "Menu"
 about = "About"
 service = "Services"
 service_overview = "Overview"
@@ -143,6 +144,7 @@ rust_cta_button = "Rust-Consulting entdecken"
 
 # Menus
 home = "Start"
+menu = "Menü"
 about = "Über uns"
 service = "Leistungen"
 service_overview = "Übersicht"

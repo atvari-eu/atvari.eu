@@ -66,9 +66,9 @@
       <div class="col-lg-10 offset-lg-1">
         {% if section.extra.intro_business %}
         <div class="expertise__intro-header">
-          <div class="expertise__audience-toggle" role="tablist">
-            <button type="button" class="expertise__audience-btn is-active" data-audience="business">{{ trans(key="for_business", lang=lang) }}</button>
-            <button type="button" class="expertise__audience-btn" data-audience="technical">{{ trans(key="for_engineers", lang=lang) }}</button>
+          <div class="expertise__audience-toggle">
+            <button type="button" class="expertise__audience-btn is-active" data-audience="business" aria-pressed="true">{{ trans(key="for_business", lang=lang) }}</button>
+            <button type="button" class="expertise__audience-btn" data-audience="technical" aria-pressed="false">{{ trans(key="for_engineers", lang=lang) }}</button>
           </div>
           {% if section.extra.credential %}
           {{ macros::credential_pill(credential=section.extra.credential, lang=lang, permalink=section.permalink) }}

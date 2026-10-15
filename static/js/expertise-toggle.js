@@ -14,7 +14,9 @@
                 var audience = button.getAttribute('data-audience');
 
                 buttons.forEach(function (btn) {
-                    btn.classList.toggle('is-active', btn === button);
+                    var isActive = btn === button;
+                    btn.classList.toggle('is-active', isActive);
+                    btn.setAttribute('aria-pressed', String(isActive));
                 });
                 panels.forEach(function (panel) {
                     var active = panel.getAttribute('data-audience') === audience;
